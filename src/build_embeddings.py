@@ -27,8 +27,7 @@ def load_chunks():
     return all_texts, metadata
 
 
-if __name__ == "__main__":
-
+def build_embeddings():
     texts, metadata = load_chunks()
 
     if not texts:
@@ -51,3 +50,7 @@ if __name__ == "__main__":
     )
 
     print("Embeddings and FAISS index saved successfully.")
+
+
+if __name__ == "__main__":
+    build_embeddings()
