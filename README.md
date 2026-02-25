@@ -9,7 +9,7 @@ Veda Bot RAG is a modular Python pipeline that transforms raw Ayurvedic PDF book
 ### Key Features
 
 - **PDF Processing Pipeline**: Extract, clean, and structure text from medical PDFs
-- **Semantic Search**: FAISS-based vector similarity search with cross-encoder reranking
+- **Hybrid Retrieval**: Dense FAISS retrieval + lexical BM25 fusion, then cross-encoder reranking
 - **Metadata Extraction**: Automatic detection of Ayurvedic concepts (doshas, srotas, treatment types)
 - **Multi-turn Conversation**: Context-aware diagnostic dialogue system
 - **Modular Architecture**: Each processing stage is independent and configurable
@@ -85,6 +85,12 @@ python build_embeddings.py
 - `data/embeddings/faiss.index` - Vector index
 - `data/embeddings/metadata.json` - Chunk metadata
 
+Alternative single command:
+```bash
+python process_new_pdfs.py
+```
+This runs PDF processing + embedding/index build end-to-end.
+
 ### Stage 3: Run Chatbot
 
 Start the interactive RAG chatbot:
@@ -98,15 +104,15 @@ python run_rag.py
 ```
 You: I have a cough
 
-AI: To help me provide an accurate Ayurvedic assessment, could you share your age and gender?
+AI: To provide an accurate Ayurvedic assessment, could you share your age and gender?
 
 You: 35, male
 
-AI: Thank you. Can you describe your cough? Is it dry or productive? When is it worse?
+AI: What kind of cough is it (dry or productive), and when is it worst?
 
 You: Dry cough, worse at night
 
-AI: Based on your symptoms, this appears to be Vataja Kasa (Vata-type cough)...
+AI: [After minimum configured gathering questions, diagnosis is generated and verified before final output]
 ```
 
 ## Project Structure
@@ -154,14 +160,30 @@ Key parameters in [`src/config.py`](src/config.py):
 | `K_RETRIEVAL` | 20 | Initial retrieval count |
 | `K_RERANK` | 8 | Final chunks after reranking |
 | `TEMPERATURE` | 0.1 | LLM generation temperature |
-| `RERANKER_MODEL` | `cross-encoder/ms-marco-MiniLM-L-2` | Reranking model |
+| `RERANKER_MODEL` | `cross-encoder/ms-marco-MiniLM-L-6-v2` | Reranking model |
+| `USE_HYBRID_RETRIEVAL` | `True` | Enables dense + BM25 fusion retrieval |
+| `MIN_GATHERING_QUESTIONS` | `15` | Minimum user turns before first diagnosis attempt |
+| `EXTRA_GATHERING_QUESTIONS_IF_UNCERTAIN` | `5` | Extra turns if diagnosis verification fails |
 
 ## API Key Setup
 
 The chatbot requires a Google Gemini API key:
 
 1. Get an API key from [Google AI Studio](https://aistudio.google.com/apikey)
-2. Update the `API_KEY` variable in [`src/run_rag.py`](src/run_rag.py)
+2. Set it in your environment (recommended):
+   - PowerShell: `setx GEMINI_API_KEY "your_key_here"` (new terminal required)
+3. Update code to read from env if needed in [`src/run_rag.py`](src/run_rag.py)
+
+## Evaluation
+
+Run:
+```bash
+python src/benchmarks/evaluate_rag.py
+```
+
+Evaluation supports:
+- Gold retrieval metrics (`Recall@k`, `MRR`, `nDCG@k`) when `data/evaluation/retrieval_gold.json` exists
+- Fallback keyword-based retrieval scoring otherwise
 
 ## Supported Ayurvedic Concepts
 
