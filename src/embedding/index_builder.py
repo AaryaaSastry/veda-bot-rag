@@ -35,10 +35,15 @@ class VectorIndex:
 
         results = []
         for idx, score in zip(indices[0], scores[0]):
-            results.append({
-                "score": float(score),
-                "text": self.metadata[idx]["text"],
-                "source": self.metadata[idx]["source"]
-            })
+            if idx < 0 or idx >= len(self.metadata):
+                continue
+
+            item = dict(self.metadata[idx])
+            item["metadata_index"] = int(idx)
+            item["score"] = float(score)
+            # Keep explicit keys for existing callers.
+            item["text"] = self.metadata[idx]["text"]
+            item["source"] = self.metadata[idx]["source"]
+            results.append(item)
 
         return results

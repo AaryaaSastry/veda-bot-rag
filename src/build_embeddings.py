@@ -3,12 +3,16 @@ import json
 from embedding.embed import TextEmbedder
 from embedding.index_builder import VectorIndex
 
-CHUNKS_PATH = "data/chunks"
-EMBEDDINGS_PATH = "data/embeddings"
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+CHUNKS_PATH = os.path.join(PROJECT_ROOT, "data", "chunks")
+EMBEDDINGS_PATH = os.path.join(PROJECT_ROOT, "data", "embeddings")
 
 def load_chunks():
     all_texts = []
     metadata = []
+
+    if not os.path.exists(CHUNKS_PATH):
+        raise FileNotFoundError(f"Chunks directory not found: {CHUNKS_PATH}")
 
     for file in os.listdir(CHUNKS_PATH):
         if file.endswith(".json"):
@@ -26,6 +30,9 @@ def load_chunks():
 if __name__ == "__main__":
 
     texts, metadata = load_chunks()
+
+    if not texts:
+        raise ValueError(f"No chunks found in {CHUNKS_PATH}. Run main.py first to generate chunk files.")
 
     embedder = TextEmbedder("BAAI/bge-small-en")
 
