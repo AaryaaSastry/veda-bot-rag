@@ -149,14 +149,25 @@ Embeddings and FAISS index saved successfully.
 
 **Note:** This step may take 2-5 minutes depending on your CPU. The embedding model will be downloaded automatically on first run (~50MB).
 
+**Alternative (single command):**
+```bash
+cd src
+python process_new_pdfs.py
+```
+This runs Stage 1 and Stage 2 together.
+
 ---
 
 ### Stage 3: Run RAG Chatbot
 
 **What it does:**
 - Loads FAISS index and metadata
+- Uses hybrid retrieval (dense + BM25 fusion) when enabled in `src/config.py`
 - Starts interactive chat session
-- Uses RAG pipeline to answer questions about Ayurvedic medicine
+- Uses a multi-turn diagnosis flow:
+  - asks at least `MIN_GATHERING_QUESTIONS` user turns (default 15)
+  - generates diagnosis and runs verification (`YES`/`NO` check)
+  - if verification fails, asks `EXTRA_GATHERING_QUESTIONS_IF_UNCERTAIN` more (default 5)
 
 **Command:**
 ```bash
@@ -172,15 +183,16 @@ python src/run_rag.py
 **Expected Output:**
 ```
 Loading embedding model: BAAI/bge-small-en
+Retriever mode: hybrid (dense + BM25 fusion)
 --- Ayurvedic AI Chatbot (type 'exit' to quit) ---
 
 You: I have a cough
 
-AI: To help me provide an accurate Ayurvedic assessment, could you share your age and gender?
+AI: To provide an accurate Ayurvedic assessment, could you share your age and gender?
 
 You: 35, male
 
-AI: Thank you. Can you describe your cough? Is it dry or productive? When is it worse?
+AI: What kind of cough is it (dry or productive), and when is it worst?
 
 You: Dry cough, worse at night
 
@@ -322,6 +334,21 @@ python test_search.py
 
 ---
 
+### 4.6 Run Evaluation
+
+**Purpose:** Evaluate retrieval/safety and sample response quality.
+
+**Command:**
+```bash
+python src/benchmarks/evaluate_rag.py
+```
+
+**Notes:**
+- If `data/evaluation/retrieval_gold.json` exists, retrieval uses gold metrics (`Recall@k`, `MRR`, `nDCG@k`).
+- If no gold file exists, evaluation falls back to keyword-based retrieval scoring.
+
+---
+
 ## 5. Troubleshooting
 
 ### Error: `ModuleNotFoundError: No module named 'pymupdf'`
@@ -397,6 +424,17 @@ python main.py
 
 ---
 
+### Error: `429 RESOURCE_EXHAUSTED` (Gemini quota exceeded)
+
+**Cause:** Input token quota exceeded for the selected model.
+
+**Solution:**
+1. Wait for retry window and try again.
+2. Use a lower-cost model in `src/rag/generator.py` (for example Gemini Flash).
+3. Keep `K_RERANK` moderate and avoid very long sessions without restarting.
+
+---
+
 ### Slow Embedding Generation
 
 **Cause:** Running on CPU without optimizations.
@@ -418,10 +456,12 @@ pip install pymupdf tiktoken sentence-transformers faiss-cpu google-genai numpy
 # === RUN PIPELINE ===
 cd src && python main.py                                  # Stage 1-4: Process PDFs
 cd src && python build_embeddings.py                      # Stage 5: Build embeddings
+cd src && python process_new_pdfs.py                      # Stage 1-5 in one command
 cd src && python run_rag.py                               # Stage 6-7: Run chatbot
 
 # === UTILITIES ===
 cd src && python analyze_corpus.py                        # Analyze corpus quality
+python src/benchmarks/evaluate_rag.py                     # Run evaluation suite
 
 # === FROM PROJECT ROOT ===
 python src/main.py                                        # Process PDFs
