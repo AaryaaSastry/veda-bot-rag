@@ -1,4 +1,5 @@
 import config
+import re
 from google import genai
 
 
@@ -17,15 +18,66 @@ class Generator:
         )
         return response.text
 
+    def _trim_history(self, conversation_history, max_lines=24):
+        lines = [line for line in conversation_history.splitlines() if line.strip()]
+        if len(lines) <= max_lines:
+            return conversation_history
+        return "\n".join(lines[-max_lines:])
+
+    def _build_context(self, retrieved_chunks, max_chunks=6, max_chars_per_chunk=900):
+        limited = retrieved_chunks[:max_chunks]
+        parts = []
+        for i, chunk in enumerate(limited):
+            text = (chunk.get("text", "") or "").strip()
+            if len(text) > max_chars_per_chunk:
+                text = text[:max_chars_per_chunk].rstrip() + "..."
+            parts.append(f"Source {i+1}:\n{text}")
+        return "\n\n".join(parts)
+
+    def _extract_previous_questions(self, conversation_history):
+        questions = []
+        for line in conversation_history.splitlines():
+            if not line.startswith("ASSISTANT:"):
+                continue
+            content = line[len("ASSISTANT:"):].strip()
+            if "?" in content:
+                questions.append(content)
+        return questions
+
+    def _normalize_question(self, text):
+        lowered = text.lower()
+        lowered = re.sub(r"[^a-z0-9\s]", " ", lowered)
+        lowered = re.sub(r"\s+", " ", lowered).strip()
+        return lowered
+
+    def _is_duplicate_question(self, candidate, previous_questions):
+        cand_norm = self._normalize_question(candidate)
+        cand_tokens = set(cand_norm.split())
+        if not cand_norm or not cand_tokens:
+            return False
+
+        for prev in previous_questions:
+            prev_norm = self._normalize_question(prev)
+            if cand_norm == prev_norm:
+                return True
+            prev_tokens = set(prev_norm.split())
+            if not prev_tokens:
+                continue
+            overlap = len(cand_tokens & prev_tokens) / max(1, len(cand_tokens | prev_tokens))
+            if overlap >= 0.75:
+                return True
+        return False
+
     def generate_diagnosis(self, conversation_history, retrieved_chunks):
-        context = "\n\n".join([f"Source {i+1}:\n{chunk['text']}" for i, chunk in enumerate(retrieved_chunks)])
+        trimmed_history = self._trim_history(conversation_history, max_lines=30)
+        context = self._build_context(retrieved_chunks, max_chunks=8, max_chars_per_chunk=1100)
         prompt = f"""
 SYSTEM:
 You are an Ayurvedic clinical diagnostic expert.
 Based ON THE RETRIEVED SOURCES and the conversation history, provide a potential diagnosis and the reasoning behind it.
 
 CONVERSATION HISTORY:
-{conversation_history}
+{trimmed_history}
 
 RETRIEVED SOURCES:
 {context}
@@ -37,18 +89,21 @@ REASONING: [Step by step reasoning based on symptoms and sources]
         return self.generate_text(prompt)
 
     def verify_diagnosis(self, diagnosis_report, conversation_history):
+        trimmed_history = self._trim_history(conversation_history, max_lines=30)
         prompt = f"""
 SYSTEM:
 You are a senior Ayurvedic medical reviewer.
 Look at the following diagnosis, reasoning, and the full conversation history.
 Ensure that you understand the age and gender of the patient from the conversation history and use that for further diagnosis.
 CONVERSATION HISTORY:
-{conversation_history}
+{trimmed_history}
 
 DIAGNOSIS REPORT:
 {diagnosis_report}
 
 Does this diagnosis make sense and is it sufficiently supported by the facts gathered from the user?
+Check very strictly to ensure it checks the accuract of the diagnosis based on the conversation history and the symptoms mentioned, and ensure that the reasoning is sound and follows a logical flow.
+Respond with "YES" if the diagnosis is valid and well supported, or "NO" if it is not.
 Respond with ONLY one word: "YES" or "NO".
 """
         response = self.generate_text(prompt).strip().upper()
@@ -59,10 +114,11 @@ Respond with ONLY one word: "YES" or "NO".
             yield "I could find no relevant information in the documents provided."
             return
 
-        context = "\n\n".join(
-            [f"Source {i+1}:\n{chunk['text']}"
-             for i, chunk in enumerate(retrieved_chunks)]
-        )
+        trimmed_history = self._trim_history(conversation_history, max_lines=24)
+        if mode == "gathering":
+            context = self._build_context(retrieved_chunks, max_chunks=4, max_chars_per_chunk=750)
+        else:
+            context = self._build_context(retrieved_chunks, max_chunks=6, max_chars_per_chunk=950)
 
         if mode == "gathering":
             instruction = """
@@ -71,6 +127,7 @@ STRICT OUTPUT RULES:
 2. DO NOT say things like "Thank you for providing your age and gender" or "It's interesting that..." or any similar statements.
 3. DO NOT provide any context, explanations, or commentary before or after the question.
 4. Start your response directly with the question word (What, How, When, Where, Which, etc.) or a direct question.
+5. DO NOT REPEAT THE QUESTIONS ATALL , IF ONCE ASKED DO NOT ASK AGAIN, MOVE ON TO OTHER QUESTIONS.
 
 QUESTION RULES:
 1. Check conversation history. If age and gender are NOT mentioned yet, ask: "To provide an accurate Ayurvedic assessment, could you share your age and gender?"
@@ -116,7 +173,7 @@ GLOBAL RULES (APPLY TO ALL MODES):
 - Go directly to the content requested
 
 CONVERSATION HISTORY:
-{conversation_history}
+{trimmed_history}
 
 RETRIEVED SOURCES:
 {context}
@@ -133,13 +190,37 @@ Answer:
 """
 
         try:
-            # Using generate_content_stream for real-time response
+            if mode == "gathering":
+                previous_questions = self._extract_previous_questions(trimmed_history)
+                retry_prompt = prompt
+
+                for attempt in range(3):
+                    candidate = (self.generate_text(retry_prompt) or "").strip()
+                    candidate = " ".join(candidate.split())
+
+                    if candidate and "?" not in candidate:
+                        candidate = candidate + "?"
+
+                    if candidate and not self._is_duplicate_question(candidate, previous_questions):
+                        yield candidate
+                        return
+
+                    retry_prompt = f"""{prompt}
+ADDITIONAL HARD CONSTRAINT:
+- The next question MUST be semantically different from all previous assistant questions.
+- Do NOT ask about age, gender, nausea, sunlight triggers, diet timing, food list, or time of day again.
+- Ask about a new diagnostic axis: sleep, bowel habits, urine, stress, hydration, appetite, or relief factors.
+- Output only one new question.
+"""
+
+                yield "How are your sleep quality, bowel habits, and hydration on days when the headache becomes worse?"
+                return
+
+            # Non-gathering modes keep streaming behavior.
             for response in self.client.models.generate_content_stream(
                 model=self.model_id,
                 contents=prompt,
-                config={
-                    "temperature": config.TEMPERATURE,
-                }
+                config={"temperature": config.TEMPERATURE}
             ):
                 if response.text:
                     yield response.text
