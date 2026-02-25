@@ -8,6 +8,12 @@ from cleaning.toc_removal import remove_front_matter
 from structure.chapter_parser import parse_chapters
 from chunking.chunker import create_structured_chunk, TokenChunker
 
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+RAW_DIR = os.path.join(PROJECT_ROOT, "data", "raw_pdfs")
+CLEANED_DIR = os.path.join(PROJECT_ROOT, "data", "cleaned_text")
+CHUNKS_DIR = os.path.join(PROJECT_ROOT, "data", "chunks")
+
+
 def save_chunks(chunks, output_path):
     """
     Saves a list of KnowledgeChunk objects to a JSON file.
@@ -18,21 +24,32 @@ def save_chunks(chunks, output_path):
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump([c.to_dict() for c in chunks], f, indent=2, ensure_ascii=False)
 
-def main():
-    project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    raw_dir = os.path.join(project_root, "data", "raw_pdfs")
-    cleaned_dir = os.path.join(project_root, "data", "cleaned_text")
-    chunks_dir = os.path.join(project_root, "data", "chunks")
-    
+
+def process_pdfs(skip_existing=False):
+    """
+    Process PDFs into cleaned text and chunk JSON files.
+
+    Args:
+        skip_existing: if True, skips PDFs that already have chunk JSON output.
+    """
     # Ensure directories exist
-    for d in [cleaned_dir, chunks_dir]:
+    for d in [CLEANED_DIR, CHUNKS_DIR]:
         if not os.path.exists(d):
             os.makedirs(d)
 
-    for filename in os.listdir(raw_dir):
+    processed_files = []
+
+    for filename in os.listdir(RAW_DIR):
         if filename.endswith(".pdf"):
+            output_filename = filename.replace(".pdf", "_chunks.json")
+            output_path = os.path.join(CHUNKS_DIR, output_filename)
+            if skip_existing and os.path.exists(output_path):
+                print(f"\n[SKIP] {filename} - already processed")
+                processed_files.append(output_filename)
+                continue
+
             print(f"\n--- Processing: {filename} ---")
-            pdf_path = os.path.join(raw_dir, filename)
+            pdf_path = os.path.join(RAW_DIR, filename)
             
             try:
                 # 1. Extraction (Page-level)
@@ -51,7 +68,7 @@ def main():
                 
                 # 4. Save intermediate cleaned text
                 cleaned_filename = filename.replace(".pdf", "_final_clean.txt")
-                with open(os.path.join(cleaned_dir, cleaned_filename), "w", encoding="utf-8") as f:
+                with open(os.path.join(CLEANED_DIR, cleaned_filename), "w", encoding="utf-8") as f:
                     f.write(full_text)
 
                 # 5. Structural Parsing
@@ -76,13 +93,24 @@ def main():
                 
                 # 7. Final Output
                 print(f"Step 6: Saving {len(all_structured_chunks)} structured chunks to JSON...")
-                output_filename = filename.replace(".pdf", "_chunks.json")
-                save_chunks(all_structured_chunks, os.path.join(chunks_dir, output_filename))
+                save_chunks(all_structured_chunks, output_path)
                 
                 print(f" WORKFLOW COMPLETE: {output_filename}")
+                processed_files.append(output_filename)
                 
             except Exception as e:
                 print(f" Error: {e}")
+
+    return processed_files
+
+
+def main():
+    if not os.path.exists(RAW_DIR):
+        raise FileNotFoundError(f"Raw PDF directory not found: {RAW_DIR}")
+
+    pdf_files = [f for f in os.listdir(RAW_DIR) if f.endswith(".pdf")]
+    print(f"Found {len(pdf_files)} PDFs in {RAW_DIR}")
+    process_pdfs(skip_existing=False)
 
 
 if __name__ == "__main__":
