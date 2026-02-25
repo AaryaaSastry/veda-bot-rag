@@ -22,12 +22,10 @@ def save_chunks(chunks, output_path):
         json.dump([c.to_dict() for c in chunks], f, indent=2, ensure_ascii=False)
 
 def main():
-    raw_dir = os.path.join(PROJECT_ROOT, "data", "raw_pdfs")
-    cleaned_dir = os.path.join(PROJECT_ROOT, "data", "cleaned_text")
-    chunks_dir = os.path.join(PROJECT_ROOT, "data", "chunks")
-
-    if not os.path.isdir(raw_dir):
-        raise FileNotFoundError(f"Input PDF directory not found: {raw_dir}")
+    project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    raw_dir = os.path.join(project_root, "data", "raw_pdfs")
+    cleaned_dir = os.path.join(project_root, "data", "cleaned_text")
+    chunks_dir = os.path.join(project_root, "data", "chunks")
     
     # Ensure directories exist
     for d in [cleaned_dir, chunks_dir]:
@@ -92,4 +90,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
