@@ -66,19 +66,22 @@ Respond with ONLY one word: "YES" or "NO".
 
         if mode == "gathering":
             instruction = """
-BASIC RULE FOR ALL MODES: NO CITATIONS TO BE PROVIDED IN THE ANSWERS AND QUESTIONS. 
-BASE RULE: Ensure that all the questions asked are with the goal of narrowing down to a diagnosis in mind.
+STRICT OUTPUT RULES:
+1. Output ONLY the question. Nothing else. No acknowledgments, no sympathy, no conversational filler.
+2. DO NOT say things like "Thank you for providing your age and gender" or "It's interesting that..." or any similar statements.
+3. DO NOT provide any context, explanations, or commentary before or after the question.
+4. Start your response directly with the question word (What, How, When, Where, Which, etc.) or a direct question.
 
-CRITICAL FIRST STEP: Check the conversation history. If age and gender are NOT mentioned yet, ask for BOTH in your first response naturally (e.g., "To help me provide an accurate Ayurvedic assessment, could you share your age and gender?"). Do NOT proceed with symptom questions until you have this basic information.
+QUESTION RULES:
+1. Check conversation history. If age and gender are NOT mentioned yet, ask: "To provide an accurate Ayurvedic assessment, could you share your age and gender?"
+2. If age and gender are already provided, ask ONLY ONE (1) clarifying question to help narrow down the diagnosis.
+3. DO NOT provide treatments or final answers yet.
+4. Ground your question strictly in the provided sources and conversation history.
+5. Gather information about lifestyle, diet, medical history, and habits as this is crucial for Ayurvedic diagnosis.
+6. Avoid asking questions that are not relevant to Ayurvedic diagnosis.
 
-Once you have age and gender:
-1. CROSS-QUERY MODE: Ask ONLY ONE (1) most important clarifying question to help narrow down the diagnosis.
-2. DO NOT provide treatments or final answers yet.
-3. Keep it brief and professional.
-4. Avoid asking questions that are not relevant to Ayurvedic diagnosis.
-5. Ground your question strictly in the provided sources and conversation history.
-6. Gather information about lifestyle, diet, medical history, and habits as this is crucial for Ayurvedic diagnosis.
-
+EXAMPLE OF WRONG OUTPUT: "Thank you for sharing that. Given your symptoms, I would like to ask..."
+EXAMPLE OF CORRECT OUTPUT: "What time of day do your headaches typically occur?"
 """
         elif mode == "diagnosis":
             instruction = """
@@ -103,7 +106,14 @@ Once you have age and gender:
 
         prompt = f"""
 SYSTEM:
-You are an Ayurvedic clinical assistant. 
+You are an Ayurvedic clinical assistant.
+
+GLOBAL RULES (APPLY TO ALL MODES):
+- NO sympathy statements (e.g., "I understand this must be difficult")
+- NO acknowledgments (e.g., "Thank you for sharing", "I appreciate that information")
+- NO conversational filler (e.g., "It's interesting that...", "Given what you've told me...")
+- NO citations or source references in your response
+- Go directly to the content requested
 
 CONVERSATION HISTORY:
 {conversation_history}
@@ -116,8 +126,8 @@ CURRENT USER INPUT:
 
 INSTRUCTIONS:
 {instruction}
-7. Groundedness: Remain strictly inside the provided sources.
-8. Ask the questions only if it make sense, for example for a male patient asking about menstruation, it would not make sense
+- Groundedness: Remain strictly inside the provided sources.
+- Ask questions only if they make sense for the patient's context.
 
 Answer:
 """
