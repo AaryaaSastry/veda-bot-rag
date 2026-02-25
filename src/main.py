@@ -8,6 +8,9 @@ from cleaning.toc_removal import remove_front_matter
 from structure.chapter_parser import parse_chapters
 from chunking.chunker import create_structured_chunk, TokenChunker
 
+
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 def save_chunks(chunks, output_path):
     """
     Saves a list of KnowledgeChunk objects to a JSON file.
@@ -19,9 +22,12 @@ def save_chunks(chunks, output_path):
         json.dump([c.to_dict() for c in chunks], f, indent=2, ensure_ascii=False)
 
 def main():
-    raw_dir = os.path.join("data", "raw_pdfs")
-    cleaned_dir = os.path.join("data", "cleaned_text")
-    chunks_dir = os.path.join("data", "chunks")
+    raw_dir = os.path.join(PROJECT_ROOT, "data", "raw_pdfs")
+    cleaned_dir = os.path.join(PROJECT_ROOT, "data", "cleaned_text")
+    chunks_dir = os.path.join(PROJECT_ROOT, "data", "chunks")
+
+    if not os.path.isdir(raw_dir):
+        raise FileNotFoundError(f"Input PDF directory not found: {raw_dir}")
     
     # Ensure directories exist
     for d in [cleaned_dir, chunks_dir]:
