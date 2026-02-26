@@ -29,7 +29,8 @@ def classify_query_system(user_input, generator):
     Returns:
         String indicating the primary body system
     """
-    prompt = QUERY_SYSTEM_PROMPT.format(user_input=user_input)
+    # Use replace instead of str.format because the prompt contains literal JSON braces.
+    prompt = QUERY_SYSTEM_PROMPT.replace("{user_input}", user_input)
     
     try:
         response = generator.generate_text(prompt)
