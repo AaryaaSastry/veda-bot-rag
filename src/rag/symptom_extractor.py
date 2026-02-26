@@ -30,7 +30,8 @@ def extract_symptoms_llm(user_input: str, generator):
     Returns:
         Parsed JSON with symptom categories
     """
-    prompt = SYMPTOM_EXTRACTION_PROMPT.format(user_input=user_input)
+    # Use replace instead of str.format because the prompt contains literal JSON braces.
+    prompt = SYMPTOM_EXTRACTION_PROMPT.replace("{user_input}", user_input)
     
     try:
         response = generator.generate_text(prompt)
