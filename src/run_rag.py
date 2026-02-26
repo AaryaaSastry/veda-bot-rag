@@ -21,7 +21,7 @@ from rag.metadata_enricher import enrich_chunks_with_metadata
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 VECTOR_DB_PATH = os.path.join(PROJECT_ROOT, "data", "embeddings")
 EVALUATION_DIR = os.path.join(PROJECT_ROOT, "data", "evaluations")
-API_KEY = "AIzaSyCXAd1eoAyTYB80xnPmi0dqg1rAQhvhz0U"
+API_KEY = "AIzaSyBEsINh-jay9q0M6HDVlXk-TU3SfY-N9x0"
 
 BOOK_1 = "ayurvedic_treatment_file1.pdf"
 BOOK_2 = "Ayurvedic-Home-Remedies-English.pdf"

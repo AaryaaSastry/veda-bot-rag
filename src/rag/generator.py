@@ -1,4 +1,5 @@
 import config
+import json
 import re
 from google import genai
 
@@ -22,7 +23,12 @@ class Generator:
         lines = [line for line in conversation_history.splitlines() if line.strip()]
         if len(lines) <= max_lines:
             return conversation_history
-        return "\n".join(lines[-max_lines:])
+
+        profile_lines = [line for line in lines if line.startswith("PATIENT_PROFILE:")]
+        tail_lines = lines[-max_lines:]
+        if profile_lines and profile_lines[0] not in tail_lines:
+            return "\n".join([profile_lines[0]] + tail_lines)
+        return "\n".join(tail_lines)
 
     def _build_context(self, retrieved_chunks, max_chunks=6, max_chars_per_chunk=900):
         limited = retrieved_chunks[:max_chunks]
@@ -68,13 +74,30 @@ class Generator:
                 return True
         return False
 
-    def generate_diagnosis(self, conversation_history, retrieved_chunks):
+    def _safe_json_load(self, text, fallback):
+        if not text:
+            return fallback
+        try:
+            return json.loads(text)
+        except Exception:
+            # Try extracting first JSON object boundaries.
+            start = text.find("{")
+            end = text.rfind("}")
+            if start != -1 and end != -1 and end > start:
+                try:
+                    return json.loads(text[start:end + 1])
+                except Exception:
+                    return fallback
+        return fallback
+
+    def generate_differential_diagnosis(self, conversation_history, retrieved_chunks):
         trimmed_history = self._trim_history(conversation_history, max_lines=30)
         context = self._build_context(retrieved_chunks, max_chunks=8, max_chars_per_chunk=1100)
+
         prompt = f"""
 SYSTEM:
-You are an Ayurvedic clinical diagnostic expert.
-Based ON THE RETRIEVED SOURCES and the conversation history, provide a potential diagnosis and the reasoning behind it.
+You are an Ayurvedic clinical diagnostic expert with strict medical safety policy.
+Create a differential diagnosis with uncertainty handling.
 
 CONVERSATION HISTORY:
 {trimmed_history}
@@ -82,13 +105,122 @@ CONVERSATION HISTORY:
 RETRIEVED SOURCES:
 {context}
 
-Format your output exactly like this:
-DIAGNOSIS: [Name of condition]
-REASONING: [Step by step reasoning based on symptoms and sources]
+Return ONLY valid JSON with this exact schema:
+{{
+  "possible_conditions": [
+    {{"name": "string", "confidence": 0.0, "evidence_for": ["..."], "evidence_against": ["..."]}},
+    {{"name": "string", "confidence": 0.0, "evidence_for": ["..."], "evidence_against": ["..."]}},
+    {{"name": "string", "confidence": 0.0, "evidence_for": ["..."], "evidence_against": ["..."]}}
+  ],
+  "most_likely": "string",
+  "most_likely_confidence": 0.0,
+  "uncertainty_level": "low|moderate|high",
+  "red_flags_present": ["..."],
+  "reasoning_summary": "string"
+}}
+
+Rules:
+- Always provide at least 3 competing conditions.
+- Confidence values must be between 0 and 1.
+- Use uncertainty_level="high" if evidence is weak, contradictory, or symptom duration is short/unclear.
+- Do not produce treatment in this step.
 """
-        return self.generate_text(prompt)
+        raw = self.generate_text(prompt)
+        fallback = {
+            "possible_conditions": [
+                {"name": "Undifferentiated headache pattern", "confidence": 0.34, "evidence_for": [], "evidence_against": []},
+                {"name": "Pitta-aggravated headache pattern", "confidence": 0.33, "evidence_for": [], "evidence_against": []},
+                {"name": "Tension-type pattern", "confidence": 0.33, "evidence_for": [], "evidence_against": []},
+            ],
+            "most_likely": "Undifferentiated headache pattern",
+            "most_likely_confidence": 0.34,
+            "uncertainty_level": "high",
+            "red_flags_present": [],
+            "reasoning_summary": "Evidence is limited; differential retained to avoid overconfident diagnosis.",
+        }
+        report = self._safe_json_load(raw, fallback)
+        # Normalize basic fields for downstream safety gating.
+        if "possible_conditions" not in report or not isinstance(report["possible_conditions"], list):
+            report["possible_conditions"] = fallback["possible_conditions"]
+        if len(report["possible_conditions"]) < 3:
+            report["possible_conditions"] = (report["possible_conditions"] + fallback["possible_conditions"])[:3]
+        try:
+            report["most_likely_confidence"] = float(report.get("most_likely_confidence", 0.0))
+        except Exception:
+            report["most_likely_confidence"] = 0.0
+        report["most_likely_confidence"] = max(0.0, min(1.0, report["most_likely_confidence"]))
+        if report.get("uncertainty_level") not in {"low", "moderate", "high"}:
+            report["uncertainty_level"] = "moderate"
+        if not isinstance(report.get("red_flags_present"), list):
+            report["red_flags_present"] = []
+        return report
+
+    def self_check_differential(self, differential_report, conversation_history):
+        trimmed_history = self._trim_history(conversation_history, max_lines=30)
+        payload = json.dumps(differential_report, ensure_ascii=False)
+        prompt = f"""
+SYSTEM:
+You are a strict medical safety auditor.
+Review whether the diagnosis is overconfident and whether treatment should be blocked.
+
+CONVERSATION HISTORY:
+{trimmed_history}
+
+DIFFERENTIAL REPORT:
+{payload}
+
+Return ONLY valid JSON:
+{{
+  "overconfident": true,
+  "missing_differentials": true,
+  "requires_medical_escalation": false,
+  "treatment_allowed": false,
+  "adjusted_confidence_cap": 0.55,
+  "notes": "short reason"
+}}
+"""
+        raw = self.generate_text(prompt)
+        fallback = {
+            "overconfident": False,
+            "missing_differentials": False,
+            "requires_medical_escalation": False,
+            "treatment_allowed": True,
+            "adjusted_confidence_cap": 1.0,
+            "notes": "",
+        }
+        out = self._safe_json_load(raw, fallback)
+        for key in ("overconfident", "missing_differentials", "requires_medical_escalation", "treatment_allowed"):
+            out[key] = bool(out.get(key, fallback[key]))
+        try:
+            out["adjusted_confidence_cap"] = float(out.get("adjusted_confidence_cap", 1.0))
+        except Exception:
+            out["adjusted_confidence_cap"] = 1.0
+        out["adjusted_confidence_cap"] = max(0.0, min(1.0, out["adjusted_confidence_cap"]))
+        out["notes"] = str(out.get("notes", ""))
+        return out
+
+    def format_differential_report(self, differential_report):
+        most_likely = differential_report.get("most_likely", "Uncertain")
+        confidence = differential_report.get("most_likely_confidence", 0.0)
+        uncertainty = differential_report.get("uncertainty_level", "moderate")
+        lines = [f"DIAGNOSIS: {most_likely}", f"CONFIDENCE: {confidence:.2f}", f"UNCERTAINTY: {uncertainty}"]
+        options = differential_report.get("possible_conditions", [])[:3]
+        for i, opt in enumerate(options, start=1):
+            name = opt.get("name", "Unknown")
+            try:
+                c = float(opt.get("confidence", 0.0))
+            except Exception:
+                c = 0.0
+            lines.append(f"DIFFERENTIAL_{i}: {name} ({c:.2f})")
+        return "\n".join(lines)
+
+    def generate_diagnosis(self, conversation_history, retrieved_chunks):
+        # Backward-compatible wrapper.
+        report = self.generate_differential_diagnosis(conversation_history, retrieved_chunks)
+        return self.format_differential_report(report)
 
     def verify_diagnosis(self, diagnosis_report, conversation_history):
+        # Backward-compatible boolean verifier.
         trimmed_history = self._trim_history(conversation_history, max_lines=30)
         prompt = f"""
 SYSTEM:
@@ -130,33 +262,58 @@ STRICT OUTPUT RULES:
 5. DO NOT REPEAT THE QUESTIONS ATALL , IF ONCE ASKED DO NOT ASK AGAIN, MOVE ON TO OTHER QUESTIONS.
 
 QUESTION RULES:
-1. Check conversation history. If age and gender are NOT mentioned yet, ask: "To provide an accurate Ayurvedic assessment, could you share your age and gender?"
-2. If age and gender are already provided, ask ONLY ONE (1) clarifying question to help narrow down the diagnosis.
-3. DO NOT provide treatments or final answers yet.
-4. Ground your question strictly in the provided sources and conversation history.
-5. Gather information about lifestyle, diet, medical history, and habits as this is crucial for Ayurvedic diagnosis.
-6. Avoid asking questions that are not relevant to Ayurvedic diagnosis.
+1. If PATIENT_PROFILE shows unknown age or unknown gender, ask: "To provide an accurate Ayurvedic assessment, could you share your age and gender?"
+2. If PATIENT_PROFILE already has both age and gender, DO NOT ask age/gender again.
+3. Ask ONLY ONE (1) clarifying question to help narrow down the diagnosis.
+4. DO NOT provide treatments or final answers yet.
+5. Ground your question strictly in the provided sources and conversation history.
+6. Gather information about lifestyle, diet, medical history, and habits as this is crucial for Ayurvedic diagnosis.
+7. Avoid asking questions that are not relevant to Ayurvedic diagnosis.
 
 EXAMPLE OF WRONG OUTPUT: "Thank you for sharing that. Given your symptoms, I would like to ask..."
 EXAMPLE OF CORRECT OUTPUT: "What time of day do your headaches typically occur?"
 """
         elif mode == "diagnosis":
             instruction = """
-1. Provide a professional diagnosis summary from the report.
-2. Use very minimal markdown (avoid bold and headers).
-3. End your response by asking if the user would like to hear remedies, do's, and don'ts.
-4. Give a clear understanding of the users current condition and places where they can improve based on the sources and the conversation history.
-5. Avoid medical jargon as much as possible and make it user friendly and easy to understand.
-6. Ensure u have an understanding of the user's lifestyle, diet, medical history, and habits as this is crucial for Ayurvedic diagnosis.
+1. Summarize the differential diagnosis from the provided report (not a single absolute diagnosis).
+2. Mention uncertainty clearly and briefly state at least one alternative condition.
+3. Keep language conservative and probabilistic, avoid certainty claims.
+4. End by asking if the user wants safe remedies and lifestyle guidance.
+5. Avoid medical jargon as much as possible.
+"""
+        elif mode == "uncertain":
+            instruction = """
+1. Output ONLY one new, specific follow-up question that has NOT been asked before.
+2. Do NOT include diagnostic summaries, warnings, or lifestyle advice text.
+3. Question must be tightly focused on unresolved ear/respiratory differential details.
+4. Keep it short and clear.
+"""
+        elif mode == "uncertain_final":
+            instruction = """
+1. Output exactly two concise lines:
+   Line 1: "Uncertain diagnosis; in-person medical evaluation is recommended."
+   Line 2: "No treatment protocol will be provided at this confidence level."
+2. Do NOT add extra explanation, differential details, or self-care tips.
+"""
+        elif mode == "risk_gate_question":
+            instruction = """
+Ask exactly one safety question:
+"Before I suggest remedies, are you currently on any medicines, or do you have liver disease, kidney disease, hypertension, or diabetes?"
+Output only that question.
+"""
+        elif mode == "escalation":
+            instruction = """
+1. State that red flags are present and in-person medical evaluation is recommended first.
+2. Do NOT provide treatment protocol, herbs, detox, or medicine combinations.
+3. Keep response concise and safety-first.
 """
         elif mode == "remedies":
-            instruction = """
-1. Extract and provide Ayurvedic remedies, treatments, and detailed 'Do's and Don'ts' directly from the RETRIEVED SOURCES.
-2. If certain foods or habits are recommended or forbidden, list them clearly.
-3. Formatting: NO bolding, NO complex headers. Use standard numbering and single line breaks.
-4. Be comprehensive but organized without extra markdown fluff.
-5. Strictly use given sources.
-6. Provide the solution in a very clear consise manner that is user friendly and easy to understand, avoid medical jargon as much as possible.
+            instruction = f"""
+1. Conservative-first policy: begin with low-risk advice (rest, hydration, sleep, heat/ergonomics, trigger avoidance).
+2. If adding remedies, limit to at most {getattr(config, "MAX_REMEDY_INTERVENTIONS", 3)} interventions total.
+3. If medication/comorbidity risk profile is unclear, do not give aggressive regimens.
+4. Extract only from RETRIEVED SOURCES; do not hallucinate.
+5. Keep it simple, concise, and user-friendly with numbered points.
 """
         else:
             instruction = "Provide a professional concluding response."
@@ -190,8 +347,8 @@ Answer:
 """
 
         try:
-            if mode == "gathering":
-                previous_questions = self._extract_previous_questions(trimmed_history)
+            if mode in ("gathering", "uncertain"):
+                previous_questions = self._extract_previous_questions(conversation_history)
                 retry_prompt = prompt
 
                 for attempt in range(3):
@@ -209,11 +366,11 @@ Answer:
 ADDITIONAL HARD CONSTRAINT:
 - The next question MUST be semantically different from all previous assistant questions.
 - Do NOT ask about age, gender, nausea, sunlight triggers, diet timing, food list, or time of day again.
-- Ask about a new diagnostic axis: sleep, bowel habits, urine, stress, hydration, appetite, or relief factors.
+- Ask about a new diagnostic axis that is unresolved.
 - Output only one new question.
 """
 
-                yield "How are your sleep quality, bowel habits, and hydration on days when the headache becomes worse?"
+                yield "Do you have reduced hearing, ringing, or fever along with the ear pain?"
                 return
 
             # Non-gathering modes keep streaming behavior.
