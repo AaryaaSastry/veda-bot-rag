@@ -433,6 +433,33 @@ User Query
 | 5 | `diagnosis` | Generates and verifies diagnosis |
 | 6-9 | `gathering` | Extra gathering if verification fails |
 | 10+ | `diagnosis` | Final diagnosis |
+| Any | `escalation` | Medical escalation required, with remedies consent |
+| Post-diagnosis | `remedies` | If user says YES to remedies |
+| Post-diagnosis | bye message | If user says NO to remedies |
+
+---
+
+#### Safety Engine
+
+**Files**: 
+- [`src/rag/dynamic_safety_engine.py`](src/rag/dynamic_safety_engine.py)
+- [`src/rag/risk_embeddings.py`](src/rag/risk_embeddings.py)
+
+**Purpose**: Detects high-risk medical symptoms and prevents harmful advice.
+
+**Risk Detection**: Uses embedding similarity to detect symptoms matching serious conditions:
+- Vascular infection
+- Deep vein thrombosis
+- Heart failure exacerbation
+- Pulmonary embolism
+- Stroke symptoms
+- And 20+ other critical conditions
+
+**Safety Flow**:
+1. User describes symptoms
+2. Safety engine checks for high-risk patterns
+3. If risk detected (similarity > 0.65): Asks user for more details instead of terminating
+4. Session continues with more symptom gathering
 
 ---
 
@@ -481,6 +508,8 @@ This prefix is required by BGE models for optimal retrieval performance.
 | `diagnosis` | Provides diagnosis summary, asks about remedies |
 | `remedies` | Lists treatments, do's and don'ts |
 | `final` | Professional concluding response |
+| `escalation` | Handles cases requiring medical escalation, asks about remedies |
+| `risk_gate_question` | Asks about current medicines and health conditions before remedies |
 
 ---
 
@@ -700,10 +729,30 @@ AI: [Asks more questions]
 ... (continues for 5 turns)
 
 AI: [Provides diagnosis]
-AI: Would you like to hear remedies?
+AI: Would you like home-based remedies, do's and don'ts, and lifestyle recommendations?
 
 User: Yes
 AI: [Lists treatments, do's and don'ts]
+
+---
+
+**Alternative - User says NO:**
+```
+AI: Would you like home-based remedies, do's and don'ts, and lifestyle recommendations?
+
+User: No
+AI: Thank you for consulting with us. Take care and hope I helped! Goodbye.
+```
+
+---
+
+**Safety Alert Flow:**
+```
+User: I have chest pain
+AI: Could you please describe your symptoms in more detail? For example, when did it start, what makes it better or worse, and do you have any other symptoms?
+
+User: [Provides more details]
+AI: [Continues diagnosis flow]
 ```
 
 **Exit Commands**: Type `exit` to quit

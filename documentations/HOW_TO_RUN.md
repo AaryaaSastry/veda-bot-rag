@@ -168,6 +168,10 @@ This runs Stage 1 and Stage 2 together.
   - asks at least `MIN_GATHERING_QUESTIONS` user turns (default 15)
   - generates diagnosis and runs verification (`YES`/`NO` check)
   - if verification fails, asks `EXTRA_GATHERING_QUESTIONS_IF_UNCERTAIN` more (default 5)
+- **Safety Flow**: When high-risk symptoms are detected, asks for more details instead of terminating
+- **Remedies Flow**: After diagnosis, asks if user wants remedies:
+  - If YES: Provides home remedies, do's/don'ts, lifestyle recommendations
+  - If NO: Ends with "Thank you for consulting with us. Take care and hope I helped! Goodbye."
 
 **Command:**
 ```bash
