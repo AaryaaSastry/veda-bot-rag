@@ -8,11 +8,8 @@ from cleaning.toc_removal import remove_front_matter
 from structure.chapter_parser import parse_chapters
 from chunking.chunker import create_structured_chunk, TokenChunker
 
-PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-RAW_DIR = os.path.join(PROJECT_ROOT, "data", "raw_pdfs")
-CLEANED_DIR = os.path.join(PROJECT_ROOT, "data", "cleaned_text")
-CHUNKS_DIR = os.path.join(PROJECT_ROOT, "data", "chunks")
 
+PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 def save_chunks(chunks, output_path):
     """
@@ -24,14 +21,12 @@ def save_chunks(chunks, output_path):
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump([c.to_dict() for c in chunks], f, indent=2, ensure_ascii=False)
 
-
-def process_pdfs(skip_existing=False):
-    """
-    Process PDFs into cleaned text and chunk JSON files.
-
-    Args:
-        skip_existing: if True, skips PDFs that already have chunk JSON output.
-    """
+def main():
+    project_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    raw_dir = os.path.join(project_root, "data", "raw_pdfs")
+    cleaned_dir = os.path.join(project_root, "data", "cleaned_text")
+    chunks_dir = os.path.join(project_root, "data", "chunks")
+    
     # Ensure directories exist
     for d in [CLEANED_DIR, CHUNKS_DIR]:
         if not os.path.exists(d):
