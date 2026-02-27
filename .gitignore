@@ -1,0 +1,9 @@
+# Python cache
+__pycache__/
+*.pyc
+src/__pycache__/
+src/rag/__pycache__/
+src/embedding/__pycache__/
+# Virtual env
+.venv/
+

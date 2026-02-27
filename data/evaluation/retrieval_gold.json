@@ -1,0 +1,21 @@
+{
+  "cases": [
+    {
+      "query": "What are the symptoms of Kasa?",
+      "relevant_chunks": [
+        {
+          "source": "ayurvedic_treatment_file1.pdf",
+          "chapter": "Kasa"
+        }
+      ]
+    },
+    {
+      "query": "Ayurvedic remedies for skin disorders",
+      "relevant_chunks": [
+        {
+          "source": "24052018_Ayurveda-Based-Diet-Lifestyle-Guidelines-Skin-Diseas.pdf"
+        }
+      ]
+    }
+  ]
+}
