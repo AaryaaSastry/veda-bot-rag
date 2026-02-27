@@ -1,0 +1,1326 @@
+AYURVEDA BASED DIET 
+AND LIFE STYLE GUIDELINES 
+FOR PREVENTION OF 
+CARDIAC DISORDERS
+CENTRAL COUNCIL FOR RESEARCH IN AYURVEDIC SCIENCES 
+Ministry of AYUSH, Government of India 
+New Delhi
+
+■I l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l
+AYURVEDA BASED DIET 
+AND LIFE STYLE GUIDELINES 
+FOR PREVENTION OF 
+CARDIAC DISORDERS
+Central Council for Research in Ayurvedic Sciences
+Ministry of A Y U S H , Government of India
+New Delhi
+1 INI I INI I INI INI I INI I INI I III I INI I INI I INI INI I INI I INI I III I INI I INI I INI I III I INI I INI I INI INI I INI I INI I III I INI I INI I INI INI I INI
+
+© Central Council for Research in Ayurvedic Sciences 
+Ministry of AYUSH, Government of India, New Delhi - 110058
+First Edition - 2018
+Publisher: Central Council for Research in Ayurvedic Sciences, Ministry of AYUSH, Government of 
+India, New Delhi, J. L. N. B. C. A. H. Anusandhan Bhavan, 61-65, Institutional Area, Opp. D-Block, 
+Janakpuri, New Delhi -  110 058, E-mail: dg-ccras@nic.in, Website : www.ccras.nic.in
+Disclaimer: All possible efforts have been made to ensure the correctness of the contents. However 
+Central Council for Research in Ayurvedic Sciences, Ministry of AYUSH, shall not be accountable 
+for any inadvertent error in the content. Corrective measures shall be taken up once such errors are 
+brought to notice.
+Note: These are general guidelines & advocacies and should only be followed under supervision of 
+qualified registered Ayurveda practicetioner.
+ISBN : 978-93-83864-31-7
+Printed a t: JK Offset Graphics Pvt. Ltd., New Delhi-110020
+
+Prologue
+Ayurveda evolved as a comprehensive health care system through systematic experimentation by 
+generating reproducible evidence. These evidences are further expanded and documented as 
+classical texts of Ayurveda such as Charaka Samhita, Susrutha Samhita, Astanga Sangraha etc. 
+Further in the medieval period, several new classics such as Bhavaprakasha, Shamgdhara 
+Samhita, Chakradatta etc have expanded the scope, emphasizing on prevention and management 
+of diseases through dietary and preventive interventions.
+Ayurveda vividly describes the conducive and non-conducive substances including diet, 
+medicines etc and has classified them into three major categories, viz, Shamana (palliative), 
+Kopana (aggravating) and Swastha Hita (conducive to health). Ayurveda has also emphasized on 
+three major factors responsible for causation of any illness such as Asatmyendriyartha Samyoga 
+(incompatible correlation of sense organs), Prajnaparadha (intellectual blasphemy) and 
+Parinama (disharmony with rhythms and cycles of nature); avoidance of which is essential for 
+maintenance of health and prevention of diseases.
+Detailed description concerning functional anatomy and physiology of Hridaya and associated 
+illnesses are available in Ayurvedic literature. Hridaya (heart) is the mula (main seat) of 
+Rasavaha Srotas or circulatory system in the body. The vitiation of this system may lead to 
+diseases such as Sthoulya, Hridroga etc. The role of Vyana Vayu and Ojus which are major 
+functional attributes also contribute significantly to the health and disease of cardio-vascular 
+system.
+In recent times, there has been an emerging shift in epidemiologic and demographic pattern of 
+diseases, and non-communicable diseases are emerging as a major share of disease burden in 
+developing countries. Cardiovascular disorders and other allied conditions contributing to 
+cardiac illness are also spreading in this pattern. Prevention and management of these conditions 
+are pivotal to reduce the disease burden and also facilitate to cut the health costs grossly. 
+Ayurveda offers a comprehensive and personalized approach for such conditions.
+The council has taken initiatives to present a user friendly guidelines on prevention of cardio­
+vascular diseases through dietary and lifestyle advocacies based on principles of Ayurveda, 
+meeting the contemporary requirements. These guidelines are certainly useful for physicians and 
+health seekers alike, approaching Ayurveda healthcare set-ups.
+
+INDEX
+S. No.
+Content
+Page No.
+1.
+Prologue
+iii
+2.
+Background
+1
+3.
+Concept of Ahara (Diet) in Ayurveda
+2.1 Viruddha Ahara (Dietetic Incompatibility)
+1 -2
+4.
+Concept of Vihara (Lifestyle) in Ayurveda
+3.1 Dinacharya (Daily regimen)
+3.2 Rithucharya (Seasonal regimen)
+3.3 Sada vritta (Ethical Regimen): Rules of good conduct
+3.4 Dhamiya & Adhamiyavega (Preventive Regimens)
+2 -5
+5.
+Preventive Cardiology-An overview
+5 -8
+6.
+Preventive / Therapeutic dietary and lifestyle measures 
+as per Ayurveda
+9-1 4
+7.
+Cardiac Risk Factors -Preventive Cardiology
+6.1 Preventive Measures as per Ayurveda
+6.2 Madhumeha (Diabetes Mellitus)
+6.3 Uchcharaktachapa (Hypertension)
+6.4 Sthaulya (Obesity)
+15-21
+8.
+Diet Chart for Vata Prakriti Purush
+22
+9.
+Diet Chart for Pitta Prakriti Purush
+23
+10.
+Diet Chart for Kapha Prakriti Purush
+24
+11.
+References
+25-27
+M iiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiiii
+
+AYURVEDA BASED DIET & LIFE STYLE GUIDELINES 
+FOR PREVENTION OF CARDIAC DISORDERS 
+1. Background
+The incidence of lifestyle diseases like hypertension, diabetes mellitus, dyslipidemia, 
+and overweight/obesity associated with cardiovascular diseases is on the rise. Cardiovascular 
+disorders continue to be the major cause of mortality representing about 30% of all deaths 
+worldwide. With rapid economic development and increasing urbanization of lifestyle in the past 
+few decades, prevalence of these diseases has reached alarming proportions among Indians in the 
+recent years. As Ayurveda is recognized as foremost life science and describes ways to prevent 
+and manage lifestyle disorders, the world is being attracted towards its potential. Ayurveda 
+provides effective solutions in the forms of dietary regulation, lifestyle advisory, detoxification 
+and bio-purification procedures like Panchakarma, since it targets preventive, palliative 
+rejuvenative interventions and medicaments. The holistic approach of Ayurveda, treating the 
+patient as a whole, meaning intervention targeted towards complete physical, psychological, 
+and spiritual well-being makes this science a wonderful option in lifestyle disorders.
+Basically in Ayurveda, promotion of health and prevention of diseases is given more 
+importance than the treatment of the diseases. Health and diseases is dependent on three factors
+1.e. Ahara (Diet), Vihara (life style practices) & Oushadha (Drug& therapies). Among these, 
+food (Ahara) is considered as most important one. Pathya is defined as the ahara (diet) which 
+is congenial to a person according to his constitution, appetite & digestive capacity of the body. 
+Most health problems develop due to the wrong eating and improper cooking. The planning 
+of diet, based on certain principles mentioned in Astavidhi vishesayatan is very rational and 
+scientific. Ayurveda emphasizes the characteristics of food in terms of quality, quantity and time 
+which vary with age, constitution, habitat, digestive power, season, disease and also liking of 
+the patient. One has to consume the diet, which is suitable to him in all aspects, and deviation 
+from these may cause diseases. In addition to these, wrong cooking procedures, irregular timing, 
+and consuming imbalanced and non-congenial food and not following the prescribed rules for 
+preparing, preserving and eating food may also cause imbalance of health. The proper intake 
+of diet not only can prevent many health disorders but also plays major role in the management 
+of diseases. Therefore, due consideration should be given to all aspects of diet- planning for 
+treatment of diseases and to maintain the health, according to Ayurveda.
+The Ayurvedic regime of healthy life is designed for achievement of a long, healthy 
+active life, providing relief from pain and disease allowing enjoyment of life with attainment of 
+satisfaction & contentment. Elaborate description is available on personal hygiene encompassing 
+diet and regimen during daily routine (Dinacharya), seasonal routine (Ritucharya) and 
+behavioral and ethical principles (Sadvritta). Observance of certain rules regarding suppressible 
+and non-suppressible urges also paves way towards positive health. Cardiac risk factors can be 
+prevented or managed by lifestyle including principles of Dinacharya, Ritucharya and sadvrtta.
+2. Concept of Ahara (Diet)
+Any material in the universe, according to Ayurveda is composed of five basic elements, 
+the Pancha Mahabhootas, namely Earth (Prithvi), Water (Ap), Fire (Teja), Air (Vayu) and 
+Ether (Akasha) including human body and the food. Tridoshas i.e. Vata, Pitta & Kapha which 
+constitutes the body is also made up of Panchamahabhootas viz Vata is made up of Vayu and
+1 INI I INI I INI INI I INI I INI I III I INI I INI I INI INI I INI I INI I III I INI I INI I INI I III I INI I INI I INI INI I INI I INI I III I INI I INI I INI INI I INI
+
+Akasha mahabhoota, Pitta is made up of Agni and Jala mahabhoota and Kapha is made up 
+of Jala and Prthvi mahabhoota. Planning and indulging in the diet balancing these elements 
+maintain the homoeostasis of the body.
+Each dietary item may have dosha aggravating, dosha pacifying or dosha balancing 
+actions in the body. Specific diet has been mentioned in Ayurveda to maintain the balance of 
+Doshas disturbed due to various factors like season, age etc.The food contains six basic tastes 
+and each taste has pre-dominance of particular elements of Pancha mahabhoota which exerts 
+specific effect on the Tridoshas & Dhatus.The Madhura (Sweet) rasa has predominance of 
+Prithvi & Aap elements, Amla (Sour) rasa has predominance of Prithvi & Agni, Lavana (Salt) 
+rasa has predominance of Aap & Agni, Katu (Pungent) rasa has predominance of Agni & Vayu, 
+Thikta (Bitter) rasa has predominance of Vayu & Akash and Kashaya (Astringent) rasa has 
+predominance of Prithvi & Vayu. It is mentioned that, drugs having sweet, sour and salty taste 
+alleviate Vata, those having astringent, sweet and bitter tastes alleviate Pitta and those having 
+astringent, pungent and bitter tastes alleviate Kapha dosha.
+In Ayurveda specific principles are described for consuming diet. It is not possible to 
+derive the entire benefit out of food, simply on the basis of quantity of intake, without considering 
+the eight factors like Prakrti (Qualitative characteristics of the food), Karana (Processing of 
+food), Samyoga (combination of food), Rashi (The quantity of food), Desha (Habitat of the 
+person), Kala (Time& seasonal variation), Upayoga Samstha (Variable digestibility of various 
+food articles) and Upayokta (The person who consumes the food).
+Fat rich diet harms the body in the long run and very low fat diet is also unhealthy in 
+that it could result in fatty acid deficiency syndromes. Regular physical exercise, not heavy 
+exercise, keeps the body healthy, both by suppressing appetite after a while and burning extra 
+calories if needed.
+2.1 Viruddhahara (Dietetic Incompatibility)
+The food with incompatible or contradictory qualities has poisonous effect on the body 
+that aggravates Tridoshas in turn leading to various disorders viz: Gulma (Lump), Allergies 
+and Skin diseases. It also destroys strength, vigour, memory, immunity etc. The dietary 
+incompatibility is due to Desha (climate), Kala (season), Agni (digestive power), Matra 
+(quantity), Satmya (adaptability/customization), Doshas (tridosha), 
+Samskara (mode of 
+processing), Aharavirya (potency of food), Kostha (bowel habits) , Avastha (state of health), 
+Krama (order of food intake), Parihara (restriction), Upachara (prescription), Sanyoga 
+(combination) , Hridya (delicious), Sampad (richness of quality)and Vidhi (rules of eating).Few 
+contradictory combinations mentioned in the classics are fish or its soup along with milk, milk 
+or milk products with alcoholic beverages , radish consumed with milk and lotus stem with 
+honey etc.
+3. Concept of Vihara (Lifestyle)
+The Dinacharya, Ritucharya and Sadvritta are parts of correct/ideal Lifestyle measures 
+mentioned in Ayurvedic classics for maintenance of health and also to achieve a long, healthy 
+active life, providing relief from pain and disease. Detailed description of personal hygiene 
+encompass diet and regimen during daily routine (Dinacharya), seasonal routine (Ritucharya) 
+and behavioral, rules of good conduct (Sadvritta) and description of suppressible (Dhamiya 
+vega) & non suppressible(Adhamiya vega) urges is available in Ayurveda.
+I INI I INI INI I INI I INI I III I INI I INI I INI INI I INI I INI I INI INI I INI I INI I III I INI I INI I INI INI I INI I INI I III I INI I INI I INI I III I INI I INI I
+
+Abstain from those factors which cause mental agony:-It is not what you eat that kills you; 
+it is what eats you (negative thoughts) that kills you. (Hippsley-Cox J, Fielding K, and Pringle 
+M. Depression as a risk factor for IHD in men). There are a host of scientific studies, both 
+prospective and retrospective, that have shown a very close cause-effect relationship between 
+negative thoughts like anger, pride, hostility, and depression and vascular diseases and, even, 
+cancer!.
+3.1 Dinacharya (Daily regimen)
+• 
+It is advisable to wake up during Brahma Muhurta (preferably between 4.00 a.m. to 5.30
+a.m.).
+• 
+One should attend the nature’s calls.
+• 
+The soft brushes made out of twigs of Khadira, Karanja, Apamarga etc. should be used 
+for brushing the teeth.
+• 
+Tongue should be cleaned by a long flexible strip of metal or plant twig. It not only 
+cleanses the tongue but also stimulates digestion. Mouth should also be cleaned properly.
+• 
+Chewing of betel leaves with small pieces of Areca nut (Khadira) and fragrant substances 
+like cardamom, cloves, refreshes the mouth and enhance digestion.
+• 
+It is necessary to massage (Abhyanga) whole body with oil every day. Oil massage ensures 
+softness and unctuousness of skin, free movement of joints and muscles, peripheral 
+circulation and elimination of metabolic wastes.
+• 
+Regular exercise (Vyayama) is essential for perfect health. It builds up stamina and 
+resistance against disease, clears the channels of body (Srotas) and increases the blood 
+circulation. It enhances efficiency of body organs, promotes appetite and digestion and 
+prevents obesity.
+• 
+Whole body massage with dry powders of yava,kola & kulath (Udvartana) every day.
+• 
+Bathing (Snana) improves enthusiasm, strength, sexual vigour, appetite, span of life and 
+removes sweat and other impurities from the body. After bath one should wear clean 
+clothes and smear the body with perfume.
+• 
+One should have regular shaving, haircut (Kshaura Karma), cutting of nails (Nakh 
+apkartana) etc.
+3.2 Rithucharya (Seasonal regimen)
+In Ayurvedic classics, there has been a thorough consideration for seasons, besides 
+the dietetic regimens for days and nights. Whole year is divided into six seasons and detailed 
+dietetic regimen for these seasons is prescribed. In spring season, bitter, hot and astringent diet 
+is advised while salty, sour and sweet food should be avoided. Wheat, barley, honey syrup, 
+fruits like mango, jack fruit-etc. and meat of forest animals is advised. In summer season due to 
+hot climate, aggravation of pitta occurs. Hence pitta pacifying cold, liquid, sweet and oily diet 
+is advised. Excessive hot, spicy, sour salty diet should be avoided. Intake of rice, milk, ghee, 
+sugar, grapes, coconut water, meat of forest animals are advised. In rainy season aggravation of 
+vata occurs, hence vata shamaka sweet, sour and salty food and drinks are preferred. The food 
+should be hot, dry, fatty and easily digestible.
+1 INI I INI I INI INI I INI I INI I III I INI I INI I INI INI I INI I INI I III I INI I INI I INI I III I INI I INI I INI INI I INI I INI I III I INI I INI I INI INI I INI
+
+Preserved rice, wheat, barley and mutton soups are advised. In pre winter and winter 
+season Vatadosha aggravates due to cold, dry, chilly atmosphere in this season hence vataghna, 
+pittavardhaka diet is recommended. Hot, sweet, sour and salty food, milk, sugarcane, rice, oils 
+and fats are advised and in autumn season aggravation of Pitta dosha occurs. Therefore, it is 
+ideal to take ghee processed with bitter drugs; purgation, bloodletting, coolant, and light diet are 
+advised. Diets dominant in Bitter, sweet, pungent diets are advised ideal in this season.
+3.3 Sadvritta (Rules of good conduct)
+Ayurveda prescribes certain rules for maintaining healthy mind. These are principles 
+of right conduct that are applicable to all people at all times and places. Practicing them gives 
+balance and harmony to the mind. These are
+• 
+Whenever possible, devote your services to God, to the wise and to respectable or elderly 
+individuals.
+• Always speak the truth
+• 
+Do not lose your temper under any circumstances
+• 
+Do not get addicted to sensory pleasures.
+• 
+Do not harm anyone.
+• 
+As far as possible, do not expose yourself to hardships.
+• Try to control your passions.
+• 
+Endeavor to speak pleasant and sweet words.
+• Meditate every day for tranquility of mind.
+• Observe cleanliness in all things.
+• Be patient
+• Observe self-control
+• 
+Try to distribute knowledge, good advice and help to others.
+• Be straightforward and kind.
+• Avoid irregularity in daily activities.
+• Avoid over eating, overdrinking, too much sexual activity, too much or too little sleep.
+• 
+Behave according to the time and place where you are residing.
+• 
+Act always in a courteous and polite manner.
+• Control your sense organs.
+• Make a habit of doing all that is good 
+and avoiding all that is bad.
+3.4 Dharniya & Adharniyavega (Preventive Regimens)
+Observations of certain prescriptions and prohibitions given by Ayurveda ensure physical, 
+mental and spiritual well-being.
+
+Non-Suppressible Urges
+There are thirteen natural urges. Suppression of which leads to many diseases as given below:
+• 
+Suppression of urge for urination leads to difficulty in passing urine, urinary stone, 
+atony of bladder and inflammation of urinary tract.
+• 
+Suppression of urge for passing stool leads to pain in abdomen, indigestion, gas in 
+abdomen, headache.
+• 
+Suppression of flatus leads to pain in abdomen, indigestion, heart diseases, constipation 
+or diarrhea.
+• 
+Suppression of ejaculation of semen may produce a stone (Spermato-lith), pain in testis 
+and difficulty in intercourse.
+• 
+Suppression of vomiting produces different types of diseases like urticaria, giddiness, 
+anaemia, hyperacidity, skin diseases and fever.
+• 
+Suppression of sneezing may produce rhinitis and chronic cold, headache, sinusitis and 
+diseases of respiratory system.
+• 
+Suppression of eructation leads to hiccough, pain in chest, cough and loss of appetite.
+• 
+Suppression of yawning leads to diseases of the eyes, throat, ear and nose.
+• 
+Suppression of hunger and thirst may lead to nutritional disorders and debility.
+• 
+Suppression of tears leads to mental disorders, pain in chest, giddiness and digestive 
+disorders.
+• 
+Suppression of respiration may cause suffocation, respiratory disorders, heart diseases 
+and even death.
+• 
+Suppression of sleep causes the diseases like insomnia, mental disorders, digestive 
+disorders and diseases of sense organs.
+Suppressible Urges
+One should suppress urges of greed, grief, fear, fury, pride, shamelessness, envy and
+excessive passion. Observe self-control and always speak truth. One should not harm others
+and should always act in a courteous and polite manner.
+• 
+Dietetic and behavioural bad habits should be given up and good' things should be taken 
+up gradually. An intelligent person who seeks happiness should make a great effort to 
+make good company and avoid the bad one.
+4. Preventive Cardiology-An overview
+More than 50% of the deaths and disability from heart disease and strokes, which together 
+kill more than 12 million people each year, can be cut down by a combination of simple and cost 
+effective national efforts and individual attentions to reduce major risk factors. 80% of all CVD 
+deaths worldwide occur in developing, low and middle income countries. CVD has become one 
+of the major leading causes of deaths in developing countries. It is estimated that 90% of CVD 
+is preventable. Prevention of CVD involves improving risk factors through: healthy eating, 
+exercise, avoidance of tobacco smoke and limiting alcohol intake.
+1 INI I INI I INI INI I INI I INI I III I INI I INI I INI INI I INI I INI I III I INI I INI I INI I III I INI I INI I INI INI I INI I INI I III I INI I INI I INI INI I INI
+
+As per Ayurveda, the food consumed by an individual is transformed in the intestinal 
+tract by the action of koshtagni i.e, digestive fire. Production of ahararasa, which is normal 
+in quality and quantity, depends upon the normalcy of koshtagni. The Rasa Dhatu is the 
+first Dhatu which gets formed from the Ahara Rasa i.e. nutrient portion of food after proper 
+digestion of food and is circulated by the action of vyana vayu throughout the body providing 
+nutrition to seven dhatus, viz, Rasa, Rakta, Mamsa, Medas, Asthi, Majja and Sukra. The organs 
+and channels through which this Rasa Samvahana (circulation) takes place are collectively 
+termed as Rasavaha Srotas and Hridaya along with the ten Mula Dhamanis (great vessels) are 
+considered as Mula (main organ) of this Srotas. In contrast, if the quality and quantity of Ahara 
+and /or Kostagni are not in appropriate condition, it leads to improper digestion of food and 
+subsequent formation of abnormal Rasa dhatu which has direct impact on Hridaya, the seat of 
+Rasavaha srotas. In other words, the indiscretions followed by human beings in terms of Ahara 
+(diet) and Vihara (lifestyle) can directly cause impairment of Agni and thus leads to formation 
+of vitiated rasa dhatu. This vitiated rasadhatu is not capable of performing its normal functions 
+of providing proper nutrition to seven dhatus in human body.
+According to Ayurveda, excessive consumption of food which is heavy to digest, dry, 
+cold and with bitter or astringent qualities, excessive physical exertion, altered patterns of 
+sleep including day sleep, forceful withholding of urges or initiation of urges, excessive 
+indulgence in purgation, emesis or enema procedures, mental stress, excessive fear, over 
+thinking, anxiety and indulgences in medications to counteract these things can be broadly 
+classified into Aharaja, Viharaja and Manasika factors which in turn vitiate the agni and 
+subsequently the rasadhatu. The impaired rasadhatu in circulation, in presence of impaired 
+agni at the levels of koshta and dhatus and vitiated vyana vayu, eventually paves the way for 
+metabolic disorders such as medoroga, sthoulya, prameha etc which are milestones in the 
+pathogenesis of hrid-vikara.
+The common causative/predisposing factors for hridrogas as described in authoritative 
+texts of Ayurveda are enumerated below so that these can be prevented for a healthy
+I INI I INI INI I INI I INI I III I INI I INI I INI INI I INI I INI I INI INI I INI I INI I III I INI I INI I INI INI I INI I INI I III I INI I INI I INI I III I INI I INI I
+heart.
+1. Excessive use of hot (Ushna), oily (Snigdha), spicy (Iikta) and fried food items.
+2.
+Excessive use of astringent (Kashaya rasa) and irritant (Tikshna) food items.
+3. Use of incompatible diet (viruddhaahara).
+4.
+Excessive physical exercise or lack of exercise.
+5.
+Excessive stress, fear and anger.
+6.
+Retention of natural urges (Adharniya Vega).
+7.
+Excessive fasting (Ati-karshari).
+8.
+Over eating and irregular food habits.
+9.
+Improper application of vasti and drastic purgatives.
+10. Excessive consumption of alcohol/tobacco/cigarette etc.
+11. Injury over chest ( Vaksha pradesh).
+
+Common Symptoms of Hridroga
+I INI I INI I INI INI I INI I INI I III I INI I INI I INI INI I INI I INI I III I INI I INI I INI I III I INI I INI I INI INI I INI I INI I III I INI I INI I INI INI I INI
+1. Anorexia (Aruchi)
+2.
+Dis-taste of mouth (Mukhavairasya)
+3. Nausea (Kaphotklesh)
+4.
+Increased thirst(Trishna)
+5.
+Dyspnoea (Shwas)
+6.
+Fainting (Murchha)
+7.
+Hiccough(Hikka)
+8.
+Chest pain (UrahShool)
+9.
+Cough (Kasa)
+10. Vomiting (Chhardi)
+11. Pallor/Cyanosis (Vivamata)
+12. Stupor (Pramoh)
+13. Coating inside throat (Galoplepa)
+14. Fever (Jwar)
+15. Productive Cough (KaphaShthivan)
+Food articles to be consumed /not to be consumed regularly
+Ayurveda prescribes specific diet patterns in the diseased conditions. According to the principles 
+of Ayurveda, derangement of the digestive power occurs in many diseases and hence it is 
+important to restore normalcy of the digestive power.
+Food articles to be consumed regularly
+Sr. No.
+Aahara Dravyas
+1.
+Sastika(type of Rice)
+A kind of rice harvested in sixty days
+2.
+Shali (type of Rice)
+Oryza sativum Linn
+3.
+Mudga (Pulse)
+Phaseolus mungo Linn.
+4.
+Saindhava (type of salt)
+Rock salt
+5.
+Amalaka(fruit)
+Emblica officinalis Gaertn.
+6.
+Antarika Jala
+Rain water
+7.
+Ghrita
+Ghee
+8.
+Jangala Masa (meat)
+Meat of animals dwelling in arid climate
+9.
+Madhu
+Honey
+
+^ ■Illlllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll
+Food articles not to be consumed regularly
+Sr.No.
+Aahara Dravyas
+1.
+Dadhi
+Curd
+2.
+Kurcika
+If milk cooked with curd or butter milk it will separate into liquid 
+and solid portion called as Kurcika
+3.
+KTlata
+The solid part separated form kurcika
+4.
+Kshara
+Alkaline preparations
+5.
+Shukta
+Mixing mastu(whey) with honey, jiggery, Kanji etc. and keep for 
+three days- the fermented preparation called as Sukta
+6.
+Aamamulaka
+Uncooked radish
+7.
+Krisha Aamisha
+Meat of emaciated animals
+8.
+Shuska Aamisha
+Dried meat
+9.
+Varaha Aamisha
+Pork
+10.
+Avi Aamisha
+Meat of sheep
+11.
+Go- Aamisha
+Beaf meat
+12.
+Matsya
+Fish
+13.
+Mahish Aamisha
+Meat of buffalo
+14.
+Masha
+Black gram
+15.
+Nishpava
+Bean
+16.
+Shaluka
+Tuberous root
+17.
+Bisa
+The fiber of lotus
+18.
+Payasa
+Sweets prepared by grinding cereals
+19.
+Virudha
+Sprouted seeds
+20.
+Shuska Shaka
+Dried leaves
+21.
+Yavaka
+Rice of Yavaka variety of paddy
+22.
+Phanita
+Molasses
+The unwholesome form of vegetables and fruits
+• 
+Vegetables infested with insects, exposed to wind and sun for long time, dried up, 
+old (Puraana) and unseasonal (Anartavam) are unwholesome. When they are cooked 
+without adding fat (Nisneha-Siddham) and residual water after boiling as not filtered out 
+(Aparistttam), vegetables becomes unwholesome for use.
+• 
+Fruits which are old, unripe, afflicted by insects and serpents, exposed to snow or sun 
+for long time, growing in the land and season other than the normal habitat and time and 
+putrefied are unwholesome.
+
+■I l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l
+5. Preventive / Therapeutic dietary and lifestyle measures as per Ayurveda
+Aharaja pathya (Dietary factors)
+Jurnahva 
+Shyamaka 
+Puranashali
+ShamiDhanya (Pulses)
+^
+ Adhaki(red gram- 
+Cajanuscajan),
+^
+ Kulattha (horse gram)
+(Dolichos biflorus Linn.) 
+should be taken with 
+bitter and astringent leafy 
+vegetables.
+^
+ Mudga(green gram) ( Vigna 
+radiata)) should be taken 
+with bitter and astringent 
+leafy vegetables.
+^
+ Makushtha (Vigna 
+aconitifolia)
+^
+ Chanaka (Cicer arietinum)
+Adhaki 
+Kulattha 
+Mudga
+Makushtha
+Chanaka
+Shuka Dhanya (Cereals)
+^
+ Kzva(Barley) (Hordeum 
+vulgare L.)
+^
+ Godhuma (wheat)(Triticum 
+vulgare Vill.)
+/
+'  
+Kodrava (grain variety)
+(Paspolum scrobiculatum)
+^
+ Uddalaka(forest variety of 
+kodrava)
+/
+* 
+Kangu (Seteria italica)
+^
+ Madhulika (Eleusine 
+coracana)
+/
+* 
+Jurnahva(Sorghum vulgare)
+^
+ Shyamaka (Echinochloa 
+frumentacea)
+^
+ Puranashali{old rice more 
+than one year after harvesting)
+Uddalaka 
+Kangu 
+Madhulika
+Godhuma
+Ayurveda based Diet and Life Style Guidelines for Prevention of Cardiac Disorders 
+| 
+
+Phala Varga (Fruits)
+^
+ Amalaki (Phyllanthus 
+emblica)
+Kapitha (Feronia limonia) 
+Parushaka (Grewia
+asiatica)
+Vrikshamla (Garcenia 
+morella)
+Bilva (Aegle 
+marmelos)
+Naranga (Oranges)
+Jambeera (Citrus 
+Lemon)
+Dadima (Punica 
+granatum}
+Arara(Mangifera
+indica)
+Badara (Ziziphus 
+jujuba)
+Milk & milk products
+^
+ Go Dugdha (Cow’s Milk) 
+treated with turmeric
+^
+ Takra (defatted-Butter milk)
+Cow s Milk) treated 
+Butter milk
+with turmeric
+Amalaki 
+Kapitha 
+Parushaka
+Oils
+^
+ Atasi(Linum usitatisimum) 
+^
+ Sarshapa (mustard)
+Atasi 
+Sarshapa
+Naranga
+I  
+'
+Amra
+Bilva
+Dadima
+Jambeera
+Badara
+
+■I l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l l
+Spices
+Maricha (black Pepper) 
+^
+ Tvak (Cinnamon)
+^
+ Lashuna (Garlic)
+/
+Shunthi (Dry Ginger)
+^
+ Dhanyaka (Coriandrum) 
+^
+ Jeeraka (Cumin seeds) 
+^
+ Methika (Fenugreek)
+Udvartan (Dry Massage 
+with Powder)
+Snana (Bath)
+Chankramana (Walking)
+Exercise
+Yoga
+Optimum activity
+Haridra 
+Maricha 
+Tvak 
+Lashuna
+Dhanyaka 
+Shunthi 
+Jeeraka 
+Methika
+Udvartan(Dry Massage 
+Chankramana (Walking) 
+with Powder)
+Exercise 
+Yoga
+Ayurveda based Diet and Life Style Guidelines for Prevention of Cardiac Disorders 
+| 
+
+Restricted Use
+Aharaja Apathya (Dietary factors to be avoided in excess)
+Shuka /)/?a/ijfl(Cereals)
+White Newly harvested 
+Rice (within One year) & its 
+preparations, Aromatic Rice 
+(Basmati)
+Maida & its preparations
+Bread, Noodles, Pasta, Maida 
+biscuits, Maida
+Maida Chapati, Maida Barfi, 
+Puri
+Newly Harvested Rice
+Bread
+Noodles
+Pasta
+Maida Biscuits
+Maida Chapati 
+Maida Barfi 
+Puri
+Rajamasha
+Mamsa Varga (Non-veg)
+✓
+Gramyaudakanuparasa
+(meat soup of the domestic, 
+aquatic and marshy animals)
+Meat soup of pork, buffalo, 
+fish etc.
+Gramya udaka nupa rasa pork 
+fish
+Shami Dhanya (Pulses)
+^
+ Black Tila(Sesame)J\/[asha 
+(Udad/ black gram & its 
+preparations
+^
+ Rajamasha (Cow pea), Matara 
+(Pea)
+Black Tila
+Masha
+
+■Illlllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll
+✓
+✓
+✓
+Shaka Varga: Kanda (tubers)
+Potato, sweet potato, beetroot, 
+cabbage and its preparations
+French fries, Chips, Alutikki
+Potato
+sweet potato 
+beetroot
+French fries 
+Chips
+Alutikki
+MadyaVarga ( Drink)
+^
+ Navamadyapana(freshly 
+brewed alcoholic drinks) 
+Sweet alcoholic drinks -Red 
+wine is suggested to be good 
+for heart
+✓
+Better to avoid all kinds of 
+alcohol
+Navamadyapana
+Pana (Water)
+✓
+Varsha Ritu Jala, Soft drinks, 
+Soda, Cold drinks
+Sweet fruit juices
+i Ii Ah if_ul
+Soft drinks, Soda, Cold drinks
+Sweet fruit juices
+
+Lifestyle factors to be avoided in excess
+Viharaja Apathy a (Lifestyle factors to be avoided in excess)
+^
+ Atimatrasevana (excessive eating)
+^
+ Aasyasukham (enjoying the pleasure 
+of continuous sitting)
+^
+ Swapnasukham (enjoying the 
+pleasure of excessive sleeping )
+^
+ Avyayam (lack of exercise and 
+physical activity )
+2)/wflsw«/>«(sleeping in the daytime/ 
+afternoon)
+v4a/asya(laziness)
+Tobacco smoking
+
+6. Cardiac Risk Factors -Preventive Cardiology 
+Non modifiable risk factors
+1. Advancing age.
+2. Genetic predisposition.
+Modifiable risk factors
+1 INI I INI I INI INI I INI I INI I III I INI I INI I INI INI I INI I INI I III I INI I INI I INI I III I INI I INI I INI INI I INI I INI I III I INI I INI I INI INI I INI
+1.
+Sedentary life style.
+2.
+Hypertension.
+3.
+Type-II Diabetes mellitus.
+4.
+Dyslipidemia / Lipid disorders.
+5.
+Overweight/Obesity.
+6.
+Metabolic syndrome.
+7.
+Smoking/alcohol consumption.
+Emerging risk factors
+1. Infections due to helicobacter pylori and Chlamydia pneumonia.
+2. Calcium supplementation.
+3. Vitamin D deficiency.
+4. Anti-phospholipids Syndrome.
+5. Premature Births/Low Birth weight.
+The Ayurvedic guidelines for modifiable risk factors i.e. Madhumeha(Diabetes), Sthaulya 
+(Obesity), Uchcharaktachap(Hypertension) and Medoroga (Dyslipidaemia) are given 
+below.
+
+6.1 Madhumeha (Diabetes)
+A condition characterised by excess (prabhut) elimination of turbid (avil) mutra( urine) is 
+termed as prameha. Prameha is mentioned as Santarpanjanyavyadhi i.e. disease caused by over 
+eating and sedentary lifestyle. Madhumeha (Diabetes mellitus) is mentioned as a special variety 
+of Vataja Prameha. Acharya Sushrutha and Vagbhatta mentioned that if all pramehas when left 
+untreated/not treated properly may eventually get converted to Madhumeha. Madhumeha is 
+also termed as Ojomeha & Kshaudrameha.
+Causes
+1. Excessive sleeping (Swapnasukham), lack of physical activity or exercise (Aasyasukham).
+2. Excessive intake of sweet, sugar (Gudavaikrit), milk (payah), dairy products (Dadhi).
+3. Excessive intake of carbohydrate rich diet especially newly harvested e.g. rice, maida
+etc (Nava annapana).
+4. Excessive or regular intake of fried or oily food items.
+5. Psychological factors like fear, grief, anger etc.
+6. Children of parents suffering from Madhumeha are more likely to have this disease. 
+Symptoms
+• 
+Excessive and frequent urination (Prabhuta mutrata)
+• 
+Passing of turbid urine (Avila mutrata)
+• 
+Excessive thirst (Pipasa -  Trishna) and hunger
+• 
+Buming/Tingling/Pricking sensation in the hands or feet (Hasta padasuptata)
+• 
+Feeling of tiredness (Alasya)
+Preventive Measures as per Ayurveda
+Pathya (Do’s)
+• 
+Timely intake of diet.
+• 
+Intake of old harvested cereals, barley (Yava), Sorghum (Jowar), whole wheat atta, 
+bitter gourd (Karela), green leafy vegetables; garlic (Lasuna), turmeric (Haridra), aloe 
+(Kumari) among vegetables and fruits like Guava, Oranges, Indian Blackberry (Jamun) 
+etc. may be useful.
+• 
+Reduce intake of rice, food rich in carbohydrate and fried or processed food.
+• 
+Regular exercise especially walking
+• 
+Regular practice of Yoga, Meditation etc. under the supervision of Yoga specialist is
+suggested.
+Apathya (Don’ts)
+• 
+Sugarcane juice, jaggery, sugar and milk products.
+• 
+Sedentary lifestyle.
+• 
+Sleeping in the day time and excessive sleeping
+I INI I INI INI I INI I INI I III I INI I INI I INI INI I INI I INI I INI INI I INI I INI I III I INI I INI I INI INI I INI I INI I III I INI I INI I INI I III I INI I INI I
+
+• 
+Alcohol consumption
+• 
+Prolonged fasting
+• 
+Cold drinks, Ice cream, burger- pizza and other fast foods etc.
+The role of ahara (dietary regimen) & vihara (lifestyle) are equally important in diabetes 
+to control blood sugar level as well as to prevent complications of this disease.
+1 INI I INI I INI INI I INI I INI I III I INI I INI I INI INI I INI I INI I III I INI I INI I INI I III I INI I INI I INI INI I INI I INI I III I INI I INI I INI INI I INI
+Ayurveda based Diet and Life Style Guidelines for Prevention of Cardiac Disorders 
+| 
+
+6.2 Uchcharaktachapa (Hypertension)
+As per Ayurveda, the disease is supposed to be Vataja probably due to Vaishamya 
+(imbalance) of Vyanavayu. Cardiac functions (Hridayadharan) are regulated mainly by Vata 
+particularly Vyana (responsible for Praspandana, Asriksravana) and Prana (responsible for 
+Raktaanudhavand). Associated conditions like Palpitation (Hridrava), Headache (Shirahashula), 
+Vertigo (Bhrama), Insomnia (Nidranasha), Tinnitus (Kama nada) are described as VatajaVikara 
+in Ayurveda.
+Some similar situations are described in Ayurvedic texts under Raktagatavata, 
+Raktavritavata, Pittavritavata.
+Causes
+1. Obesity.
+2. Sedentary lifestyle and lack of physical exercise.
+3. Excessive intake of oily, salty, sour and spicy food items.
+4. Excessive alcohol consumption and smoking.
+5. Psychological factors such as stress, anxiety, anger etc.
+Symptoms
+Any of the following symptom/s may be present -
+• 
+Headache, Vertigo
+• 
+Breathlessness
+• 
+Discomfort/Pain in chest
+• 
+Irritability
+• 
+Nausea, vomiting
+• 
+Loss of appetite
+• 
+Bleeding from nose
+• 
+Haziness of vision
+• 
+Swelling in legs and under eyes
+• 
+Feeling of burning sensation and/or numbness in hands and feet.
+• 
+Feeling of tiredness, restlessness
+Preventive Measures as per Ayurveda
+Pathya{Do’s)
+• 
+Barley(Kzva), sorghum( Jowar), wheat, green gram(Mudga/Moongdat), horse gram, moringa 
+(Shigru), Bitter gourd (karela), bottle gourd(Ghia/ Lauki), turnip(Shalgam), carrot(Gajar), 
+radish(Muli), Indian gooseberry (Amla), cucumber(K7z/ra), black grapes(Draksha), 
+pomegranate(^4«ar), apple, pineapple, cold milk etc.
+• 
+Reduce intake of oily, salty, sour and spicy food items.
+I INI I INI INI I INI I INI I III I INI I INI I INI INI I INI I INI I INI INI I INI I INI I III I INI I INI I INI INI I INI I INI I III I INI I INI I INI I III I INI I INI I
+
+• 
+Timely intake of balanced diet and increase the quantity of fruit and vegetable intake .
+• 
+Weight reduction
+• 
+Timely sleeping and awakening.
+• 
+Regular blood pressure check-up.
+• 
+Regular physical exercise.
+• 
+Daily brisk walking for half an hour.
+• 
+Regular practice of Yoga, Meditation etc. under the supervision of Yoga expert. 
+Apathya(Don’t%)
+• 
+Excessive intake of salt (sprinkling over salad, curd etc.)
+• 
+Excessive use of butter, ghee, chilies (red-green), pickles, bengal gram, sour fruits, curd, 
+tea, coffee etc.
+• 
+Intake of animal fat, processed/oily food items.
+• 
+Alcohol consumption and smoking.
+• 
+Practice of day sleeping and awakening at night.
+1 INI I INI I INI INI I INI I INI I III I INI I INI I INI INI I INI I INI I III I INI I INI I INI I III I INI I INI I INI INI I INI I INI I III I INI I INI I INI INI I INI
+Ayurveda based Diet and Life Style Guidelines for Prevention of Cardiac Disorders 
+| 
+
+6.3 Sthaulya (Obesity)
+Atisthaulya (Obesity) is considered and described as one of the Ashta ninditiya purusha 
+(eight despicable conditions) by Charaka [28]. A person with excessive accumulation of Meda 
+(fat/adipose tissue) and Mamsa (flesh/muscle tissue) leading to flabbiness of hips, abdomen, 
+and breast has been categorized as Atisthula. It is considered as one of the Santarpanottha
+Vikaras (disease due to over calories) in Ayurveda. Medodushti (disorders of fat metabolism)
+may be one of the risk factors for Ischemic Heart Disease (IHD).
+Causes
+1. Sedentary lifestyle
+2. Excessive and frequent intake of food.
+3. Excessive intake of oily, sweet, cold, heavy food items.
+4. Lack of physical activity / exercise.
+5. Day sleeping.
+6. Children of obese parents are likely to be obese.
+7. Mental worries and exhaustive mental activities.
+Symptoms
+1. Breathlessness even on little exertion / physical activity.
+2. Lack of interest in doing work.
+3. Profuse sweating with foul body odor.
+4. Excessive hunger.
+5. Feeling of tiredness.
+6. Excessive sleep.
+Preventive Measures as per Ayurveda
+Pathya (Do’s,)
+1. Intake of regular and balanced diet.
+2. Use of lukewarm water (Ushnodaka) for drinking.
+3. Use of Barley (Yava), Sorghum (Jowara), Indian gooseberry (Amla),Old Honey (Mad.hu) 
+and defatted Butter milk (Takra)
+4. Use of Green gram (Moong), Horse gram (Kulathi), Bengal gram (Ghana) and Spilt Red 
+Gram (Arhar)
+5. Plenty of green leafy vegetables and fruits
+6. Fibrous food items
+7. Brisk walking and jogging in fresh air every day in early morning
+I INI I INI INI I INI I INI I III I INI I INI I INI INI I INI I INI I INI INI I INI I INI I III I INI I INI I INI INI I INI I INI I III I INI I INI I INI I III I INI I INI I
+
+8. Regular exercise, physical activity
+9. Worrying
+10. Practice of Yoga & Naturopathy in consultation with a specialist 
+Apathy a (Don’ts)
+1. Frequent and excessive intake of oily / heavy food items(Guru-snigdhaatisevana)
+2. Sleeping in day time (Diva-swapna)
+3. Sleeping immediately after taking meals
+4. Canned food products
+5. Sedentary lifestyle (Asyasukham).
+6. Junk food like burger, pizza, cold drinks and fried food items
+1 INI I INI I INI INI I INI I INI I III I INI I INI I INI INI I INI I INI I III I INI I INI I INI I III I INI I INI I INI INI I INI I INI I III I INI I INI I INI INI I INI
+Ayurveda based Diet and Life Style Guidelines for Prevention of Cardiac Disorders 
+| 
+
+7. Diet Chart for Vata Prakriti Purush
+Meal/ time
+Menu
+Quantity
+Nuts - 
+Almond
+6-7
+Early morning
+Walnuts
+1-2
+Lemon tea / Green Tea/ Light tea with milk
+1 cup (200 ml.approx.)
+Breakfast
+Fruits- Apple/Anar/ Banana
+Daliya /Cornflakes / poha / upma / oat meal
+Milk and milk products 250 ml
+1 nos.
+1 bowl
+Idli / dosa
+2-3 nos.
+Roti
+Boiled Brown rice with starch
+2-3 nos 
+1 bowl
+Lunch
+Green vegetable (Lauki,Tinda, Torai, 
+cabbage, Spinach etc.)
+Mudga Dal (Preferably whole legume)
+1 bowl
+Takra (Butter milk) or Skimmed Curd
+1 bowl
+Apple/Anar/ any citrus fruit
+Evening
+Fruits-,Papaya, Guava ,Pineapple
+lnos./ bowl
+Roasted chana /Dhokala
+1 Bowl
+Roti /Missi roti
+1-2 nos
+Dinner
+Green vegetable (Lauki,Tinda, Torai, 
+cabbage,Methi,Bathua ,Carrot,Spinach etc.)
+Paneer /Dal
+1 bowl
+Salad (Carrot, Tomato, cucumber, Ginger, 
+Amalaki etc).
+1 bowl
+Bed Time
+Milk
+1-250 
+.
+
+Ill I INI I INI I INI INI I INI I INI I III I INI I INI I INI INI I INI I INI I III I INI I INI I INI I III I INI I INI I INI INI I INI I INI I III I INI I INI I INI INI I INI
+8. Diet Chart for Pitta Prakriti Purush
+Meal/ time
+Menu
+Quantity
+Nuts - 
+Almond
+6-7 nos.
+Early
+Khaijura
+1-2 nos.
+morning
+Milk /Coconut Water
+1 cup (200-250 ml)
+Fruit: Banana /Apple
+1 bowl
+Breakfast
+Daliya with milk/ 6poha/ upama
+Idali/dosa
+3 /I nos
+Roti
+2-3 nos
+Boiled Brown rice with starch
+1 bowl
+Lunch
+Green vegetable (Lauki,Tinda, Torai, cabbage,
+1 bowl
+cauliflower, broccoli,Spinach etc.) 
+Dal (Preferably whole legume) 
+Skimmed Curd
+1 bowl
+Fruits- Apple/Anar/ any citrus fruit,Papaya,
+lnos
+Evening
+Guava,Pineapple
+Roasted cereals - Roasted chana / com etc.
+1 Bowl
+Dhokala / murmurachat
+2 nos/1 bowl
+Roti /Missi roti
+1-2 nos
+Dinner
+Green vegetable (Lauki,Tinda, Torai, cabbage,
+1 bowl
+Spinach etc.)
+1 bowl
+Paneer /Dal
+1 bowl
+Bed Time
+Milk with Mishri / Khand
+200-250 ml.
+Ayurveda based Diet and Life Style Guidelines for Prevention of Cardiac Disorders 
+| 
+
+9 . Diet Chart for Kapha Prakriti Purush
+Meal/ time
+Menu
+Quantity
+Early
+Nuts - 
+Almonds
+6-7 nos.
+morning
+Walnuts
+l-2os.
+Honey Lemon with warm water / coffee / 
+lemon tea
+1 cup
+Breakfast
+Fruits- Apple/Anar/ any citrus fruit
+1 nos.
+Besancheela / Vegetable stuffed Roti / 
+Cornflakes with milk / poha/ upama
+1 bowl
+Idali/ dosa
+3/1 nos.
+Lunch
+Roti / missi roti /multi grain roti
+2-3 nos
+Boiled Brown rice with starch
+1 bowl
+Green vegetable (Lauki,Tinda, Torai, cabbage, 
+Methi, Bathua,Spinach etc.)
+1 bowl
+Paneer /Dal - Chana and mudga dal (Preferably 
+whole legume)
+1 bowl
+Evening
+Fruits- Apple, Anar, any citrus fruit,Papaya, 
+Guava,Pineapple
+lnos./ bowl
+Roasted chana /Dhokala / murmura chat 
+Tea / Coffee
+1 Bowl / 2 nos. 
+1 cup
+Dinner
+Roti /Missi roti
+1-2 nos
+Green vegetable (Lauki,Tinda, Torai, cabbage, 
+Methi, Bathua, Spinach etc.)
+1 bowl
+Paneer /Dal
+1 bowl
+Bed Time
+Milk without sugar
+200-250 ml.
+
+References
+1. 
+Srikanth N. Haripriya N., Singh Renu, Manjula ,Tewari Devesh, Diabetes Mellitus 
+(Madhumeha) And Ayurvedic Management: An Evidence Based Approach, World 
+Journal Of Pharmacy And Pharmaceutical Sciences, Volume 4, Issue 08, 881-892.
+2. 
+Rao TP, Sakaguchi N, Juneja LR, Wada E, Yokozawa T (2005). “Amla (Emblica 
+officinalis Gaertn.) extracts reduce oxidative stress in streptozotocin-induced diabetic 
+rats”. JM ed Food. 8 (3): 362-8.
+3. 
+Bhattacharya, A.; Chatteijee, A.; Ghosal, S.; Bhattacharya, S. K. (1999). “Antioxidant 
+activity of active tannoid principles of Emblica officinalis (amla)”. Indian journal of 
+experimental biology. 37 (7): 676-680.
+4. 
+Habib-ur-Rehman, Yasin KA, Choudhary MA; et al. (Jul 2007). “Studies on the 
+chemical constituents of Phyllanthus emblica”. Nat. Prod. Res. 21 (9): 775-81. Yadav, 
+A. K. (1999). Phalsa: A Potential New Small Fruit for Georgia, pp.348-352 in: Janick, 
+J. (ed.). Perspectives on new crops and new uses.
+5. 
+Govindachari, 
+TR; 
+Premila 
+MS 
+(1983). 
+“Some 
+alkaloids from 
+Aegle 
+marmelos”. Phytochem. 22. 3: 755-757.
+6. 
+Sharma, BR; Rattan RK; Sharma P (1981). “Marmeline, an alkaloid, and other 
+components of unripe fruits o f Aegle marmelos”. Phytochem. 20. 11: 2606—2607.
+7. 
+Mathew George*, Lincy Joseph, Sreelakshmi R (2016) Evaluation of Antidepressant 
+and Antianxiety activity of Ethanolic leaf extract of Aegle marmelos , Vol. 6 (1)| 012- 
+014
+8. 
+Gonzalez CA, Sala N, Rokkas T (2013). “Gastric cancer: epidemiologic 
+aspects”. Helicobacter. 18 (Supplement 1): 34—38.
+9. 
+Singh, R. P.; Chidambara Murthy, K. N.; Jayaprakasha, G. K. (2002). “Studies on the 
+Antioxidant Activity of Pomegranate (Punicagranatum) Peel and Seed Extracts Using in 
+Vitro Models”. Journal of Agricultural and Food Chemistry. 50 (1): 81-6.
+10. K. K. Jindal; R. C. Sharma (2004). Recent trends in horticulture in the Himalayas. Indus 
+Publishing. ... bark of tree and rind of fruit is commonly used in ayurveda ... also used 
+for dyeing...
+11. Negi, P. S.; Jayaprakasha, G. K.; Jena, B. S. (2003). “Antioxidant and antimutagenic 
+activities of pomegranate peel extracts”. Food Chemistry. 80 (3): 393.
+12. Singh KK, Mridula D, Rehal J, Bamwal P (2011). “Flaxseed: a potential source of food, 
+feed and fiber”. Crit Rev Food Sci Nutr. 51 (3): 210-22.
+13. Chen, Z-Y. “Oxidative stability of flaxseed lipids during baking”. Journal of the 
+American Oil Chemists’ Society. 71: 629—632.
+14. Vaughn, A. R.; Branum, A; Sivamani, R. K. (2016). “Effects of Turmeric (Curcuma 
+longa) on Skin Health: A Systematic Review of the Clinical Evidence”. Phytotherapy 
+Research. 30 (8): 1243-64.
+15. Daily, J. W.; Yang, M; Park, S (2016). “Efficacy of Turmeric Extracts and Curcumin for
+1 INI I INI I INI INI I INI I INI I III I INI I INI I INI INI I INI I INI I III I INI I INI I INI I III I INI I INI I INI INI I INI I INI I III I INI I INI I INI INI I INI
+
+Alleviating the Symptoms of Joint Arthritis: A Systematic Review and Meta-Analysis 
+of Randomized Clinical Trials”. Journal of Medicinal Food. 19 (8): 717-29.
+16. Nagpal M, Sood S (2013). “Role of curcumin in systemic and oral health: An 
+overview”. J Nat Sci Biol Med. 4 (1): 3-7Srinivasan K (2007). “Black pepper and its 
+pungent principle-piperine: a review of diverse physiological effects”. Crit Rev Food 
+Sci Nutr. 47 (8): 735^8.
+17. Jayaprakasha, G. K.; Rao, L. J. (2011). “Chemistry, biogenesis, and biological activities 
+of Cinnamomumzeylanicum”. Critical Reviews in Food Science and Nutrition. 51 (6): 
+547-6
+18. Ried K, Toben C, Fakler P (May 2013). “Effect of garlic on serum lipids: an updated 
+meta-analysis”. Nutrition Reviews. 71 (5): 282-99.
+19. Rohner, Andres; Ried, Karin; Sobenin, Igor A.; Bucher, Heiner C.; Nordmann, Alain 
+J. (1 March 2015). “A systematic review and meta-analysis on the effects of garlic 
+preparations on blood pressure in individuals with hypertension”. American Journal of 
+Hypertension. 28 (3): 414—423.
+20. Marx, WM; Teleni L; McCarthyAL; Vitetta L; McKavanagh D; Thomson D; Isenring E. 
+(2013). “Ginger (Zingiberofficinale) and chemotherapy-induced nausea and vomiting: a 
+systematic literature review”. Nutr Rev. 71 (4): 245-54.
+21. Daily, James W.; Zhang, Xin; Kim, Da Sol; Park, Sunmin (2015-12-01). “Efficacy 
+of Ginger for Alleviating the Symptoms of Primary Dysmenorrhea: A Systematic 
+Review and Meta-analysis of Randomized Clinical Trials”. Pain Medicine (Malden, 
+Mass.). 16 (12): 2243-2255.
+22. Iacobellis, Nicola S.; et al. (2005). “Antibacterial Activity of Cuminumcyminum L. and 
+Carumcarvi L. Essential Oils”. Journal of Agricultural and Food Chemistry. 53 (1): 
+57-61.
+23. Gong, J; Fang, K; Dong, H; Wang, D; Hu, M; Lu, F (2 August 2016). “Effect of 
+Fenugreek on Hyperglycaemia and Hyperlipidemia in Diabetes and Prediabetes: a 
+Meta-analysis”. Journal of Ethnopharmacology. 194: 260-268.
+24. Pappachan MJ. Increasing prevalence of lifestyle diseases: high time for action. Indian 
+J Med Res. 2011;134:143-5. [PMC free article] [PubMed]
+25. Datta Chakrapani,CharakaSamhita Ayurveda Deepika commentary:Sutrasthana 28/45, 
+Chaukhamba Sanskrit Sansthan,Varanasi, India. (1994)
+26. Vaidya: Lai Chandra, Astanga Hridaya Sarvanga Sundari Tika commentary Sutra 13/25, 
+Motilal Banarasi Das Varanasi, India. (1963)
+27. Traditional Systems of Medicine for Primary Health care: Training Manual for 
+Paramedics and other Health care Providers„CCRAS2008-2009
+28. Datta Chakrapani,CharakaSamhita Ayurveda Deepika commentary:Sutrasthana 5/7, 
+Chaukhamba Sanskrit Sansthan, Varanasi, India. (1994)
+29. Yadavji Trikamji (edtr) Dalhana, Sushruta Samhita, Nibandhasangraha,: Sutra 46/465- 
+466, Chaukhamba Orientalia,Varanasi, India. (1980)
+I INI I INI INI I INI I INI I III I INI I INI I INI INI I INI I INI I INI INI I INI I INI I III I INI I INI I INI INI I INI I INI I III I INI I INI I INI I III I INI I INI I
+
+■Illlllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll
+30. Vaidya: Lai Chandra, Astanga Hridaya Sarvanga Sundari Tika commentary Sutra 7/44, 
+Motilal Banarasi Das Varanasi, India. (1963)
+31. Vaidya Pt. Lalchand Shastri, Ashtanga Sangraha Hindi commentary (vol 1): Sutra Sthana 
+9/4, Baidyanath Ayurved Bhavanpvt. Ltd, Kolkata, India. (1965)
+32. Datta Chakrapani, Charaka Samhita Ayurveda Deepika commentary Vimanasthana 
+1/24-25:, Chaukhamba Sanskrit Sansthan,, Varanasi, India(1994)
+33. Sharma A. K. Jain Avinash, Jain, Seema, Kayachikitsa, Part II, chapter 9/118, 122,136 
+Chaukhamba Orientalia,, Varanasi, India(2008)
+34. Draft guidelines & training manual forlntegration of AYUSH (Ayurveda) with national 
+program for prevention and control of cancer, diabetes, cardiovascular diseases and stroke 
+(NPCDCS), CCRAS, Ministry of AYUSH, Govt, of India, New Delhi in collaboration 
+with, Directorate General of Health Services,Ministry of Health and Family Welfare, 
+Govt, of India
+35. Agnivesha, Charaka, Dridhabala, Charaka Samhita, Sutra Sthana, Ashtauninditeeya 
+Adhyaya, 21/3.5th ed. VaidyaJadavajiTrikamji Aacharya, editor. Varanasi: Chaukhamba 
+Sanskrit Sansthan; 2009. p. 116
+Ayurveda based Diet and Life Style Guidelines for Prevention of Cardiac Disorders 
+| 
+
+Experts Involved in Development of Guidelines and Consultative Process
+Chief Editor
+Prof. Vaidya K. S. Dhiman
+Director General | Central Council for Research in Ayurvedic Sciences | New Delhi 
+Executive Editor 
+Dr.N.Srikanth
+Deputy Director General | Central Council for Research in Ayurvedic Sciences | New Delhi 
+Associate Editors 
+Dr.Bharti
+Assistant Director (Ayu.) | Central Council for Research in Ayurvedic Sciences | New Delhi 
+Dr.Babita Yadav
+Research Officer (Ayu.) | Central Ayurveda Research Institute for Cardiovascular Diseases |New 
+Delhi
+Contributors for content development
+1. Dr. B. C. S. Rao
+Assistant Director (Ayu.) | Central Council for Research in Ayurvedic Sciences | New Delhi
+2. Dr. Seema Jain
+Research Officer (Ayu.) | Central Ayurveda Research Institute for Cardiovascular Diseases |New 
+Delhi
+3. Dr. Jai Prakash Ram
+Research Officer (Ayu.) | Central Ayurveda Research Institute for Cardiovascular Diseases |New 
+Delhi
+Members of National Consultation
+1. Dr. R.H.Singh
+Emeritus Scientist, Varanasi|
+2. Prof. Murlikrishna
+PG Dept, of Panchkarma| S.V.Ayurvedic College |Tirupati
+
+CENTRAL COUNCIL FOR RESEARCH IN AYURVEDIC SCIENCES
+Ministry of AYUSH (Government of India)
+Jawahar Lai Nehru Bhartiya Chikitsa Evam Homeopathy Anusandhan Bhawan, 
+No. 61-65, Institutional Area, Opp. “D” Block, Janakpuri, New Delhi-110058 
+Tele.: 91-11-28524457, Fax: 91-11-28520748 
+Email: dg-ccras@nic.in, Website : www.ccras.nic.in
+Printed at: J.K. Offset Graphics (P) Ltd., New 
+Delhi
