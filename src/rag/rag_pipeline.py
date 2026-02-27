@@ -78,8 +78,8 @@ class RAGPipeline:
             return question, "other"
 
     def _is_affirmative(self, text):
-        value = (text or "").lower()
-        return any(word in value for word in ["yes", "yeah", "ok", "sure", "please", "remedies"])
+        value = (text or "").strip().lower()
+        return value in {"yes", "yeah", "ok", "okay", "sure", "please"}
 
     def _extract_age(self, conversation_history):
         age_match = re.search(r"\b(\d{1,3})\b", conversation_history or "")
@@ -159,14 +159,18 @@ class RAGPipeline:
         report_payload = f"Differential report: {json.dumps(differential, ensure_ascii=False)}"
 
         if escalation_required:
+            memory.waiting_remedies_consent = True
             return self.generator.generate(report_payload, reranked_chunks, conversation_history, mode="escalation")
 
         if low_confidence or high_uncertainty or self_check.get("overconfident") or self_check.get("missing_differentials"):
+            # Always enter remedies consent state after diagnosis
+            memory.waiting_remedies_consent = True
+
             if final_attempt:
-                memory.mark_complete()
                 return self.generator.generate(report_payload, reranked_chunks, conversation_history, mode="uncertain_final")
             return self.generator.generate(report_payload, reranked_chunks, conversation_history, mode="uncertain")
 
+        # After diagnosis, go directly to remedies (skip the more info step)
         memory.waiting_remedies_consent = True
         return self.generator.generate(report_payload, reranked_chunks, conversation_history, mode="diagnosis")
 
@@ -201,6 +205,7 @@ class RAGPipeline:
             remedy_chunks = self.retriever.retrieve(remedy_query, k=config.K_RERANK, source_filter=source_filter)
             return self.generator.generate(remedy_query, remedy_chunks, conversation_history, mode="remedies")
 
+        # Handle remedies consent flow - go directly to remedies after diagnosis
         if memory.waiting_remedies_consent:
             if self._is_affirmative(question):
                 memory.waiting_remedies_consent = False
@@ -216,12 +221,11 @@ class RAGPipeline:
                 remedy_chunks = self.retriever.retrieve(remedy_query, k=config.K_RERANK, source_filter=source_filter)
                 return self.generator.generate(remedy_query, remedy_chunks, conversation_history, mode="remedies")
 
+            # If user says NO, end the session with bye message
             memory.waiting_remedies_consent = False
             memory.mark_complete()
-
-            def farewell_gen():
-                yield "Please let me know if you need anything else. Goodbye!"
-            return farewell_gen()
+            bye_message = "Thank you for consulting with us. Take care and hope I helped! Goodbye."
+            return bye_message
 
         if memory.diagnosis_complete:
             return self.generator.generate(question, reranked_chunks, conversation_history, mode="final")
@@ -236,3 +240,4 @@ class RAGPipeline:
             return self.generator.generate(question, reranked_chunks, conversation_history, mode="gathering")
 
         return self._run_differential_decision(question, reranked_chunks, conversation_history, memory, final_attempt=True)
+

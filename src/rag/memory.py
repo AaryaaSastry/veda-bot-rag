@@ -7,7 +7,9 @@ class ConversationMemory:
         self.max_turns = max_turns
         self.user_turn_count = 0
         self.diagnosis_complete = False
+        self.remedies_provided = False
         self.waiting_remedies_consent = False
+        self.waiting_more_info_consent = False  # Track if user was asked about more info
         self.waiting_treatment_risk_profile = False
         self.treatment_risk_profile_collected = False
         self.last_diagnosis = None

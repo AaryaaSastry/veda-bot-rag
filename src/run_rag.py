@@ -10,18 +10,20 @@ Features:
 - Automatic evaluation report generation
 """
 
+
 import os
 import json
 from datetime import datetime
 from rag.rag_pipeline import RAGPipeline
 from rag.memory import ConversationMemory
 from rag.metadata_enricher import enrich_chunks_with_metadata
+from utils.env_utils import get_api_key
 
 # Get the project root directory (parent of src/)
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 VECTOR_DB_PATH = os.path.join(PROJECT_ROOT, "data", "embeddings")
 EVALUATION_DIR = os.path.join(PROJECT_ROOT, "data", "evaluations")
-API_KEY = "AIzaSyBEsINh-jay9q0M6HDVlXk-TU3SfY-N9x0"
+API_KEY = get_api_key()
 
 BOOK_1 = "ayurvedic_treatment_file1.pdf"
 BOOK_2 = "Ayurvedic-Home-Remedies-English.pdf"
@@ -166,17 +168,15 @@ if __name__ == "__main__":
             is_safe, safety_result = pipeline.check_safety(user_input)
             
             if not is_safe:
-                print("\n⚠️ MEDICAL SAFETY ALERT")
-                print("The symptoms you described may indicate a serious condition.")
-                print("Matched risks:", safety_result["matched_risks"])
-                print("\nPlease seek immediate medical attention.")
-                print("This AI is not a substitute for professional medical care.")
+                # Instead of showing alert, ask user to explain more symptoms
+                follow_up_question = "Could you please describe your symptoms in more detail? For example, when did it start, what makes it better or worse, and do you have any other symptoms?"
+                print(f"\nAI: {follow_up_question}")
                 
-                # Log the safety alert
+                # Log the safety alert but continue the session
                 evaluator.log_turn(
                     turn_number=memory.user_turn_count + 1,
                     user_input=user_input,
-                    assistant_response="[SAFETY ALERT - Session terminated]",
+                    assistant_response=follow_up_question,
                     safety_check=(is_safe, safety_result)
                 )
                 continue
@@ -206,11 +206,21 @@ if __name__ == "__main__":
                 retrieval_query=retrieval_query
             )
             
+            # Log the turn
+            evaluator.log_turn(
+                turn_number=memory.user_turn_count,
+                user_input=user_input,
+                assistant_response=full_response,
+                safety_check=(is_safe, safety_result),
+                retrieval_query=retrieval_query
+            )
+            
             # Log diagnosis if completed
             if memory.last_diagnosis:
                 evaluator.log_diagnosis(memory.last_diagnosis)
 
-            if memory.diagnosis_complete:
+            # Check if session should end (diagnosis complete or bye message)
+            if memory.diagnosis_complete or "hope I helped" in full_response.lower() or "goodbye" in full_response.lower():
                 print("\n--- Session Complete ---")
                 break
     

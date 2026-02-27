@@ -37,7 +37,12 @@ class Generator:
             text = (chunk.get("text", "") or "").strip()
             if len(text) > max_chars_per_chunk:
                 text = text[:max_chars_per_chunk].rstrip() + "..."
-            parts.append(f"Source {i+1}:\n{text}")
+            # Get the source filename from the chunk metadata
+            source = chunk.get("source", "Unknown")
+            # Clean up source name (remove .pdf extension)
+            if source.endswith(".pdf"):
+                source = source.replace(".pdf", "")
+            parts.append(f"Source {i+1} ({source}):\n{text}")
         return "\n\n".join(parts)
 
     def _extract_previous_questions(self, conversation_history):
@@ -268,32 +273,218 @@ QUESTION RULES:
 4. DO NOT provide treatments or final answers yet.
 5. Ground your question strictly in the provided sources and conversation history.
 6. Gather information about lifestyle, diet, medical history, and habits as this is crucial for Ayurvedic diagnosis.
-7. Avoid asking questions that are not relevant to Ayurvedic diagnosis.
+7. Ask questions from DIFFERENT books/sources - do not stick to only one book.
+
+IMPORTANT: After your question, ADD the source in brackets. Show DIFFERENT sources each time:
+Example: "What time of day do your headaches typically occur? (Ayurvedic-Home-Remedies-English)"
+Next question could be: "What types of food do you typically consume? (Evidence_based_Ayurvedic_Practice)"
 
 EXAMPLE OF WRONG OUTPUT: "Thank you for sharing that. Given your symptoms, I would like to ask..."
-EXAMPLE OF CORRECT OUTPUT: "What time of day do your headaches typically occur?"
+EXAMPLE OF CORRECT OUTPUT: "What time of day do your headaches typically occur? (ayurvedic_treatment_file1)"
 """
         elif mode == "diagnosis":
             instruction = """
-1. Summarize the differential diagnosis from the provided report (not a single absolute diagnosis).
-2. Mention uncertainty clearly and briefly state at least one alternative condition.
-3. Keep language conservative and probabilistic, avoid certainty claims.
-4. End by asking if the user wants safe remedies and lifestyle guidance.
-5. Avoid medical jargon as much as possible.
+OUTPUT FORMAT (STRICTLY FOLLOW THIS - ONE ITEM PER LINE):
+BASE RULE: EACH OPTION MUST BE IN BULLET POINT FORMAT STARTING WITH THE EMOJI AND THE LABEL. DO NOT DEVIATE FROM THIS FORMAT.
+All OF THEM NEEDS TO BE SEPERATED BY NEW LINES. DO NOT COMBINE MULTIPLE OPTIONS IN THE SAME LINE.
+The output should be in bullet point format with the following sections:
+--- USER-FRIENDLY OUTPUT ---
+
+📋 DIAGNOSIS:
+• [condition name - english and sanskrit if available]
+
+📖 EXPLANATION:
+• [5 bullet point explaining only]
+• [Reason-1 from knowledge base with source in brackets]
+• [Reason-2 from knowledge base with source in brackets]
+• [Reason-3 from knowledge base with source in brackets]
+• [Reason-4 from knowledge base with source in brackets]
+• [Reason-5 from knowledge base with source in brackets]
+
+
+
+⚠️ IS IT SERIOUS?
+• [Yes or No followed by 3 bullet points explaining why - use sources in brackets]
+• [Reason-1 from knowledge base with source in brackets]
+• [Reason-2 from knowledge base with source in brackets]
+• [Reason-3 from knowledge base with source in brackets]
+
+
+🏠 CAN IT BE TREATED AT HOME?
+• [Yes or No]
+• [Brief reason followed by 3 bullet points explaining why - use sources in brackets]
+• [Reason-1 from knowledge base with source in brackets]
+• [Reason-2 from knowledge base with source in brackets]
+• [Reason-3 from knowledge base with source in brackets]
+
+
+Would you like home-based remedies, do's and don'ts, and lifestyle recommendations?
+
+--- END USER OUTPUT ---
+<--leave space between each content section and do not combine them into one line-->
+*
+*
+*
+*
+*
+<--IMPORTANT: When user responds to remedies question, ALWAYS provide remedies - do NOT ask more questions!-->
+INTERNAL ANALYSIS (For your reference only):
+Top 3 conditions in bullet point:
+ * Disease Name - 1 (COMMON ENGLISH NAME AND AYURVEDIC NAME) [List with confidence scores] 
+     -> Reason-1 from knowledge base with source in brackets
+     -> Reason-2 from knowledge base with source in brackets
+
+ * Disease Name - 2 (COMMON ENGLISH NAME AND AYURVEDIC NAME) [List with confidence scores]
+        -> Reason-1 from knowledge base with source in brackets
+        -> Reason-2 from knowledge base with source in brackets
+
+* Disease Name - 3 (COMMON ENGLISH NAME AND AYURVEDIC NAME) [List with confidence scores]
+        -> Reason-1 from knowledge base with source in brackets
+        -> Reason-2 from knowledge base with source in brackets
+
+Next ASK THE USER ONLY ONE QUESTION about remedies consent: "Would you like home-based remedies, do's and don'ts, and lifestyle recommendations?"
+IMPORTANT: When user responds to remedies question, ALWAYS provide remedies - do NOT ask more questions!
+
+STRICTLY use ONLY information from the RETRIEVED SOURCES. Use actual document names like "(ayurvedic_treatment_file1)", "(Ayurvedic-Home-Remedies-English)" for citations.
 """
         elif mode == "uncertain":
             instruction = """
-1. Output ONLY one new, specific follow-up question that has NOT been asked before.
-2. Do NOT include diagnostic summaries, warnings, or lifestyle advice text.
-3. Question must be tightly focused on unresolved ear/respiratory differential details.
-4. Keep it short and clear.
+OUTPUT FORMAT (STRICTLY FOLLOW THIS):
+BASE RULE: EACH OPTION MUST BE IN BULLET POINT FORMAT STARTING WITH THE EMOJI AND THE LABEL. DO NOT DEVIATE FROM THIS FORMAT.
+All OF THEM NEEDS TO BE SEPERATED BY NEW LINES. DO NOT COMBINE MULTIPLE OPTIONS IN THE SAME LINE.
+The output should be in bullet point format with the following sections:
+
+--- USER-FRIENDLY OUTPUT ---
+[BULLET POINT FORMAT - Show this to user]
+
+📋 DIAGNOSIS:
+• [condition name - english and sanskrit if available]
+
+📖 EXPLANATION:
+• [5 bullet point explaining only]
+• [Reason-1 from knowledge base with source in brackets]
+• [Reason-2 from knowledge base with source in brackets]
+• [Reason-3 from knowledge base with source in brackets]
+• [Reason-4 from knowledge base with source in brackets]
+• [Reason-5 from knowledge base with source in brackets]
+
+
+
+⚠️ IS IT SERIOUS?
+• [Yes or No followed by 3 bullet points explaining why - use sources in brackets]
+• [Reason-1 from knowledge base with source in brackets]
+• [Reason-2 from knowledge base with source in brackets]
+• [Reason-3 from knowledge base with source in brackets]
+
+
+🏠 CAN IT BE TREATED AT HOME?
+• [Yes or No]
+• [Brief reason followed by 3 bullet points explaining why - use sources in brackets]
+• [Reason-1 from knowledge base with source in brackets]
+• [Reason-2 from knowledge base with source in brackets]
+• [Reason-3 from knowledge base with source in brackets]
+
+
+Would you like home-based remedies, do's and don'ts, and lifestyle recommendations?
+<--leave space between each content section and do not combine them into one line-->
+*
+*
+*
+*
+*
+<--IMPORTANT: When user responds to remedies question, ALWAYS provide remedies - do NOT ask more questions!-->
+--- END USER OUTPUT ---
+
+INTERNAL ANALYSIS (For your reference only):
+Top 3 conditions in bullet point:
+ * Disease Name - 1 (COMMON ENGLISH NAME AND AYURVEDIC NAME) [List with confidence scores] 
+     -> Reason-1 from knowledge base with source in brackets
+     -> Reason-2 from knowledge base with source in brackets
+
+ * Disease Name - 2 (COMMON ENGLISH NAME AND AYURVEDIC NAME) [List with confidence scores]
+        -> Reason-1 from knowledge base with source in brackets
+        -> Reason-2 from knowledge base with source in brackets
+
+* Disease Name - 3 (COMMON ENGLISH NAME AND AYURVEDIC NAME) [List with confidence scores]
+        -> Reason-1 from knowledge base with source in brackets
+        -> Reason-2 from knowledge base with source in brackets
+
+Next ASK THE USER ONLY ONE QUESTION about remedies consent: "Would you like home-based remedies, do's and don'ts, and lifestyle recommendations?"
+IMPORTANT: When user responds to remedies question, ALWAYS provide remedies - do NOT ask more questions!
+
+IMPORTANT: When user responds to remedies question, ALWAYS provide remedies - do NOT ask more questions!
+
+STRICTLY use ONLY information from the RETRIEVED SOURCES. Use actual document names like "(ayurvedic_treatment_file1)", "(Ayurvedic-Home-Remedies-English)" for citations.
 """
         elif mode == "uncertain_final":
             instruction = """
-1. Output exactly two concise lines:
-   Line 1: "Uncertain diagnosis; in-person medical evaluation is recommended."
-   Line 2: "No treatment protocol will be provided at this confidence level."
-2. Do NOT add extra explanation, differential details, or self-care tips.
+OUTPUT FORMAT (STRICTLY FOLLOW THIS):
+
+
+--- USER-FRIENDLY OUTPUT ---
+[BULLET POINT FORMAT - Show this to user]
+BASE RULE: EACH OPTION MUST BE IN BULLET POINT FORMAT STARTING WITH THE EMOJI AND THE LABEL. DO NOT DEVIATE FROM THIS FORMAT.
+All OF THEM NEEDS TO BE SEPERATED BY NEW LINES. DO NOT COMBINE MULTIPLE OPTIONS IN THE SAME LINE.
+The output should be in bullet point format with the following sections:
+
+📋 DIAGNOSIS:
+• [condition name - english and sanskrit if available]
+
+📖 EXPLANATION:
+• [5 bullet point explaining only]
+• [Reason-1 from knowledge base with source in brackets]
+• [Reason-2 from knowledge base with source in brackets]
+• [Reason-3 from knowledge base with source in brackets]
+• [Reason-4 from knowledge base with source in brackets]
+• [Reason-5 from knowledge base with source in brackets]
+
+
+
+⚠️ IS IT SERIOUS?
+• [Yes or No followed by 3 bullet points explaining why - use sources in brackets]
+• [Reason-1 from knowledge base with source in brackets]
+• [Reason-2 from knowledge base with source in brackets]
+• [Reason-3 from knowledge base with source in brackets]
+
+
+🏠 CAN IT BE TREATED AT HOME?
+• [Yes or No]
+• [Brief reason followed by 3 bullet points explaining why - use sources in brackets]
+• [Reason-1 from knowledge base with source in brackets]
+• [Reason-2 from knowledge base with source in brackets]
+• [Reason-3 from knowledge base with source in brackets]
+
+
+Would you like home-based remedies, do's and don'ts, and lifestyle recommendations?
+<--leave space between each content section and do not combine them into one line-->
+*
+*
+*
+*
+*
+<--IMPORTANT: When user responds to remedies question, ALWAYS provide remedies - do NOT ask more questions!-->
+--- END USER OUTPUT ---
+
+INTERNAL ANALYSIS (For your reference only):
+Top 3 conditions in bullet point:
+ * Disease Name - 1 (COMMON ENGLISH NAME AND AYURVEDIC NAME) [List with confidence scores] 
+     -> Reason-1 from knowledge base with source in brackets
+     -> Reason-2 from knowledge base with source in brackets
+
+ * Disease Name - 2 (COMMON ENGLISH NAME AND AYURVEDIC NAME) [List with confidence scores]
+        -> Reason-1 from knowledge base with source in brackets
+        -> Reason-2 from knowledge base with source in brackets
+
+* Disease Name - 3 (COMMON ENGLISH NAME AND AYURVEDIC NAME) [List with confidence scores]
+        -> Reason-1 from knowledge base with source in brackets
+        -> Reason-2 from knowledge base with source in brackets
+
+Next ASK THE USER ONLY ONE QUESTION about remedies consent: "Would you like home-based remedies, do's and don'ts, and lifestyle recommendations?"
+IMPORTANT: When user responds to remedies question, ALWAYS provide remedies - do NOT ask more questions!
+
+IMPORTANT: When user responds to remedies question, ALWAYS provide remedies - do NOT ask more questions!
+
+STRICTLY use ONLY information from the RETRIEVED SOURCES. Use actual document names like "(ayurvedic_treatment_file1)", "(Ayurvedic-Home-Remedies-English)" for citations.
 """
         elif mode == "risk_gate_question":
             instruction = """
@@ -303,20 +494,148 @@ Output only that question.
 """
         elif mode == "escalation":
             instruction = """
-1. State that red flags are present and in-person medical evaluation is recommended first.
-2. Do NOT provide treatment protocol, herbs, detox, or medicine combinations.
-3. Keep response concise and safety-first.
+OUTPUT FORMAT (STRICTLY FOLLOW THIS):
+
+
+--- USER-FRIENDLY OUTPUT ---
+[BULLET POINT FORMAT - Show this to user]
+
+📋 DIAGNOSIS:
+• [condition name - english and sanskrit if available]
+
+📖 EXPLANATION:
+• [5 bullet point explaining only]
+• [Reason-1 from knowledge base with source in brackets]
+• [Reason-2 from knowledge base with source in brackets]
+• [Reason-3 from knowledge base with source in brackets]
+• [Reason-4 from knowledge base with source in brackets]
+• [Reason-5 from knowledge base with source in brackets]
+
+
+
+⚠️ IS IT SERIOUS?
+• [Yes or No followed by 3 bullet points explaining why - use sources in brackets]
+• [Reason-1 from knowledge base with source in brackets]
+• [Reason-2 from knowledge base with source in brackets]
+• [Reason-3 from knowledge base with source in brackets]
+
+
+🏠 CAN IT BE TREATED AT HOME?
+• [Yes or No]
+• [Brief reason followed by 3 bullet points explaining why - use sources in brackets]
+• [Reason-1 from knowledge base with source in brackets]
+• [Reason-2 from knowledge base with source in brackets]
+• [Reason-3 from knowledge base with source in brackets]
+
+
+Would you like home-based remedies, do's and don'ts, and lifestyle recommendations?
+<--leave space between each content section and do not combine them into one line-->
+*
+*
+*
+*
+*
+<--IMPORTANT: When user responds to remedies question, ALWAYS provide remedies - do NOT ask more questions!-->
+--- END USER OUTPUT ---
+
+INTERNAL ANALYSIS (For your reference only):
+Top 3 conditions in bullet point:
+ * Disease Name - 1 (COMMON ENGLISH NAME AND AYURVEDIC NAME) [List with confidence scores] 
+     -> Reason-1 from knowledge base with source in brackets
+     -> Reason-2 from knowledge base with source in brackets
+
+ * Disease Name - 2 (COMMON ENGLISH NAME AND AYURVEDIC NAME) [List with confidence scores]
+        -> Reason-1 from knowledge base with source in brackets
+        -> Reason-2 from knowledge base with source in brackets
+
+* Disease Name - 3 (COMMON ENGLISH NAME AND AYURVEDIC NAME) [List with confidence scores]
+        -> Reason-1 from knowledge base with source in brackets
+        -> Reason-2 from knowledge base with source in brackets
+
+Next ASK THE USER ONLY ONE QUESTION about remedies consent: "Would you like home-based remedies, do's and don'ts, and lifestyle recommendations?"
+IMPORTANT: When user responds to remedies question, ALWAYS provide remedies - do NOT ask more questions!
+
+IMPORTANT: When user responds to remedies question, ALWAYS provide remedies - do NOT ask more questions!
+
+STRICTLY use ONLY information from the RETRIEVED SOURCES. Use actual document names like "(ayurvedic_treatment_file1)", "(Ayurvedic-Home-Remedies-English)" for citations.
 """
         elif mode == "remedies":
             instruction = f"""
-1. Conservative-first policy: begin with low-risk advice (rest, hydration, sleep, heat/ergonomics, trigger avoidance).
-2. If adding remedies, limit to at most {getattr(config, "MAX_REMEDY_INTERVENTIONS", 3)} interventions total.
-3. If medication/comorbidity risk profile is unclear, do not give aggressive regimens.
-4. Extract only from RETRIEVED SOURCES; do not hallucinate.
-5. Keep it simple, concise, and user-friendly with numbered points.
+OUTPUT FORMAT (STRICTLY FOLLOW THIS - BULLET POINT FORMAT):
+
+--- REMEDIES & LIFESTYLE ---
+[BULLET POINT FORMAT - Show everything below to user]
+
+🏠 HOME REMEDIES:
+    - TOP 5 REMEDIES (WITH CITATIONS):
+    • [Remedy 1 from knowledge base with source in brackets]
+    • [Remedy 2 from knowledge base with source in brackets]
+    • [Remedy 3 from knowledge base with source in brackets]
+    • [Remedy 4 from knowledge base with source in brackets]
+    • [Remedy 5 from knowledge base with source in brackets]
+Additional Note on Remedies: [Any important notes on remedies based on the knowledge base]
+
+
+✅ DO'S (THINGS YOU CAN HAVE/MUST DO):
+-TOP 5 DO'S (WITH CITATIONS):
+• [Do 1 from knowledge base with source in brackets]
+• [Do 2 from knowledge base with source in brackets]
+• [Do 3 from knowledge base with source in brackets]
+• [Do 4 from knowledge base with source in brackets]
+• [Do 5 from knowledge base with source in brackets]
+
+❌ DON'TS (THINGS TO AVOID/MUST NOT DO):
+-TOP 5 DON'TS (WITH CITATIONS):
+• [Avoid 1 from knowledge base]
+• [Avoid 2 from knowledge base with source in brackets]
+• [Avoid 3 from knowledge base with source in brackets]
+• [Avoid 4 from knowledge base with source in brackets]
+• [Avoid 5 from knowledge base with source in brackets]
+
+🍽️ FOOD TO HAVE:
+• [Food 1 from knowledge base with source in brackets]
+• [Food 2 from knowledge base with source in brackets]
+• [Food 3 from knowledge base with source in brackets]
+• [Food 1 from knowledge base with source in brackets]
+• [Food 2 from knowledge base with source in brackets]
+• [Food 3 from knowledge base with source in brackets]
+
+
+🚫 FOOD TO AVOID:
+• [Food 1 from knowledge base with source in brackets]
+• [Food 2 from knowledge base with source in brackets]
+• [Food 3 from knowledge base with source in brackets   ]
+
+🌿 LIFESTYLE RECOMMENDATIONS:
+• [Lifestyle tip 1 from knowledge base]
+• [Lifestyle tip 2 from knowledge base]
+• [Lifestyle tip 3 from knowledge base]
+
+Additional Note on Lifestyle: [Any important notes on lifestyle based on the knowledge base]
+
+--- END OUTPUT ---
+
+Cite sources using actual document names like "(ayurvedic_treatment_file1)", "(Ayurvedic-Home-Remedies-English)".
+
+STRICTLY use ONLY information from the RETRIEVED SOURCES. Do not hallucinate.
+"""
+        elif mode == "more_info":
+            instruction = """
+Provide more detailed information about the diagnosis.
+Include:
+- Detailed explanation of the condition
+- Possible causes
+- What to expect
+- Any additional details from the knowledge base
+
+Then ask: "Would you like home-based remedies, do's and don'ts, and lifestyle recommendations?"
+
+Cite sources using actual document names like "(ayurvedic_treatment_file1)", "(Ayurvedic-Home-Remedies-English)".
+
+STRICTLY use ONLY information from the RETRIEVED SOURCES.
 """
         else:
-            instruction = "Provide a professional concluding response."
+            instruction = "Provide a helpful response based on the RETRIEVED SOURCES. If providing medical information, cite sources."
 
         prompt = f"""
 SYSTEM:
@@ -326,8 +645,9 @@ GLOBAL RULES (APPLY TO ALL MODES):
 - NO sympathy statements (e.g., "I understand this must be difficult")
 - NO acknowledgments (e.g., "Thank you for sharing", "I appreciate that information")
 - NO conversational filler (e.g., "It's interesting that...", "Given what you've told me...")
-- NO citations or source references in your response
 - Go directly to the content requested
+- ALWAYS cite sources when providing medical information (e.g., "(Source 1)", "(Ayurvedic-Home-Remedies-English)")
+- Use information ONLY from the RETRIEVED SOURCES
 
 CONVERSATION HISTORY:
 {trimmed_history}
@@ -373,13 +693,69 @@ ADDITIONAL HARD CONSTRAINT:
                 yield "Do you have reduced hearing, ringing, or fever along with the ear pain?"
                 return
 
-            # Non-gathering modes keep streaming behavior.
-            for response in self.client.models.generate_content_stream(
+            # Non-gathering modes - use non-streaming for better structure
+            response = self.client.models.generate_content(
                 model=self.model_id,
                 contents=prompt,
                 config={"temperature": config.TEMPERATURE}
-            ):
-                if response.text:
-                    yield response.text
+            )
+            output = response.text or ""
+            # Clean the output to remove duplicates
+            output = self._clean_output(output)
+            yield output
         except Exception as e:
             yield f"\n[Error during generation: {e}]"
+
+    def _clean_output(self, text: str) -> str:
+        """
+        Cleans repetition, duplicated lines,
+        and structured section looping.
+        """
+        if not text:
+            return text
+
+        lines = text.splitlines()
+        cleaned_lines = []
+        seen_lines = set()
+
+        for line in lines:
+            normalized = line.strip()
+
+            # Remove exact duplicate lines
+            if normalized and normalized in seen_lines:
+                continue
+
+            cleaned_lines.append(line)
+            seen_lines.add(normalized)
+
+        cleaned_text = "\n".join(cleaned_lines)
+
+        cleaned_text = self._dedupe_sections(cleaned_text)
+
+        return cleaned_text
+
+    def _dedupe_sections(self, text: str) -> str:
+        """
+        Prevent repeated section headers
+        like multiple FOOD / DO'S / REMEDIES blocks.
+        """
+
+        section_markers = [
+            "HOME REMEDIES",
+            "DO'S",
+            "DON'TS",
+            "DIET",
+            "LIFESTYLE",
+            "FOOD",
+        ]
+
+        for marker in section_markers:
+            count = text.count(marker)
+            if count > 1:
+                first_index = text.find(marker)
+                text = (
+                    text[:first_index]
+                    + text[first_index:].replace(marker, "", count - 1)
+                )
+
+        return text
