@@ -16,7 +16,7 @@ from datetime import datetime
 from dotenv import load_dotenv
 from rag.rag_pipeline import RAGPipeline
 from rag.memory import ConversationMemory
-from rag.metadata_enricher import enrich_chunks_with_metadata
+# from rag.metadata_enricher import enrich_chunks_with_metadata
 
 # Load .env file
 load_dotenv(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), '.env'))
@@ -132,25 +132,11 @@ class SessionEvaluator:
         return filepath
 
 
-def run_metadata_enrichment(api_key):
-    """
-    One-time metadata enrichment for chunks.
-    Run this once to add primary_system and symptom_keywords to chunks.
-    """
-    from rag.generator import Generator
-    generator = Generator(api_key)
-    
-    chunks_path = os.path.join(PROJECT_ROOT, "data", "chunks", "*.json")
-    enrich_chunks_with_metadata(generator, chunks_path)
-
-
 if __name__ == "__main__":
-    # Initialize the enhanced pipeline
+    # Initialize the Bayesian-first RAG pipeline
     pipeline = RAGPipeline(
         vector_db_path=VECTOR_DB_PATH, 
-        api_key=API_KEY,
-        use_enhanced_retrieval=True,  # Enable symptom extraction and system classification
-        safety_threshold=0.65  # Threshold for medical safety detection
+        api_key=API_KEY
     )
     memory = ConversationMemory()
     evaluator = SessionEvaluator(EVALUATION_DIR)
@@ -158,68 +144,54 @@ if __name__ == "__main__":
     # Start session evaluation
     evaluator.start_session()
     
-    print("--- Ayurvedic AI Chatbot (type 'exit' to quit) ---")
-    print("--- Enhanced with symptom-based retrieval and safety detection ---")
-    print("--- Evaluation reports saved to: data/evaluations/ ---\n")
+    print("--- Veda Bot: Bayesian Diagnostic Engine (Gemma-3-27b + Llama 3) ---")
+    print("(Type 'exit' to quit)")
 
     try:
         while True:
-            user_input = input("\nYou: ")
+            user_input = input("\nYou: ").strip()
 
-            if user_input.lower() == "exit":
-                print("Goodbye!")
+            if user_input.lower() in ["exit", "quit", "bye"]:
+                print("Closing session. Stay well.")
                 break
 
-            # Check for medical safety risks before processing
-            is_safe, safety_result = pipeline.check_safety(user_input)
-            is_first_user_turn = memory.user_turn_count == 0
-            
-            if not is_safe:
-                
-                # Log the safety alert but do NOT terminate
-                evaluator.log_turn(
-                    turn_number=memory.user_turn_count + 1,
-                    user_input=user_input,
-                    assistant_response="[SAFETY WARNING - Continuing with clarification]",
-                    safety_check=(is_safe, safety_result)
-                )
-                # Ensure we are in a mode where the LLM asks questions
-                # If turn count is already high, we might need to adjust it or force gathering mode
+            if not user_input:
+                continue
 
+            # 1. Emergency Detection / Safety Check
+            is_safe, safety_result = pipeline.check_safety(user_input)
+            
+            # Log turn for evaluation
+            evaluator.log_turn(
+                turn_number=len(memory.turns) + 1,
+                user_input=user_input,
+                assistant_response="[Processing...]",
+                safety_check=(is_safe, safety_result)
+            )
+
+            # 2. Add to memory
             memory.add_turn("user", user_input)
 
+            # 3. Run Pipeline (Generator yields chunks)
             print("\nAI: ", end="", flush=True)
             full_response = ""
             
-            # Get retrieval query for logging
-            retrieval_query, _ = pipeline._classify_and_weight_query(user_input) if is_first_user_turn else (user_input, None)
-            
-            # Stream response for better user experience
             for chunk in pipeline.run(user_input, memory):
                 print(chunk, end="", flush=True)
                 full_response += chunk
             print()
 
+            # 4. Update memory with response
             memory.add_turn("assistant", full_response)
             
-            # Log the turn
-            evaluator.log_turn(
-                turn_number=memory.user_turn_count,
-                user_input=user_input,
-                assistant_response=full_response,
-                safety_check=(is_safe, safety_result),
-                retrieval_query=retrieval_query
-            )
-            
-            # Log diagnosis if completed
-            if memory.last_diagnosis:
-                evaluator.log_diagnosis(memory.last_diagnosis)
-
-            if memory.diagnosis_complete:
-                print("\n--- Session Complete ---")
+            # 5. Check if session has concluded
+            if getattr(memory, "diagnosis_complete", False):
+                print("\n--- Diagnostic Session Concluded ---")
+                if hasattr(memory, "last_diagnosis") and memory.last_diagnosis:
+                    evaluator.log_diagnosis(memory.last_diagnosis)
                 break
     
     finally:
-        # Always save the evaluation report
+        # Save evaluation report
         report_path = evaluator.end_session()
-        print(f"\n--- Evaluation Report Saved: {report_path} ---")
+        print(f"\n[System] Evaluation report archived: {report_path}")

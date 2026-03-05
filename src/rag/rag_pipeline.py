@@ -7,7 +7,6 @@ from rag.retriever import Retriever
 from rag.hybrid_fusion_retriever import HybridFusionRetriever
 from rag.generator import Generator
 from sentence_transformers import CrossEncoder, SentenceTransformer
-from rag.query_rewriter import rewrite_query
 from rag.symptom_extractor import extract_symptoms_llm
 from rag.symptom_canonicalizer import canonicalize_symptoms_llm, fuzzy_canonicalizer
 from rag.ollama_verifier import OllamaVerifier
@@ -156,47 +155,6 @@ class RAGPipeline:
         negative_tokens = {"no", "n", "nope", "not now", "later", "stop", "exit"}
         return any(token in value for token in negative_tokens)
 
-    def _extract_age(self, conversation_history):
-        age_match = re.search(r"\b(\d{1,3})\b", conversation_history or "")
-        if not age_match:
-            return None
-        try:
-            age = int(age_match.group(1))
-            if 0 < age < 120:
-                return age
-        except Exception:
-            pass
-        return None
-
-    def _detect_pre_diagnosis_red_flags(self, conversation_history):
-        text = (conversation_history or "").lower()
-        flags = []
-        keyword_groups = {
-            "severe_or_worst_pain": ["severe pain", "worst pain", "excruciating", "unbearable"],
-            "sudden_onset": ["sudden", "abrupt", "all of a sudden"],
-            "functional_loss": ["cannot walk", "can't walk", "weakness", "numbness", "fainting", "collapse"],
-            "systemic_symptoms": ["high fever", "persistent fever", "weight loss", "night sweats", "vomiting blood", "blood in stool"],
-        }
-        for flag, keys in keyword_groups.items():
-            if any(k in text for k in keys):
-                flags.append(flag)
-
-        age = self._extract_age(conversation_history)
-        if age and age > 50 and ("new joint pain" in text or ("joint pain" in text and "new" in text)):
-            flags.append("age_over_50_new_joint_pain")
-        if getattr(config, "PEDIATRIC_ESCALATION_ENABLED", True) and age and age < getattr(config, "PEDIATRIC_AGE_THRESHOLD", 18):
-            swelling_keys = getattr(config, "MINOR_SWELLING_KEYWORDS", [])
-            lower_limb_keys = getattr(config, "LOWER_LIMB_KEYWORDS", [])
-            pediatric_systemic = getattr(config, "PEDIATRIC_SYSTEMIC_RISK_KEYWORDS", [])
-            has_swelling = any(k in text for k in swelling_keys)
-            has_lower_limb = any(k in text for k in lower_limb_keys)
-            has_systemic = any(k in text for k in pediatric_systemic)
-            if has_swelling and has_lower_limb:
-                flags.append("pediatric_limb_swelling")
-            if has_systemic:
-                flags.append("pediatric_systemic_features")
-        return flags
-
     def _build_reranked_chunks(self, retrieval_query, source_filter=None, metadata_filter=None):
         retrieved_chunks = self.retriever.retrieve(
             retrieval_query,
@@ -217,10 +175,6 @@ class RAGPipeline:
             reverse=True
         )[:config.K_RERANK]
         return reranked_chunks
-
-    def _trigger_verification(self, stage, question, conversation_history):
-        if getattr(config, "VERIFY_ALL_CASES", True):
-            self.generator.trigger_verification(stage, question, conversation_history)
 
     def _extract_diagnosis_name(self, diagnosis_report):
         diag_name = "the condition"
