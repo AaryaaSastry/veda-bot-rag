@@ -1,30 +1,39 @@
-# Software Requirements Specification (SRS)
+# Software Requirements Specification (SRS) - Veda Bot RAG
 
 ## 1. Introduction
 
 ### 1.1 Purpose
-This document specifies the requirements for the Book Corpus Pipeline project, which processes raw book PDFs into cleaned, chunked, and embedded data for downstream NLP tasks such as retrieval-augmented generation (RAG).
+This document specifies the requirements for the Veda Bot RAG project, an advanced AI-powered Retrieval-Augmented Generation (RAG) system designed specifically for Ayurvedic medical knowledge. The system transforms raw PDF books into structured, searchable knowledge and enables intelligent diagnostic conversations through an AI chatbot interface.
 
 ### 1.2 Scope
-The pipeline automates the extraction, cleaning, chunking, and embedding of book data, enabling efficient search and retrieval. It is intended for researchers and developers working with large text corpora.
+The pipeline automates the extraction, cleaning, chunking, and embedding of book data, enabling efficient search and retrieval. It implements sophisticated reasoning capabilities using Bayesian inference for probabilistic diagnosis, ensuring medical safety through emergency detection and risk assessment.
 
 ### 1.3 Definitions, Acronyms, and Abbreviations
 - **PDF**: Portable Document Format
 - **RAG**: Retrieval-Augmented Generation
 - **Embedding**: Vector representation of text
 - **Chunking**: Splitting text into manageable pieces
+- **Bayesian Inference**: Probabilistic reasoning for diagnosis
+- **LLM**: Large Language Model
+- **Ollama**: Local AI model for verification
+- **FAISS**: Facebook AI Similarity Search for vector retrieval
 
 ## 2. Overall Description
 
 ### 2.1 Product Perspective
-The pipeline is a standalone system that processes raw PDFs and outputs cleaned text, chunked data, and embeddings. It integrates with FAISS for vector search and supports modular processing steps.
+Veda Bot RAG is a sophisticated standalone system that processes raw PDFs into structured, searchable knowledge for Ayurvedic medical diagnosis. It integrates FAISS for vector search, Bayesian inference for probabilistic reasoning, and medical safety checks through emergency detection and dynamic risk assessment.
 
 ### 2.2 Product Functions
 - Extract text from PDFs
 - Clean and normalize text (remove headers, footers, page numbers, etc.)
-- Chunk text into segments
+- Chunk text into segments with Ayurvedic metadata
 - Generate embeddings for each chunk
 - Store embeddings and metadata for retrieval
+- Provide an interactive RAG-based chatbot with diagnostic capabilities
+- Implement Bayesian reasoning for probabilistic diagnosis
+- Ensure medical safety through emergency detection and risk assessment
+- Verify diagnosis consistency using Ollama
+- Generate detailed evaluation reports
 
 ### 2.3 User Classes and Characteristics
 - **Researchers**: Use the pipeline to prepare corpora for NLP experiments
