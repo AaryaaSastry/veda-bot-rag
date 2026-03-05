@@ -1,4 +1,4 @@
-# Book Corpus Pipeline - Comprehensive Technical Documentation
+# Veda Bot RAG - Comprehensive Technical Documentation
 
 ## Table of Contents
 1. [System Overview](#1-system-overview)
@@ -13,7 +13,7 @@
 
 ## 1. System Overview
 
-The **Book Corpus Pipeline** is a modular Python system designed to process raw PDF books into structured, searchable knowledge for Retrieval-Augmented Generation (RAG). The pipeline is specifically tailored for Ayurvedic medical texts but can be adapted for other domains.
+**Veda Bot RAG** is an advanced AI-powered Retrieval-Augmented Generation (RAG) system specifically designed for Ayurvedic medical knowledge. It transforms raw PDF books into structured, searchable knowledge and enables intelligent diagnostic conversations through an AI chatbot interface.
 
 ### Purpose
 - Extract text from PDF documents
@@ -21,21 +21,85 @@ The **Book Corpus Pipeline** is a modular Python system designed to process raw 
 - Parse document structure (chapters, sections)
 - Chunk text into semantically meaningful segments
 - Generate vector embeddings for semantic search
-- Provide an interactive RAG-based chatbot for querying the knowledge base
+- Provide an interactive RAG-based chatbot with diagnostic capabilities
+- Implement Bayesian reasoning for probabilistic diagnosis
+- Ensure medical safety through emergency detection and risk assessment
 
 ### Key Features
 - **Modular Architecture**: Each processing stage is independent and can be run separately
 - **Metadata Extraction**: Automatic detection of Ayurvedic concepts (doshas, srotas, treatment types)
 - **Semantic Search**: FAISS-based vector similarity search with cross-encoder reranking
 - **Multi-turn Conversation**: Context-aware diagnostic dialogue system
+- **Bayesian Reasoning**: Probabilistic diagnosis based on symptom observations
+- **Medical Safety**: Emergency detection, dynamic safety assessment, and red flag identification
+- **Quality Assurance**: Ollama-based verification for consistency and safety checks
+- **Evaluation Reports**: Detailed session reports with safety alerts and retrieval stats
 
 ---
 
 ## 2. Architecture Diagram
 
+### Detailed System Flow
+
+The system follows a sophisticated multi-stage pipeline that combines RAG retrieval with Bayesian reasoning and safety checks:
+
+```
+USER MESSAGE
+      │
+      ▼
+Emergency Safety Detector (Every turn)
+      │
+      ▼
+Symptom Extractor (LLM)
+      │
+      ▼
+Symptom Canonicalizer (LLM + Fuzzy Matching)
+      │
+      ▼
+Body System Classifier (LLM)
+      │
+      ▼
+Candidate Disease Filter (System-based filtering)
+      │
+      ▼
+Bayesian Diagnostic Engine
+      ├─ Probability Update
+      ├─ Entropy Calculation
+      └─ Information Gain Question Selection (Weighted by difficulty)
+      │
+      ▼
+Next Symptom Question (LLM natural language wrapper)
+      │
+      ▼
+User Response
+      │
+      ▼
+Conversation Memory Update
+      │
+      ▼
+Loop (until confidence threshold or max turns)
+      │
+      ▼
+Final Diagnosis
+      │
+      ▼
+RAG Retrieval (Hybrid: FAISS + BM25 + Cross-encoder reranking)
+      │
+      ▼
+Evidence + Explanation Generation (LLM)
+      │
+      ▼
+Ollama Verifier (Consistency & Safety Check)
+      │
+      ▼
+Final Response
+```
+
+### Data Pipeline Architecture
+
 ```
 ┌─────────────────────────────────────────────────────────────────────────────────┐
-│                         BOOK CORPUS PIPELINE                                    │
+│                         VEDA BOT RAG PIPELINE                                    │
 ├─────────────────────────────────────────────────────────────────────────────────┤
 │                                                                                 │
 │  ┌──────────────┐    ┌──────────────┐    ┌──────────────┐    ┌──────────────┐  │
@@ -51,7 +115,7 @@ The **Book Corpus Pipeline** is a modular Python system designed to process raw 
 │                                                                     │          │
 │                                                                     ▼          │
 │  ┌──────────────┐    ┌──────────────┐    ┌──────────────┐    ┌──────────────┐  │
-│  │   STAGE 7    │◀───│   STAGE 6    │◀───│   STAGE 5    │◀───│  EMBEDDING   │  │
+│  │   STAGE 8    │◀───│   STAGE 7    │◀───│   STAGE 6    │◀───│  EMBEDDING   │  │
 │  │  RAG CHAT    │    │   RETRIEVAL  │    │  VECTOR DB   │    │  GENERATION  │  │
 │  └──────────────┘    └──────────────┘    └──────────────┘    └──────────────┘  │
 │         │                   │                   │                   │          │
