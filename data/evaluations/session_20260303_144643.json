@@ -1,0 +1,256 @@
+{
+  "session_summary": {
+    "start_time": "2026-03-03T13:05:12.810778",
+    "end_time": "2026-03-03T14:46:43.604667",
+    "total_turns": 15,
+    "total_safety_alerts": 2,
+    "diagnosis_completed": true
+  },
+  "safety_alerts": [
+    {
+      "turn": 1,
+      "input": "hi,i have swelling in my leg",
+      "risks": [
+        {
+          "risk_type": "vascular_infection",
+          "similarity_score": 0.6998125314712524
+        },
+        {
+          "risk_type": "deep_vein_thrombosis",
+          "similarity_score": 0.6799782514572144
+        },
+        {
+          "risk_type": "heart_failure_exacerbation",
+          "similarity_score": 0.728719174861908
+        }
+      ]
+    },
+    {
+      "turn": 1,
+      "input": "hi,i have swelling in my leg",
+      "risks": [
+        {
+          "risk_type": "vascular_infection",
+          "similarity_score": 0.6998125314712524
+        },
+        {
+          "risk_type": "deep_vein_thrombosis",
+          "similarity_score": 0.6799782514572144
+        },
+        {
+          "risk_type": "heart_failure_exacerbation",
+          "similarity_score": 0.728719174861908
+        }
+      ]
+    }
+  ],
+  "diagnosis": "DIAGNOSIS: Escalation advised\nREASONING: Red flags present: functional_loss",
+  "conversation_turns": [
+    {
+      "turn_number": 1,
+      "timestamp": "2026-03-03T13:09:34.158084",
+      "user_input": "hi,i have swelling in my leg",
+      "assistant_response": "[SAFETY WARNING - Continuing with clarification]",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": false,
+        "matched_risks": [
+          {
+            "risk_type": "vascular_infection",
+            "similarity_score": 0.6998125314712524
+          },
+          {
+            "risk_type": "deep_vein_thrombosis",
+            "similarity_score": 0.6799782514572144
+          },
+          {
+            "risk_type": "heart_failure_exacerbation",
+            "similarity_score": 0.728719174861908
+          }
+        ]
+      }
+    },
+    {
+      "turn_number": 1,
+      "timestamp": "2026-03-03T13:09:41.962822",
+      "user_input": "hi,i have swelling in my leg",
+      "assistant_response": "To provide an accurate Ayurvedic assessment, could you share your age and gender? (Source 1)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": false,
+        "matched_risks": [
+          {
+            "risk_type": "vascular_infection",
+            "similarity_score": 0.6998125314712524
+          },
+          {
+            "risk_type": "deep_vein_thrombosis",
+            "similarity_score": 0.6799782514572144
+          },
+          {
+            "risk_type": "heart_failure_exacerbation",
+            "similarity_score": 0.728719174861908
+          }
+        ]
+      },
+      "retrieval_query": "hi,i have swelling in my leg"
+    },
+    {
+      "turn_number": 2,
+      "timestamp": "2026-03-03T13:09:56.095257",
+      "user_input": "12 female",
+      "assistant_response": "What other symptoms are you experiencing alongside the swelling in your leg, such as headache, breathlessness, or discomfort in your chest? (Source 1)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "12 female"
+    },
+    {
+      "turn_number": 3,
+      "timestamp": "2026-03-03T13:10:28.414825",
+      "user_input": "no",
+      "assistant_response": "What is your typical daily diet? (Source 4)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "no"
+    },
+    {
+      "turn_number": 4,
+      "timestamp": "2026-03-03T13:10:54.365498",
+      "user_input": "i have food 3 times a day ",
+      "assistant_response": "What types of food do you typically consume? (Source 4)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "i have food 3 times a day "
+    },
+    {
+      "turn_number": 5,
+      "timestamp": "2026-03-03T13:11:53.548133",
+      "user_input": "i haverice, chapati",
+      "assistant_response": "Do you experience any other symptoms alongside the swelling, such as headache, breathlessness, or discomfort in your chest? (Source 1)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "i haverice, chapati"
+    },
+    {
+      "turn_number": 6,
+      "timestamp": "2026-03-03T13:12:13.798379",
+      "user_input": "no",
+      "assistant_response": "Do you experience any feelings of burning sensation or numbness alongside the swelling in your leg? (Source 1)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "no"
+    },
+    {
+      "turn_number": 7,
+      "timestamp": "2026-03-03T13:12:45.164906",
+      "user_input": "no",
+      "assistant_response": "What is your typical daily diet? (Evidence_based_Ayurvedic_Practice)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "no"
+    },
+    {
+      "turn_number": 8,
+      "timestamp": "2026-03-03T13:16:06.377875",
+      "user_input": "i have warm home cooked meals that is mild in taste",
+      "assistant_response": "What is your typical daily diet, including specific ingredients and cooking methods? (Source 3)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "i have warm home cooked meals that is mild in taste"
+    },
+    {
+      "turn_number": 9,
+      "timestamp": "2026-03-03T13:16:22.967444",
+      "user_input": "idk",
+      "assistant_response": "What specific ingredients are typically included in your warm home-cooked meals? (Source 3)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "idk"
+    },
+    {
+      "turn_number": 10,
+      "timestamp": "2026-03-03T13:18:17.245644",
+      "user_input": "turmeric, simple indian spices, carrots, beetroots, onions, beans , leafy vegetables",
+      "assistant_response": "--- USER-FRIENDLY OUTPUT ---\n📋 DIAGNOSIS:\n• Swelling in legs (Pada Shotha)\n\n📖 EXPLANATION:\n• Swelling in legs can be a symptom of various imbalances according to Ayurveda. (Source 1)\n• Obesity and a sedentary lifestyle can contribute to swelling in the legs. (Source 1)\n• Excessive intake of oily, salty, sour, and spicy foods may be a contributing factor. (Source 1)\n• The diet including leafy vegetables, carrots, and beetroot is generally considered beneficial, but the overall context is important. (Source 5, Source 6)\n• Intake of warm home-cooked meals that are mild in taste is a positive aspect. (Source 6)\n\n⚠️ IS IT SERIOUS?\n• No\n• Swelling in legs is listed as a symptom, but without other accompanying symptoms like chest pain or breathlessness, it doesn't immediately indicate a severe condition. (Source 1)\n• The diet described includes beneficial foods like carrots and leafy vegetables, suggesting a generally healthy lifestyle. (Source 5, Source 6)\n• The absence of other symptoms like headache, irritability, or nausea suggests it may not be a severe imbalance. (Source 1)\n\n🏠 CAN IT BE TREATED AT HOME?\n• Yes\n• Mild swelling in the legs can often be managed with dietary and lifestyle adjustments at home. (Source 6)\n• Consuming foods with Vata Anulomana and Mutrala properties like barley and green gram can be helpful. (Source 6)\n• Incorporating light exercise like walking (Chankramana) can improve circulation and reduce swelling. (Source 3)\n• A dry massage with herbal powders (Udvartan) can also be beneficial. (Source 3)\n\nWould you like home-based remedies, do's and don'ts, and lifestyle recommendations?\n\n--- END USER OUTPUT ---\n\nINTERNAL ANALYSIS (For your reference only):\nTop 3 conditions in bullet point:\n * Swelling in legs (Pada Shotha) [Confidence: 85%]\n     -> Swelling in legs is a listed symptom in Ayurvedic texts. (Source 1)\n     -> Dietary and lifestyle factors can contribute to swelling. (Source 1, Source 6)\n\n * Amavata (Rheumatoid Arthritis) [Confidence: 60%]\n        -> Amavata involves swelling in multiple joints. (Source 2)\n        -> The provided diet doesn't explicitly indicate Amavata, but it's a possibility. (Source 2)\n\n* Cardiac Disorders [Confidence: 40%]\n        -> Swelling in legs can be a symptom of cardiac issues. (Source 1)\n        -> The absence of other cardiac symptoms lowers the likelihood. (Source 1)\n\nNext ASK THE USER ONLY ONE QUESTION about remedies consent: \"Would you like home-based remedies, do's and don'ts, and lifestyle recommendations?\"",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "turmeric, simple indian spices, carrots, beetroots, onions, beans , leafy vegetables"
+    },
+    {
+      "turn_number": 11,
+      "timestamp": "2026-03-03T13:20:04.954160",
+      "user_input": "yes",
+      "assistant_response": "What is your typical daily diet, including the types of grains, vegetables, and proteins you consume? (Evidence_based_Ayurvedic_Practice)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "yes"
+    },
+    {
+      "turn_number": 12,
+      "timestamp": "2026-03-03T13:20:23.973192",
+      "user_input": "yes,it includes grains",
+      "assistant_response": "What specific types of grains are included in your diet, such as rice, wheat, barley, or corn? (Source 2)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "yes,it includes grains"
+    },
+    {
+      "turn_number": 13,
+      "timestamp": "2026-03-03T14:27:47.221765",
+      "user_input": "corn, wheat,barley ",
+      "assistant_response": "--- USER-FRIENDLY OUTPUT ---\n📋 DIAGNOSIS:\n• Pada Shotha (Swelling in legs)\n\n📖 EXPLANATION:\n• Swelling in legs is a recognized symptom in Ayurvedic texts. (Source 1)\n• Dietary and lifestyle factors can contribute to swelling. (Source 1, Source 6)\n• Consuming grains like barley is mentioned as potentially helpful. (Source 1, Source 5)\n• Intake of corn and wheat are discouraged in certain conditions. (Source 2)\n• Vata Anulomana and Mutrala properties in grains like barley can be beneficial. (Source 5)\n\n⚠️ IS IT SERIOUS?\n• No\n• Swelling in legs can often be managed with dietary and lifestyle adjustments. (Source 6)\n• It may be a symptom of underlying conditions, but is not immediately life-threatening based on current information. (Source 1)\n• The provided diet doesn't indicate a severe systemic issue. (Source 2)\n\n🏠 CAN IT BE TREATED AT HOME?\n• Yes\n• Mild swelling in the legs can often be managed with home-based remedies. (Source 6)\n• Incorporating light exercise like walking can improve circulation. (Source 3)\n• A dry massage with herbal powders can also be beneficial. (Source 3)\n• Consuming foods with Vata Anulomana and Mutrala properties like barley can be helpful. (Source 6)\n\nWould you like home-based remedies, do's and don'ts, and lifestyle recommendations?\n\n--- END USER OUTPUT ---\n\nINTERNAL ANALYSIS (For your reference only):\nTop 3 conditions in bullet point:\n * Swelling in legs (Pada Shotha) [Confidence: 85%]\n     -> Swelling in legs is a listed symptom in Ayurvedic texts. (Source 1)\n     -> Dietary and lifestyle factors can contribute to swelling. (Source 1, Source 6)\n * Amavata (Rheumatoid Arthritis) [Confidence: 60%]\n        -> Amavata involves swelling in multiple joints. (Source 6)\n        -> The provided diet doesn't explicitly indicate Amavata, but it's a possibility. (Source 6)\n* Cardiac Disorders [Confidence: 40%]\n        -> Swelling in legs can be a symptom of cardiac issues. (Source 1)\n        -> The absence of other cardiac symptoms lowers the likelihood. (Source 1)\nNext ASK THE USER ONLY ONE QUESTION about remedies consent: \"Would you like home-based remedies, do's and don'ts, and lifestyle recommendations?\"",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "corn, wheat,barley "
+    },
+    {
+      "turn_number": 14,
+      "timestamp": "2026-03-03T14:31:32.407653",
+      "user_input": "no",
+      "assistant_response": "--- USER-FRIENDLY OUTPUT ---\n📋 DIAGNOSIS:\n• Swelling in legs (Pada Shotha) [Confidence: 85%]\n\n📖 EXPLANATION:\n• Swelling in legs can be a symptom of various conditions. (Source 1)\n• Obesity and a sedentary lifestyle can contribute to swelling in the legs. (Source 1)\n• Incorrect food combinations and timing can lead to swelling. (Source 6)\n• Dietary factors, such as excessive intake of oily, salty, sour, and spicy foods, may be involved. (Source 1)\n• Swelling can occur alongside other symptoms like headaches, breathlessness, and discomfort in the chest. (Source 1)\n\n⚠️ IS IT SERIOUS?\n• No\n• Swelling in legs is not immediately life-threatening based on current information. (Source 1)\n• The provided diet doesn't indicate a severe systemic issue. (Source 2)\n• It may be a symptom of underlying conditions, but is not immediately critical. (Source 1)\n• It can often be managed with dietary and lifestyle adjustments. (Source 6)\n\n🏠 CAN IT BE TREATED AT HOME?\n• Yes\n• Mild swelling in the legs can often be managed with home-based remedies. (Source 6)\n• Incorporating light exercise like walking can improve circulation. (Source 3)\n• A dry massage with herbal powders can be beneficial. (Source 3)\n• Consuming foods with Vata Anulomana and Mutrala properties like barley can be helpful. (Source 6)\n\nWould you like home-based remedies, do's and don'ts, and lifestyle recommendations?\n\n--- END USER OUTPUT ---\n\nINTERNAL ANALYSIS (For your reference only):\nTop 3 conditions in bullet point:\n * Swelling in legs (Pada Shotha) [Confidence: 85%] \n     -> Swelling in legs is a listed symptom in Ayurvedic texts. (Source 1)\n     -> Dietary and lifestyle factors can contribute to swelling. (Source 1, Source 6)\n * Amavata (Rheumatoid Arthritis) [Confidence: 60%]\n        -> Amavata involves swelling in multiple joints. (Source 6)\n        -> The provided diet doesn't explicitly indicate Amavata, but it's a possibility. (Source 6)\n* Cardiac Disorders [Confidence: 40%]\n        -> Swelling in legs can be a symptom of cardiac issues. (Source 1)\n        -> The absence of other cardiac symptoms lowers the likelihood. (Source 1)\nNext ASK THE USER ONLY ONE QUESTION about remedies consent: \"Would you like home-based remedies, do's and don'ts, and lifestyle recommendations?\"",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "no"
+    }
+  ],
+  "retrieval_statistics": []
+}

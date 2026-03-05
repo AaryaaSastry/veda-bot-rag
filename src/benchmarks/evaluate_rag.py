@@ -22,7 +22,11 @@ from rag.memory import ConversationMemory
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 VECTOR_DB_PATH = os.path.join(PROJECT_ROOT, "data", "embeddings")
 GOLD_RETRIEVAL_PATH = os.path.join(PROJECT_ROOT, "data", "evaluation", "retrieval_gold.json")
-API_KEY = "AIzaSyCXAd1eoAyTYB80xnPmi0dqg1rAQhvhz0U"
+
+# Load API key from environment variable
+API_KEY = os.getenv("API_KEY")
+if not API_KEY:
+    raise ValueError("API_KEY not found in environment variables. Please set it in .env file.")
 
 # Test cases for retrieval evaluation
 RETRIEVAL_TEST_CASES = [

@@ -1,0 +1,61 @@
+{
+  "session_summary": {
+    "start_time": "2026-03-03T10:19:55.324070",
+    "end_time": "2026-03-03T10:34:37.916148",
+    "total_turns": 2,
+    "total_safety_alerts": 1,
+    "diagnosis_completed": false
+  },
+  "safety_alerts": [
+    {
+      "turn": 1,
+      "input": "hi,ihave swelling in my left leg",
+      "risks": [
+        {
+          "risk_type": "deep_vein_thrombosis",
+          "similarity_score": 0.6521679759025574
+        },
+        {
+          "risk_type": "heart_failure_exacerbation",
+          "similarity_score": 0.6736326813697815
+        }
+      ]
+    }
+  ],
+  "diagnosis": null,
+  "conversation_turns": [
+    {
+      "turn_number": 1,
+      "timestamp": "2026-03-03T10:20:06.988367",
+      "user_input": "hi,ihave swelling in my left leg",
+      "assistant_response": "[SAFETY ALERT - Session terminated]",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": false,
+        "matched_risks": [
+          {
+            "risk_type": "deep_vein_thrombosis",
+            "similarity_score": 0.6521679759025574
+          },
+          {
+            "risk_type": "heart_failure_exacerbation",
+            "similarity_score": 0.6736326813697815
+          }
+        ]
+      }
+    },
+    {
+      "turn_number": 1,
+      "timestamp": "2026-03-03T10:20:20.264490",
+      "user_input": "i have headache also",
+      "assistant_response": "\n[Error during generation: 400 INVALID_ARGUMENT. {'error': {'code': 400, 'message': 'API key expired. Please renew the API key.', 'status': 'INVALID_ARGUMENT', 'details': [{'@type': 'type.googleapis.com/google.rpc.ErrorInfo', 'reason': 'API_KEY_INVALID', 'domain': 'googleapis.com', 'metadata': {'service': 'generativelanguage.googleapis.com'}}, {'@type': 'type.googleapis.com/google.rpc.LocalizedMessage', 'locale': 'en-US', 'message': 'API key expired. Please renew the API key.'}]}}]",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "i have headache also"
+    }
+  ],
+  "retrieval_statistics": []
+}

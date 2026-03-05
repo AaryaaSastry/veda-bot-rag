@@ -1,4 +1,4 @@
-import os
+﻿import os
 import config
 from embedding.embed import TextEmbedder
 from embedding.index_builder import VectorIndex
@@ -16,29 +16,19 @@ class Retriever:
             os.path.join(vector_db_dir, "metadata.json")
         )
 
-    def retrieve(self, query, k=config.K_DEFAULT, source_filter=None, metadata_filter=None):
+    def retrieve(self, query, k=config.K_DEFAULT, source_filter=None):
         # BGE models require a prefix for queries to get better results
         instruction = "Represent this sentence for searching relevant passages: "
         prefixed_query = instruction + query
         query_vector = self.embedder.embed_query(prefixed_query)
         # VectorIndex.search takes the query vector and k
-        # We might need to over-retrieve if we filter afterwards to maintain k results
-        search_k = k * 20 if (source_filter or metadata_filter) else k
+        # We might need to over-retrieve if we filter afterwards to maintain 'k' results
+        # but for simplicity, let's retrieve more and then filter
+        search_k = k * 10 if source_filter else k
         results = self.store.search(query_vector, k=search_k)
 
         if source_filter:
-            results = [r for r in results if r["source"] == source_filter]
-
-        if metadata_filter:
-            filtered = []
-            for r in results:
-                match = True
-                for key, val in metadata_filter.items():
-                    if val and r.get(key) != val:
-                        match = False
-                        break
-                if match:
-                    filtered.append(r)
-            results = filtered
+            results = [r for r in results if r['source'] == source_filter]
+            return results[:k]
             
         return results[:k]

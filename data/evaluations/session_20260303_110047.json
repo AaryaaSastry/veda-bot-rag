@@ -1,0 +1,57 @@
+{
+  "session_summary": {
+    "start_time": "2026-03-03T10:44:28.190463",
+    "end_time": "2026-03-03T11:00:47.889338",
+    "total_turns": 1,
+    "total_safety_alerts": 1,
+    "diagnosis_completed": false
+  },
+  "safety_alerts": [
+    {
+      "turn": 1,
+      "input": "hi, i have swelling in my leg",
+      "risks": [
+        {
+          "risk_type": "vascular_infection",
+          "similarity_score": 0.6998125910758972
+        },
+        {
+          "risk_type": "deep_vein_thrombosis",
+          "similarity_score": 0.6799784302711487
+        },
+        {
+          "risk_type": "heart_failure_exacerbation",
+          "similarity_score": 0.7287193536758423
+        }
+      ]
+    }
+  ],
+  "diagnosis": null,
+  "conversation_turns": [
+    {
+      "turn_number": 1,
+      "timestamp": "2026-03-03T10:44:39.265473",
+      "user_input": "hi, i have swelling in my leg",
+      "assistant_response": "[SAFETY ALERT - Session terminated]",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": false,
+        "matched_risks": [
+          {
+            "risk_type": "vascular_infection",
+            "similarity_score": 0.6998125910758972
+          },
+          {
+            "risk_type": "deep_vein_thrombosis",
+            "similarity_score": 0.6799784302711487
+          },
+          {
+            "risk_type": "heart_failure_exacerbation",
+            "similarity_score": 0.7287193536758423
+          }
+        ]
+      }
+    }
+  ],
+  "retrieval_statistics": []
+}

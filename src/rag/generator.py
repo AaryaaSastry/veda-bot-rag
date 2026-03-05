@@ -1,6 +1,7 @@
-import config
+﻿import config
 import json
 import re
+import ollama
 from google import genai
 
 
@@ -11,6 +12,8 @@ class Generator:
         #Using the gemma model for testing currently as it offers unlimited tokens
         #It is recomended to switch to a more powerful model such as Gemini-2.0-flash or Gemini-2.5-flash for final production use. 
         self.model_id = "gemma-3-27b-it"
+        # Local verification model
+        self.ollama_model = "llama3" # Defaulting to llama3, can be changed in config
 
     def generate_text(self, prompt):
         response = self.client.models.generate_content(
@@ -18,6 +21,42 @@ class Generator:
             contents=prompt
         )
         return response.text
+
+    def _generate_ollama_text(self, prompt, verification=False):
+        """Generates text using a local Ollama model for verification logic."""
+        try:
+            response = ollama.chat(model=self.ollama_model, messages=[
+                {
+                    'role': 'user',
+                    'content': prompt,
+                },
+            ])
+            if verification:
+                print("verified via ollama")
+            return response['message']['content']
+        except Exception as e:
+            print(f"Ollama Error: {e}")
+            return ""
+
+    def trigger_verification(self, stage, question="", conversation_history=""):
+        """
+        Lightweight verification ping to ensure verification is triggered on all response paths.
+        """
+        prompt = f"""
+SYSTEM:
+You are a verification sentinel. Confirm this pipeline stage can proceed safely.
+Return ONLY: OK
+
+STAGE:
+{stage}
+
+USER INPUT:
+{question}
+
+CONVERSATION HISTORY (trimmed):
+{self._trim_history(conversation_history, max_lines=8)}
+"""
+        self._generate_ollama_text(prompt, verification=True)
 
     def _trim_history(self, conversation_history, max_lines=24):
         lines = [line for line in conversation_history.splitlines() if line.strip()]
@@ -44,6 +83,25 @@ class Generator:
                 source = source.replace(".pdf", "")
             parts.append(f"Source {i+1} ({source}):\n{text}")
         return "\n\n".join(parts)
+
+    def _extract_source_names(self, retrieved_chunks, max_chunks=6):
+        names = []
+        for chunk in retrieved_chunks[:max_chunks]:
+            source = (chunk.get("source", "") or "").strip()
+            if source.endswith(".pdf"):
+                source = source[:-4]
+            if source and source not in names:
+                names.append(source)
+        return names
+
+    def _extract_source_index_map(self, retrieved_chunks, max_chunks=6):
+        source_map = {}
+        for i, chunk in enumerate(retrieved_chunks[:max_chunks], start=1):
+            source = (chunk.get("source", "") or "").strip()
+            if source.endswith(".pdf"):
+                source = source[:-4]
+            source_map[str(i)] = source or "Unknown"
+        return source_map
 
     def _extract_previous_questions(self, conversation_history):
         questions = []
@@ -79,6 +137,49 @@ class Generator:
                 return True
         return False
 
+    def _infer_question_axis(self, question):
+        normalized = self._normalize_question(question)
+        axis_keywords = {
+            "demographics": {"age", "gender", "male", "female"},
+            "onset_timing": {"start", "started", "since", "when", "duration", "time", "day", "night"},
+            "severity_quality": {"severe", "mild", "sharp", "dull", "throbbing", "burning", "numbness", "pain"},
+            "associated_symptoms": {"symptom", "fever", "breathlessness", "nausea", "vomiting", "headache", "chest"},
+            "triggers_relievers": {"worse", "better", "trigger", "relieve", "aggravate", "improve"},
+            "diet": {"diet", "food", "meal", "eat", "grains", "vegetable", "spice"},
+            "lifestyle_habits": {"sleep", "exercise", "stress", "habit", "routine", "work"},
+            "medical_history": {"history", "medicine", "medication", "diagnosis", "chronic", "disease"},
+        }
+        tokens = set(normalized.split())
+        for axis, keywords in axis_keywords.items():
+            if tokens & keywords:
+                return axis
+        return "other"
+
+    def _get_unasked_axes(self, previous_questions):
+        preferred_axes = [
+            "onset_timing",
+            "severity_quality",
+            "associated_symptoms",
+            "triggers_relievers",
+            "diet",
+            "lifestyle_habits",
+            "medical_history",
+        ]
+        asked = {self._infer_question_axis(q) for q in previous_questions}
+        return [axis for axis in preferred_axes if axis not in asked]
+
+    def _fallback_question_for_axis(self, axis):
+        templates = {
+            "onset_timing": "When did this start, and is it constant or does it come and go?",
+            "severity_quality": "How severe is the symptom now, and what does it feel like?",
+            "associated_symptoms": "Do you have any other symptoms along with this?",
+            "triggers_relievers": "What makes this symptom worse, and what gives relief?",
+            "diet": "What do you usually eat in a typical day?",
+            "lifestyle_habits": "How are your sleep, daily activity, and stress levels currently?",
+            "medical_history": "Do you have any prior medical conditions or regular medicines?",
+        }
+        return templates.get(axis, "Could you share one more detail that has not been discussed yet?")
+
     def _safe_json_load(self, text, fallback):
         if not text:
             return fallback
@@ -95,9 +196,14 @@ class Generator:
                     return fallback
         return fallback
 
-    def generate_differential_diagnosis(self, conversation_history, retrieved_chunks):
+    def generate_differential_diagnosis(self, conversation_history, retrieved_chunks, disease_index=None):
         trimmed_history = self._trim_history(conversation_history, max_lines=30)
         context = self._build_context(retrieved_chunks, max_chunks=8, max_chars_per_chunk=1100)
+        
+        index_context = ""
+        if disease_index:
+            # Provide top relevant disease summaries from the index
+            index_context = "DISEASE INDEX SUMMARIES:\n" + json.dumps(disease_index[:10], indent=2)
 
         prompt = f"""
 SYSTEM:
@@ -106,6 +212,8 @@ Create a differential diagnosis with uncertainty handling.
 
 CONVERSATION HISTORY:
 {trimmed_history}
+
+{index_context}
 
 RETRIEVED SOURCES:
 {context}
@@ -160,13 +268,14 @@ Rules:
             report["red_flags_present"] = []
         return report
 
-    def self_check_differential(self, differential_report, conversation_history):
+    def self_check_differential(self, differential_report, conversation_history, retrieved_chunks=None):
         trimmed_history = self._trim_history(conversation_history, max_lines=30)
         payload = json.dumps(differential_report, ensure_ascii=False)
+        chunk_context = self._build_context(retrieved_chunks or [], max_chunks=6, max_chars_per_chunk=900) if retrieved_chunks else ""
         prompt = f"""
 SYSTEM:
 You are a strict medical safety auditor.
-Review whether the diagnosis is overconfident and whether treatment should be blocked.
+Review whether the diagnosis is overconfident, factually supported by retrieved chunks, and safe to proceed.
 
 CONVERSATION HISTORY:
 {trimmed_history}
@@ -174,28 +283,50 @@ CONVERSATION HISTORY:
 DIFFERENTIAL REPORT:
 {payload}
 
+RETRIEVED SOURCES:
+{chunk_context}
+
 Return ONLY valid JSON:
 {{
+  "diagnosis_valid": true,
   "overconfident": true,
   "missing_differentials": true,
   "requires_medical_escalation": false,
   "treatment_allowed": false,
+  "supported_by_chunks": true,
+  "rejection_reasons": ["reason 1", "reason 2", "reason 3", "reason 4", "reason 5"],
+  "alternative_conditions": ["condition 1", "condition 2", "condition 3"],
+  "targeted_questions": ["question 1?", "question 2?", "question 3?"],
   "adjusted_confidence_cap": 0.55,
   "notes": "short reason"
 }}
 """
-        raw = self.generate_text(prompt)
+        raw = self._generate_ollama_text(prompt, verification=True)
         fallback = {
+            "diagnosis_valid": True,
             "overconfident": False,
             "missing_differentials": False,
             "requires_medical_escalation": False,
             "treatment_allowed": True,
+            "supported_by_chunks": True,
+            "rejection_reasons": [],
+            "alternative_conditions": [],
+            "targeted_questions": [],
             "adjusted_confidence_cap": 1.0,
-            "notes": "",
+            "notes": "Verification failed, passing through.",
         }
         out = self._safe_json_load(raw, fallback)
-        for key in ("overconfident", "missing_differentials", "requires_medical_escalation", "treatment_allowed"):
+        for key in ("diagnosis_valid", "overconfident", "missing_differentials", "requires_medical_escalation", "treatment_allowed", "supported_by_chunks"):
             out[key] = bool(out.get(key, fallback[key]))
+        if not isinstance(out.get("rejection_reasons"), list):
+            out["rejection_reasons"] = []
+        if not isinstance(out.get("alternative_conditions"), list):
+            out["alternative_conditions"] = []
+        if not isinstance(out.get("targeted_questions"), list):
+            out["targeted_questions"] = []
+        out["rejection_reasons"] = [str(x).strip() for x in out["rejection_reasons"] if str(x).strip()]
+        out["alternative_conditions"] = [str(x).strip() for x in out["alternative_conditions"] if str(x).strip()]
+        out["targeted_questions"] = [str(x).strip() for x in out["targeted_questions"] if str(x).strip()]
         try:
             out["adjusted_confidence_cap"] = float(out.get("adjusted_confidence_cap", 1.0))
         except Exception:
@@ -243,7 +374,8 @@ Check very strictly to ensure it checks the accuract of the diagnosis based on t
 Respond with "YES" if the diagnosis is valid and well supported, or "NO" if it is not.
 Respond with ONLY one word: "YES" or "NO".
 """
-        response = self.generate_text(prompt).strip().upper()
+        raw_response = self._generate_ollama_text(prompt, verification=True)
+        response = raw_response.strip().upper()
         return "YES" in response
 
     def generate(self, question, retrieved_chunks, conversation_history="", mode="gathering"):
@@ -254,11 +386,38 @@ Respond with ONLY one word: "YES" or "NO".
         trimmed_history = self._trim_history(conversation_history, max_lines=24)
         if mode == "gathering":
             context = self._build_context(retrieved_chunks, max_chunks=4, max_chars_per_chunk=750)
+            source_names = self._extract_source_names(retrieved_chunks, max_chunks=4)
+            source_index_map = self._extract_source_index_map(retrieved_chunks, max_chunks=4)
         else:
             context = self._build_context(retrieved_chunks, max_chunks=6, max_chars_per_chunk=950)
+            source_names = self._extract_source_names(retrieved_chunks, max_chunks=6)
+            source_index_map = self._extract_source_index_map(retrieved_chunks, max_chunks=6)
 
         if mode == "gathering":
-            instruction = """
+            # Check if the question is a direct symptom from the Bayesian engine
+            symptom_match = re.search(r"if the user has these symptoms: (.*)\.", question)
+            if "The diagnosis engine wants to know" in question and symptom_match:
+                target_symptom = symptom_match.group(1).strip()
+                instruction = f"""
+SYSTEM:
+You are a natural language wrapper for a diagnostic engine.
+Your task is to take a technical symptom attribute and convert it into a gentle, natural Ayurvedic question.
+
+TARGET SYMPTOM: 
+{target_symptom}
+
+SOURCES:
+{context}
+
+RULES:
+1. Output ONLY the question.
+2. The question MUST ask about the user's experience with the '{target_symptom}'.
+3. Use a polite, clinical tone.
+4. Cite a source in brackets from the available sources (e.g., "(Charaka Samhita)").
+5. Example conversion: "cyclic_fever" -> "Are you experiencing fever that occurs in cycles or comes and goes regularly? (Charaka Samhita)"
+"""
+            else:
+                instruction = """
 STRICT OUTPUT RULES:
 1. Output ONLY the question. Nothing else. No acknowledgments, no sympathy, no conversational filler.
 2. DO NOT say things like "Thank you for providing your age and gender" or "It's interesting that..." or any similar statements.
@@ -269,18 +428,19 @@ STRICT OUTPUT RULES:
 QUESTION RULES:
 1. If PATIENT_PROFILE shows unknown age or unknown gender, ask: "To provide an accurate Ayurvedic assessment, could you share your age and gender?"
 2. If PATIENT_PROFILE already has both age and gender, DO NOT ask age/gender again.
-3. Ask ONLY ONE (1) clarifying question to help narrow down the diagnosis.
+3. Ask ONLY ONE ot TWO clarifying question to help narrow down the diagnosis and understand the user's condition.
 4. DO NOT provide treatments or final answers yet.
-5. Ground your question strictly in the provided sources and conversation history.
+5. Ground your question strictly in the provided sources and conversation history and 25 percent of llm information to understand if the orrect questions id being asked.
 6. Gather information about lifestyle, diet, medical history, and habits as this is crucial for Ayurvedic diagnosis.
 7. Ask questions from DIFFERENT books/sources - do not stick to only one book.
+8. If the user mentioned a symptom, ask deeper questions about its quality: is it sharp, dull, throbbing? What makes it better or worse? When did it start?
+9. Ask the questions based on the most relevant retrieved chunks - if a chunk mentions headaches being worse in the evening, ask "Do your headaches tend to worsen at specific times of the day, such as in the evening?" (with the source in brackets).
+10. DO NOT ask the same or very similar question more than once. If you have already asked about symptom quality, do not ask about it again. If you have already asked about timing, do not ask about it again. Move on to other aspects like diet, lifestyle, triggers, etc.
+11.Ensure you understand the underlying reasoning for your question based on the sources. For example, if you ask about timing of headaches, it's because certain Ayurvedic patterns have characteristic timing. If you ask about diet, it's because certain foods can aggravate or alleviate conditions. Always have a clear reason for why you are asking each question, grounded in the Ayurvedic knowledge from the sources.
 
 IMPORTANT: After your question, ADD the source in brackets. Show DIFFERENT sources each time:
 Example: "What time of day do your headaches typically occur? (Ayurvedic-Home-Remedies-English)"
 Next question could be: "What types of food do you typically consume? (Evidence_based_Ayurvedic_Practice)"
-
-EXAMPLE OF WRONG OUTPUT: "Thank you for sharing that. Given your symptoms, I would like to ask..."
-EXAMPLE OF CORRECT OUTPUT: "What time of day do your headaches typically occur? (ayurvedic_treatment_file1)"
 """
         elif mode == "diagnosis":
             instruction = """
@@ -290,32 +450,32 @@ All OF THEM NEEDS TO BE SEPERATED BY NEW LINES. DO NOT COMBINE MULTIPLE OPTIONS 
 The output should be in bullet point format with the following sections:
 --- USER-FRIENDLY OUTPUT ---
 
-📋 DIAGNOSIS:
-• [condition name - english and sanskrit if available]
+ðŸ“‹ DIAGNOSIS:
+â€¢ [condition name - english and sanskrit if available]
 
-📖 EXPLANATION:
-• [5 bullet point explaining only]
-• [Reason-1 from knowledge base with source in brackets]
-• [Reason-2 from knowledge base with source in brackets]
-• [Reason-3 from knowledge base with source in brackets]
-• [Reason-4 from knowledge base with source in brackets]
-• [Reason-5 from knowledge base with source in brackets]
-
-
-
-⚠️ IS IT SERIOUS?
-• [Yes or No followed by 3 bullet points explaining why - use sources in brackets]
-• [Reason-1 from knowledge base with source in brackets]
-• [Reason-2 from knowledge base with source in brackets]
-• [Reason-3 from knowledge base with source in brackets]
+ðŸ“– EXPLANATION:
+â€¢ [5 bullet point explaining only]
+â€¢ [Reason-1 from knowledge base with source in brackets]
+â€¢ [Reason-2 from knowledge base with source in brackets]
+â€¢ [Reason-3 from knowledge base with source in brackets]
+â€¢ [Reason-4 from knowledge base with source in brackets]
+â€¢ [Reason-5 from knowledge base with source in brackets]
 
 
-🏠 CAN IT BE TREATED AT HOME?
-• [Yes or No]
-• [Brief reason followed by 3 bullet points explaining why - use sources in brackets]
-• [Reason-1 from knowledge base with source in brackets]
-• [Reason-2 from knowledge base with source in brackets]
-• [Reason-3 from knowledge base with source in brackets]
+
+âš ï¸ IS IT SERIOUS?
+â€¢ [Yes or No followed by 3 bullet points explaining why - use sources in brackets]
+â€¢ [Reason-1 from knowledge base with source in brackets]
+â€¢ [Reason-2 from knowledge base with source in brackets]
+â€¢ [Reason-3 from knowledge base with source in brackets]
+
+
+ðŸ  CAN IT BE TREATED AT HOME?
+â€¢ [Yes or No]
+â€¢ [Brief reason followed by 3 bullet points explaining why - use sources in brackets]
+â€¢ [Reason-1 from knowledge base with source in brackets]
+â€¢ [Reason-2 from knowledge base with source in brackets]
+â€¢ [Reason-3 from knowledge base with source in brackets]
 
 
 Would you like home-based remedies, do's and don'ts, and lifestyle recommendations?
@@ -357,32 +517,32 @@ The output should be in bullet point format with the following sections:
 --- USER-FRIENDLY OUTPUT ---
 [BULLET POINT FORMAT - Show this to user]
 
-📋 DIAGNOSIS:
-• [condition name - english and sanskrit if available]
+ðŸ“‹ DIAGNOSIS:
+â€¢ [condition name - english and sanskrit if available]
 
-📖 EXPLANATION:
-• [5 bullet point explaining only]
-• [Reason-1 from knowledge base with source in brackets]
-• [Reason-2 from knowledge base with source in brackets]
-• [Reason-3 from knowledge base with source in brackets]
-• [Reason-4 from knowledge base with source in brackets]
-• [Reason-5 from knowledge base with source in brackets]
-
-
-
-⚠️ IS IT SERIOUS?
-• [Yes or No followed by 3 bullet points explaining why - use sources in brackets]
-• [Reason-1 from knowledge base with source in brackets]
-• [Reason-2 from knowledge base with source in brackets]
-• [Reason-3 from knowledge base with source in brackets]
+ðŸ“– EXPLANATION:
+â€¢ [5 bullet point explaining only]
+â€¢ [Reason-1 from knowledge base with source in brackets]
+â€¢ [Reason-2 from knowledge base with source in brackets]
+â€¢ [Reason-3 from knowledge base with source in brackets]
+â€¢ [Reason-4 from knowledge base with source in brackets]
+â€¢ [Reason-5 from knowledge base with source in brackets]
 
 
-🏠 CAN IT BE TREATED AT HOME?
-• [Yes or No]
-• [Brief reason followed by 3 bullet points explaining why - use sources in brackets]
-• [Reason-1 from knowledge base with source in brackets]
-• [Reason-2 from knowledge base with source in brackets]
-• [Reason-3 from knowledge base with source in brackets]
+
+âš ï¸ IS IT SERIOUS?
+â€¢ [Yes or No followed by 3 bullet points explaining why - use sources in brackets]
+â€¢ [Reason-1 from knowledge base with source in brackets]
+â€¢ [Reason-2 from knowledge base with source in brackets]
+â€¢ [Reason-3 from knowledge base with source in brackets]
+
+
+ðŸ  CAN IT BE TREATED AT HOME?
+â€¢ [Yes or No]
+â€¢ [Brief reason followed by 3 bullet points explaining why - use sources in brackets]
+â€¢ [Reason-1 from knowledge base with source in brackets]
+â€¢ [Reason-2 from knowledge base with source in brackets]
+â€¢ [Reason-3 from knowledge base with source in brackets]
 
 
 Would you like home-based remedies, do's and don'ts, and lifestyle recommendations?
@@ -427,32 +587,32 @@ BASE RULE: EACH OPTION MUST BE IN BULLET POINT FORMAT STARTING WITH THE EMOJI AN
 All OF THEM NEEDS TO BE SEPERATED BY NEW LINES. DO NOT COMBINE MULTIPLE OPTIONS IN THE SAME LINE.
 The output should be in bullet point format with the following sections:
 
-📋 DIAGNOSIS:
-• [condition name - english and sanskrit if available]
+ðŸ“‹ DIAGNOSIS:
+â€¢ [condition name - english and sanskrit if available]
 
-📖 EXPLANATION:
-• [5 bullet point explaining only]
-• [Reason-1 from knowledge base with source in brackets]
-• [Reason-2 from knowledge base with source in brackets]
-• [Reason-3 from knowledge base with source in brackets]
-• [Reason-4 from knowledge base with source in brackets]
-• [Reason-5 from knowledge base with source in brackets]
-
-
-
-⚠️ IS IT SERIOUS?
-• [Yes or No followed by 3 bullet points explaining why - use sources in brackets]
-• [Reason-1 from knowledge base with source in brackets]
-• [Reason-2 from knowledge base with source in brackets]
-• [Reason-3 from knowledge base with source in brackets]
+ðŸ“– EXPLANATION:
+â€¢ [5 bullet point explaining only]
+â€¢ [Reason-1 from knowledge base with source in brackets]
+â€¢ [Reason-2 from knowledge base with source in brackets]
+â€¢ [Reason-3 from knowledge base with source in brackets]
+â€¢ [Reason-4 from knowledge base with source in brackets]
+â€¢ [Reason-5 from knowledge base with source in brackets]
 
 
-🏠 CAN IT BE TREATED AT HOME?
-• [Yes or No]
-• [Brief reason followed by 3 bullet points explaining why - use sources in brackets]
-• [Reason-1 from knowledge base with source in brackets]
-• [Reason-2 from knowledge base with source in brackets]
-• [Reason-3 from knowledge base with source in brackets]
+
+âš ï¸ IS IT SERIOUS?
+â€¢ [Yes or No followed by 3 bullet points explaining why - use sources in brackets]
+â€¢ [Reason-1 from knowledge base with source in brackets]
+â€¢ [Reason-2 from knowledge base with source in brackets]
+â€¢ [Reason-3 from knowledge base with source in brackets]
+
+
+ðŸ  CAN IT BE TREATED AT HOME?
+â€¢ [Yes or No]
+â€¢ [Brief reason followed by 3 bullet points explaining why - use sources in brackets]
+â€¢ [Reason-1 from knowledge base with source in brackets]
+â€¢ [Reason-2 from knowledge base with source in brackets]
+â€¢ [Reason-3 from knowledge base with source in brackets]
 
 
 Would you like home-based remedies, do's and don'ts, and lifestyle recommendations?
@@ -495,69 +655,42 @@ Output only that question.
         elif mode == "escalation":
             instruction = """
 OUTPUT FORMAT (STRICTLY FOLLOW THIS):
-
-
 --- USER-FRIENDLY OUTPUT ---
-[BULLET POINT FORMAT - Show this to user]
+URGENT SAFETY ADVICE:
+- [One-line summary that symptoms need prompt in-person medical assessment]
 
-📋 DIAGNOSIS:
-• [condition name - english and sanskrit if available]
+WHY THIS NEEDS ESCALATION:
+- [3-5 concise, source-grounded reasons]
 
-📖 EXPLANATION:
-• [5 bullet point explaining only]
-• [Reason-1 from knowledge base with source in brackets]
-• [Reason-2 from knowledge base with source in brackets]
-• [Reason-3 from knowledge base with source in brackets]
-• [Reason-4 from knowledge base with source in brackets]
-• [Reason-5 from knowledge base with source in brackets]
+WHAT NOT TO DO NOW:
+- [2-4 concise points]
 
-
-
-⚠️ IS IT SERIOUS?
-• [Yes or No followed by 3 bullet points explaining why - use sources in brackets]
-• [Reason-1 from knowledge base with source in brackets]
-• [Reason-2 from knowledge base with source in brackets]
-• [Reason-3 from knowledge base with source in brackets]
-
-
-🏠 CAN IT BE TREATED AT HOME?
-• [Yes or No]
-• [Brief reason followed by 3 bullet points explaining why - use sources in brackets]
-• [Reason-1 from knowledge base with source in brackets]
-• [Reason-2 from knowledge base with source in brackets]
-• [Reason-3 from knowledge base with source in brackets]
-
-
-Would you like home-based remedies, do's and don'ts, and lifestyle recommendations?
-<--leave space between each content section and do not combine them into one line-->
-*
-*
-*
-*
-*
-<--IMPORTANT: When user responds to remedies question, ALWAYS provide remedies - do NOT ask more questions!-->
+WHAT TO DO NOW:
+- [3-5 immediate next steps, including urgent care/emergency support based on severity]
 --- END USER OUTPUT ---
 
-INTERNAL ANALYSIS (For your reference only):
-Top 3 conditions in bullet point:
- * Disease Name - 1 (COMMON ENGLISH NAME AND AYURVEDIC NAME) [List with confidence scores] 
-     -> Reason-1 from knowledge base with source in brackets
-     -> Reason-2 from knowledge base with source in brackets
+Rules:
+- Do not ask for home remedies consent in escalation mode.
+- Do not provide treatment plans that could delay urgent medical care.
+- Keep advice clear, concise, and source-grounded.
+"""
+        elif mode == "escalation_followup":
+            instruction = """
+You are in post-escalation follow-up mode.
 
- * Disease Name - 2 (COMMON ENGLISH NAME AND AYURVEDIC NAME) [List with confidence scores]
-        -> Reason-1 from knowledge base with source in brackets
-        -> Reason-2 from knowledge base with source in brackets
+OUTPUT FORMAT (STRICTLY FOLLOW THIS):
+--- USER-FRIENDLY OUTPUT ---
+SAFETY REMINDER:
+- [Reinforce urgent assessment need in one line]
 
-* Disease Name - 3 (COMMON ENGLISH NAME AND AYURVEDIC NAME) [List with confidence scores]
-        -> Reason-1 from knowledge base with source in brackets
-        -> Reason-2 from knowledge base with source in brackets
+NEXT STEP:
+- [Single concrete next step based on user reply]
+--- END USER OUTPUT ---
 
-Next ASK THE USER ONLY ONE QUESTION about remedies consent: "Would you like home-based remedies, do's and don'ts, and lifestyle recommendations?"
-IMPORTANT: When user responds to remedies question, ALWAYS provide remedies - do NOT ask more questions!
-
-IMPORTANT: When user responds to remedies question, ALWAYS provide remedies - do NOT ask more questions!
-
-STRICTLY use ONLY information from the RETRIEVED SOURCES. Use actual document names like "(ayurvedic_treatment_file1)", "(Ayurvedic-Home-Remedies-English)" for citations.
+Rules:
+- Do not re-enter diagnostic questioning loops.
+- Do not ask remedies consent.
+- Keep response concise (2-4 bullets total).
 """
         elif mode == "remedies":
             instruction = f"""
@@ -566,50 +699,50 @@ OUTPUT FORMAT (STRICTLY FOLLOW THIS - BULLET POINT FORMAT):
 --- REMEDIES & LIFESTYLE ---
 [BULLET POINT FORMAT - Show everything below to user]
 
-🏠 HOME REMEDIES:
+ðŸ  HOME REMEDIES:
     - TOP 5 REMEDIES (WITH CITATIONS):
-    • [Remedy 1 from knowledge base with source in brackets]
-    • [Remedy 2 from knowledge base with source in brackets]
-    • [Remedy 3 from knowledge base with source in brackets]
-    • [Remedy 4 from knowledge base with source in brackets]
-    • [Remedy 5 from knowledge base with source in brackets]
+    â€¢ [Remedy 1 from knowledge base with source in brackets]
+    â€¢ [Remedy 2 from knowledge base with source in brackets]
+    â€¢ [Remedy 3 from knowledge base with source in brackets]
+    â€¢ [Remedy 4 from knowledge base with source in brackets]
+    â€¢ [Remedy 5 from knowledge base with source in brackets]
 Additional Note on Remedies: [Any important notes on remedies based on the knowledge base]
 
 
-✅ DO'S (THINGS YOU CAN HAVE/MUST DO):
+âœ… DO'S (THINGS YOU CAN HAVE/MUST DO):
 -TOP 5 DO'S (WITH CITATIONS):
-• [Do 1 from knowledge base with source in brackets]
-• [Do 2 from knowledge base with source in brackets]
-• [Do 3 from knowledge base with source in brackets]
-• [Do 4 from knowledge base with source in brackets]
-• [Do 5 from knowledge base with source in brackets]
+â€¢ [Do 1 from knowledge base with source in brackets]
+â€¢ [Do 2 from knowledge base with source in brackets]
+â€¢ [Do 3 from knowledge base with source in brackets]
+â€¢ [Do 4 from knowledge base with source in brackets]
+â€¢ [Do 5 from knowledge base with source in brackets]
 
-❌ DON'TS (THINGS TO AVOID/MUST NOT DO):
+âŒ DON'TS (THINGS TO AVOID/MUST NOT DO):
 -TOP 5 DON'TS (WITH CITATIONS):
-• [Avoid 1 from knowledge base]
-• [Avoid 2 from knowledge base with source in brackets]
-• [Avoid 3 from knowledge base with source in brackets]
-• [Avoid 4 from knowledge base with source in brackets]
-• [Avoid 5 from knowledge base with source in brackets]
+â€¢ [Avoid 1 from knowledge base]
+â€¢ [Avoid 2 from knowledge base with source in brackets]
+â€¢ [Avoid 3 from knowledge base with source in brackets]
+â€¢ [Avoid 4 from knowledge base with source in brackets]
+â€¢ [Avoid 5 from knowledge base with source in brackets]
 
-🍽️ FOOD TO HAVE:
-• [Food 1 from knowledge base with source in brackets]
-• [Food 2 from knowledge base with source in brackets]
-• [Food 3 from knowledge base with source in brackets]
-• [Food 1 from knowledge base with source in brackets]
-• [Food 2 from knowledge base with source in brackets]
-• [Food 3 from knowledge base with source in brackets]
+ðŸ½ï¸ FOOD TO HAVE:
+â€¢ [Food 1 from knowledge base with source in brackets]
+â€¢ [Food 2 from knowledge base with source in brackets]
+â€¢ [Food 3 from knowledge base with source in brackets]
+â€¢ [Food 1 from knowledge base with source in brackets]
+â€¢ [Food 2 from knowledge base with source in brackets]
+â€¢ [Food 3 from knowledge base with source in brackets]
 
 
-🚫 FOOD TO AVOID:
-• [Food 1 from knowledge base with source in brackets]
-• [Food 2 from knowledge base with source in brackets]
-• [Food 3 from knowledge base with source in brackets   ]
+ðŸš« FOOD TO AVOID:
+â€¢ [Food 1 from knowledge base with source in brackets]
+â€¢ [Food 2 from knowledge base with source in brackets]
+â€¢ [Food 3 from knowledge base with source in brackets   ]
 
-🌿 LIFESTYLE RECOMMENDATIONS:
-• [Lifestyle tip 1 from knowledge base]
-• [Lifestyle tip 2 from knowledge base]
-• [Lifestyle tip 3 from knowledge base]
+ðŸŒ¿ LIFESTYLE RECOMMENDATIONS:
+â€¢ [Lifestyle tip 1 from knowledge base]
+â€¢ [Lifestyle tip 2 from knowledge base]
+â€¢ [Lifestyle tip 3 from knowledge base]
 
 Additional Note on Lifestyle: [Any important notes on lifestyle based on the knowledge base]
 
@@ -634,6 +767,12 @@ Cite sources using actual document names like "(ayurvedic_treatment_file1)", "(A
 
 STRICTLY use ONLY information from the RETRIEVED SOURCES.
 """
+        elif mode == "consent_clarification":
+            instruction = """
+Ask exactly one clarification question:
+"Would you like me to provide home-based remedies, dos and don'ts, and lifestyle recommendations? Please answer yes or no."
+Output only that question.
+"""
         else:
             instruction = "Provide a helpful response based on the RETRIEVED SOURCES. If providing medical information, cite sources."
 
@@ -646,7 +785,8 @@ GLOBAL RULES (APPLY TO ALL MODES):
 - NO acknowledgments (e.g., "Thank you for sharing", "I appreciate that information")
 - NO conversational filler (e.g., "It's interesting that...", "Given what you've told me...")
 - Go directly to the content requested
-- ALWAYS cite sources when providing medical information (e.g., "(Source 1)", "(Ayurvedic-Home-Remedies-English)")
+- ALWAYS cite sources using only source names exactly as provided in SOURCE_NAME_ALLOWLIST
+- NEVER use placeholder citations like "(Source 1)" or "(Source 2)"
 - Use information ONLY from the RETRIEVED SOURCES
 
 CONVERSATION HISTORY:
@@ -658,6 +798,9 @@ RETRIEVED SOURCES:
 CURRENT USER INPUT:
 {question}
 
+SOURCE_NAME_ALLOWLIST:
+{", ".join(source_names) if source_names else "Unknown"}
+
 INSTRUCTIONS:
 {instruction}
 - Groundedness: Remain strictly inside the provided sources.
@@ -667,8 +810,9 @@ Answer:
 """
 
         try:
-            if mode in ("gathering", "uncertain"):
+            if mode == "gathering":
                 previous_questions = self._extract_previous_questions(conversation_history)
+                unasked_axes = self._get_unasked_axes(previous_questions)
                 retry_prompt = prompt
 
                 for attempt in range(3):
@@ -685,12 +829,13 @@ Answer:
                     retry_prompt = f"""{prompt}
 ADDITIONAL HARD CONSTRAINT:
 - The next question MUST be semantically different from all previous assistant questions.
-- Do NOT ask about age, gender, nausea, sunlight triggers, diet timing, food list, or time of day again.
 - Ask about a new diagnostic axis that is unresolved.
+- Prefer one of these unresolved axes: {", ".join(unasked_axes) if unasked_axes else "any unresolved axis"}
 - Output only one new question.
 """
 
-                yield "Do you have reduced hearing, ringing, or fever along with the ear pain?"
+                fallback_axis = unasked_axes[0] if unasked_axes else "other"
+                yield self._fallback_question_for_axis(fallback_axis)
                 return
 
             # Non-gathering modes - use non-streaming for better structure
@@ -702,9 +847,47 @@ ADDITIONAL HARD CONSTRAINT:
             output = response.text or ""
             # Clean the output to remove duplicates
             output = self._clean_output(output)
+            output = self._normalize_source_citations(output, source_index_map, source_names)
+            output = self._strip_internal_sections(output)
             yield output
         except Exception as e:
             yield f"\n[Error during generation: {e}]"
+
+    def _normalize_source_citations(self, text, source_index_map, source_names):
+        if not text:
+            return text
+
+        def repl(match):
+            idx = match.group(1)
+            mapped = source_index_map.get(idx)
+            if mapped:
+                return f"({mapped})"
+            if source_names:
+                return f"({source_names[0]})"
+            return "(Unknown)"
+
+        text = re.sub(r"\(\s*source\s*(\d+)\s*\)", repl, text, flags=re.IGNORECASE)
+        text = re.sub(r"\[\s*source\s*(\d+)\s*\]", repl, text, flags=re.IGNORECASE)
+        return text
+
+    def _strip_internal_sections(self, text):
+        if not text:
+            return text
+
+        friendly_start = re.search(r"---\s*USER-FRIENDLY OUTPUT\s*---", text, flags=re.IGNORECASE)
+        friendly_end = re.search(r"---\s*END USER OUTPUT\s*---", text, flags=re.IGNORECASE)
+        if friendly_start and friendly_end and friendly_end.start() > friendly_start.end():
+            text = text[friendly_start.start():friendly_end.end()]
+
+        # Remove anything marked internal if it still leaks in.
+        text = re.sub(
+            r"INTERNAL ANALYSIS.*$",
+            "",
+            text,
+            flags=re.IGNORECASE | re.DOTALL,
+        )
+        text = re.sub(r"^\s*Next ASK THE USER ONLY ONE QUESTION.*$", "", text, flags=re.IGNORECASE | re.MULTILINE)
+        return text.strip()
 
     def _clean_output(self, text: str) -> str:
         """
@@ -759,3 +942,4 @@ ADDITIONAL HARD CONSTRAINT:
                 )
 
         return text
+

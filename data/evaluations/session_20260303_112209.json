@@ -1,0 +1,104 @@
+{
+  "session_summary": {
+    "start_time": "2026-03-03T11:16:41.859046",
+    "end_time": "2026-03-03T11:22:09.988114",
+    "total_turns": 5,
+    "total_safety_alerts": 2,
+    "diagnosis_completed": false
+  },
+  "safety_alerts": [
+    {
+      "turn": 1,
+      "input": "i have swelling in my arm",
+      "risks": [
+        {
+          "risk_type": "vascular_infection",
+          "similarity_score": 0.679986298084259
+        }
+      ]
+    },
+    {
+      "turn": 1,
+      "input": "i have swelling in my arm",
+      "risks": [
+        {
+          "risk_type": "vascular_infection",
+          "similarity_score": 0.679986298084259
+        }
+      ]
+    }
+  ],
+  "diagnosis": null,
+  "conversation_turns": [
+    {
+      "turn_number": 1,
+      "timestamp": "2026-03-03T11:17:13.339854",
+      "user_input": "i have swelling in my arm",
+      "assistant_response": "[SAFETY WARNING - Continuing with clarification]",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": false,
+        "matched_risks": [
+          {
+            "risk_type": "vascular_infection",
+            "similarity_score": 0.679986298084259
+          }
+        ]
+      }
+    },
+    {
+      "turn_number": 1,
+      "timestamp": "2026-03-03T11:17:29.694291",
+      "user_input": "i have swelling in my arm",
+      "assistant_response": "To provide an accurate Ayurvedic assessment, could you share your age and gender? (ayurvedic_treatment_file1)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": false,
+        "matched_risks": [
+          {
+            "risk_type": "vascular_infection",
+            "similarity_score": 0.679986298084259
+          }
+        ]
+      },
+      "retrieval_query": "i have swelling in my arm"
+    },
+    {
+      "turn_number": 2,
+      "timestamp": "2026-03-03T11:17:56.261570",
+      "user_input": "44 female",
+      "assistant_response": "What qualities describe the swelling – is it hard, soft, painful, or warm to the touch? (Source 4)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "44 female"
+    },
+    {
+      "turn_number": 3,
+      "timestamp": "2026-03-03T11:18:34.799776",
+      "user_input": "soft to touch",
+      "assistant_response": "Is the swelling accompanied by pain, and if so, can you describe the nature of the pain – is it sharp, dull, aching, or throbbing? (Source 4)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "soft to touch"
+    },
+    {
+      "turn_number": 4,
+      "timestamp": "2026-03-03T11:19:53.617509",
+      "user_input": "yes, there is pain, its a problem when i move my hand upwards",
+      "assistant_response": "What is your typical diet like, including the types of foods you frequently consume? (ayurvedic_treatment_file1)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "yes, there is pain, its a problem when i move my hand upwards"
+    }
+  ],
+  "retrieval_statistics": []
+}

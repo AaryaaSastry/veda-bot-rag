@@ -1,0 +1,1144 @@
+Based on CCRAS R&D Contributions
+Central Council for Research in Ayurvedic Sciences (CCRAS)
+Ministry of AYUSH, Govt, of India 
+New Delhi^
+
+Drug Development for Select Diseases 
+Evidence Based Approach
+Based on CCRAS R&D Contributions
+Central Council for Research in Ayurvedic Sciences (CCRAS)
+Ministry of AYUSH, Govt. of India 
+Jawahar Lal Nehru Bhartiya Chikitsa Evam Homoeopathy Anusandhan Bhawan 
+61-65, Institutional Area, Opp. ‘D’ Block, Janakpuri, New Delhi-110058
+• •
+
+© 2016, Central Council for Research in Ayurvedic Sciences, Ministry of AYUSH, Government of India, 
+New Delhi.
+First Edition : June, 2016 
+No. of Copies : 1000 
+ISBN : 978-93-83864-20-1
+Published by : 
+Central Council for Research in Ayurvedic Sciences (CCRAS),
+New Delhi -110058.
+Printed at : 
+Dolphin Printo-Graphics
+4E/7, Jhandewalan, New Delhi -  110055 
+w ww. dolphinprintographi cs.com
+Disclaimer: 
+All possible efforts have been made to ensure the correctness of the contents. However,
+CCRAS shall not be accountable for any inadvertent error in the contents. Corrective 
+measures shall be taken up once such errors are brought to notice.-
+
+ACKNOWLEDGEMENT
+The Central Council for Research in Ayurvedic Sciences, Ministry of AYUSH, Government 
+of India acknowledges the active participation and technical contribution of the following 
+officials in the preparation of this document.
+Guidance, Facilitation and Chief Editor : Prof. Vd. K. S. Dhiman, Director General, 
+Central Council for Research in Ayurvedic Sciences, New Delhi.
+Executive Editor : Dr. M. M. Padhi, Deputy Director General, Central Council for Research 
+in Ayurvedic Sciences, New Delhi.
+Content Development: Dr. N. Srikanth, Assistant Director (Ayurveda); Dr. Sarda Ota, 
+Research Officer (Scientist-2); Dr. Shruti Khanduri, Research Officer (Ayurveda); Dr. Renu 
+Singh, Research officer (Ayurveda); Central Council for Research in Ayurvedic Sciences, 
+New Delhi.
+Technical Support: Dr. Bharti, Assistant Director (Ayurveda); Dr. S. Gaidhani, Assistant 
+Director (Pharmacology); Dr. A. K. Mangal, Assistant Director (Pharmacognosy); Dr. S. 
+Singh, Research Officer (Scientist-4); Dr. Sunita, Research Officer (Scientist-2); Dr. B. S. 
+Sharma, Research Officer (Scientist-2); Dr. V. K. Lavaniya, Research Officer (Ayurveda); 
+Dr. Chinmay Rath, Research Officer (Botany).
+Technical Assistance: Dr. Richa Bhardwaj, Senior Research Fellow(Ayurveda), 
+Dr. Praveen Sharma, Senior Research Fellow(Ayurveda); Dr. Priyanka, Senior Research 
+Fellow (Ayurveda).The Council also places record of appreciation to Ms. Meera and 
+Mr. Pradeep for their secretarial assistance.
+Central Council for Research in Ayurvedic Sciences (CCRAS)
+
+
+PREFACE
+The Central Council for Research in Ayurvedic Sciences has been engaged in clinical 
+research and drug development of new/ coded formulations based on leads from classical 
+texts, contemporary scientific and pharmacological leads for important diseases of National 
+importance based on strength of Ayurveda.
+The Council has been putting efforts to translate the research findings into practice 
+and make available to the needful at large. In this direction, the technologies of new coded 
+drugs and formulations developed by the Council such as Ayush-64 for Malaria, Ayush-56 
+for Epilepsy, Ayush-82 for Diabetes mellitus etc have been transferred to the Industry through 
+National Research Development Corporation, Department of Scientific and Industrial 
+Research, Ministry of Science & Technology, Government of India.
+I 
+am pleased to present this concise and comprehensive document comprising the 
+fifteen important drugs / formulations developed by the Council through systemic drug 
+development process such as standardization, Pre Clinical studies and Clinical studies. I 
+appreciate the effort put in by officers of the Council in developing this document. I sincerely 
+hope the readers would find this document useful.
+(Prof. Vd. K. S. Dhiman)
+Director General
+Central Council for Research in Ayurvedic Sciences
+New Delhi
+Central Council for Research in Ayurvedic Sciences (CCRAS)
+
+
+INDEX
+Sl. No.
+Drugs/ Formulations
+Page No.
+1.
+AYUSH -64
+An Ayurvedic anti-Malarial Drug
+1-4
+2.
+AYUSH-56
+An Ayurvedic Anti-Epileptic Drug
+5-6
+3.
+AYUSH-82
+An Ayurvedic Drug For Diabetes Mellitus
+7-9
+4.
+NIMBATIKTAM
+An Ayurvedic Drug For Psoriasis and Duodenal ulcer
+10-13
+5.
+AYUSH POSHAK YOGA AND PEYA
+For Immunomodulatory, Antistress and General Health Promotion
+14-19
+6.
+SHUNTHI GUGGULU
+For Rheumatoid Arthritis (Amavata)
+20-22
+7.
+KSHARASUTRA
+In Ano Rectal Disorders
+23-24
+8.
+AYUSH BALARASAYANA
+For Promotion of Health in Children
+25-26
+9.
+AYUSH GHUTTI
+For Prevention of Diarrhoea and Fever in Children
+27-28
+10.
+AYURVEDIC FORMULATIONS
+For Antenatal Care
+29-31
+Central Council for Research in Ayurvedic Sciences (CCRAS) 
+.
+---------------------------------------------------- vii
+
+
+1. AYUSH -64
+An Ayurvedic anti-Malarial Drug
+Background
+Malaria, a tropical diseases is widely prevalent all over the world and has claimed millions of lives. 
+However, by using modern anti-malarial drugs like quinine, chloroquine & also insecticides to kill 
+mosquitoes the disease is temporarily controlled. Nevertheless, it has been found that mosquitoes have 
+developed immunity to the insecticides and their breeding, continues unabated. It has also been realized 
+that the modern allopathic anti-malarial drugs are highly toxic and their repeated use causes numerous 
+side- effects resulting in ocular disturbances etc.
+Descriptions concerning its aetiopathogenesis, clinical features and line of management are detailed under 
+‘ Vishamajwara, in ancient classical literature of Ayurveda. Ayurvedic classics vividly recount the sign, 
+symptoms and phase wise clinical consequences of mosquito bite. This may range from symptoms like 
+itching, swelling and mild pain to severe form of fever, vomiting etc. Malaria may be comparable to the 
+clinical entities emerging out of mosquito bite as described in Ayurvedic classics
+In order to provide safe, inexpensive and effective remedy for malaria, CCRAS has developed a poly 
+herbal safe, anti-malarial drug ‘Ayush-64’ through extensive pharmacological, toxicological and clinical 
+studies. This has been patented by the Council through National Research and Development Corporation, 
+New Delhi.( Patent No:152863)
+Drug Profile
+S.No.
+Ingredients
+Botanical name
+Part used
+1.
+Kiratatikta
+Swertia chirata Buch-Ham. ex Wall.
+Whole Plant
+2.
+Saptaparna
+Alstonia scholaris (L.) R.Br
+Stem Bark
+3.
+Katuki
+Picrorhiza kurroa Royle ex Benth.
+Root
+4.
+Kuberaksha
+Caesalpinia crista L.
+Seed
+Pharmacological/Safety/Toxicity Studies
+• 
+In albino mice, oral administration of Ayush -64 at doses of 250-750mg/kg for five days exhibited 
+significant anti-malarial property.3
+• 
+Ayush-64 administered in dose of 500 mg/ kg body weight in rats for 12 weeks was considered safe 
+and non-toxic. 3
+Central Council for Research in Ayurvedic Sciences (CCRAS) ^ 
+
+AYUSH -64 An Ayurvedic anti-Malarial Drug
+Clinical efficacy
+Clinical trials of Ayush-64 were conducted on 1442 positive cases of malaria at various Research 
+institutes and Centres of the Council located in different part of the country. The response of 
+treatment was 89% and the findings were comparable with known Anti-malarial drugs-chloroquine 
+and primaquine.1,2 ,3 (Figure-1).
+Figure -1
+Source: Ayush-64 A New Ayurvedic Anti- Malarial Compound ,Central Council for Research in Ayurveda & Siddha 1987
+^  
+pDrug Development for Select Diseases: Evidence Based Approach
+
+AYUSH -64 An Ayurvedic anti-Malarial Drug
+OPD & IPD level double blind studies were conducted on 178 patients revealed that the formulation 
+is effective in 95.4% of patients. Normal temperature besides clearance of malarial parasite was 
+achieved within 5-7 days. 1,2,3 (Figure-2).
+Figure-2
+Source: Ayush-64 A New Ayurvedic Anti- Malarial Compound, Central Council for Research in Ayurveda & Siddha 1987
+Collaborative studies with National Malaria Eradication programme (Govt. of Haryana & 
+Tamil Nadu): These studies conducted on 496 patients have shown clearance of parasites and 
+clinical improvement in 72-90% in 5-7 days.1,2
+Epidemic Malaria control programme (Western Rajasthan 1984, Assam, 1995) During 
+epidemic Malarial control programmes at Rajasthan and Assam approximately 3,600 and 10,000
+P.vivax cases were treated respectively. Clinical improvement was observed in almost all cases.
+Positive P.falciparum was observed in some cases and parasite clearance and clinical improvement 
+was found in few numbers of cases. 1,2
+Side effects: No side/toxic effect in prescribed doses
+Central Council for Research in Ayurvedic Sciences (CCRAS)
+^ 
+
+AYUSH -64 An Ayurvedic anti-Malarial Drug
+Recommended Dose: As mentioned below or as directed by the physician
+Adult 
+: 
+4 tablets (500 mg each) thrice daily for 5-7 days
+Children (5-12 years) 
+: 
+2 tablets thrice daily for 5-7 days
+Infants (below 5 years) 
+: 
+Powder of 1 tablet with honey, three times a day
+Ingredients
+Katuki (Picrorhiza kurroa Royale) 
+Kuberaksa (Caesalpinia crista Linn.)
+Kiratatikta (Swertia chirata Buch-ham) 
+Saptaparna (Alstonia scholaris R.Br)
+References
+1. 
+Ayush-64 A New Ayurvedic Anti- Malarial Compound ,Central Council for Research in Ayurveda 
+& Siddha(CCRAS) 1987
+2. 
+CCRAS Research an Overview, CCRAS, Year:2002, Page no.35-36
+3. 
+A Clinical trial of Ayush-64 (A coded anti-malarial medicine) in case of Malaria, Journal of 
+Research in Ayurveda and Siddha, CCRAS, Year: 1981, Vol:2, Issue: 1-2, pages 309-326
+4. 
+Pharmacological Investigations of certain Medicinal Plants and Compound Formulations used in 
+Ayurveda and Siddha; Central Council for Research in Ayurveda & Siddha (CCRAS), 1996.
+, Drug Development for Select Diseases: Evidence Based Approach 
+|_--------------------------------------------------------------------------------
+
+2. AYUSH-56
+An Ayurvedic Anti-Epileptic Drug
+Background
+Epilepsy(Apasmara) is a transient loss of consciousness with terrifying physical movements born of 
+derangement of memory, intellect and mind. Epilepsy is a Greek word meaning “A condition of being 
+overcome or seized or attached”. The clinical picture of Apasmara presented in Ayurveda and that of 
+epilepsy in modern medicine are almost identical. Ayurveda considered the involvement of both body and 
+mind in the causation of the disease. About 30%of the patients of epilepsy do not respond to the current 
+available modern drugs besides their adverse effects.
+In view of this, the Central Council for Research in Ayurvedic Sciences, through extensive pharmacological/ 
+toxicological and clinical studies has evolved a new safe and effective coded drug Ayush-56 for the 
+management of epilepsy. This has been patented by the Council through National Research and Development 
+Corporation, New Delhi. (Patent No: 141170)
+Drug Profile
+S. No.
+Ingredients
+Botanical name
+Parts used
+1.
+Sunisannaka
+Marsilea minuta L.
+Whole Plant
+2.
+Jatamansi
+Nardostachys jatamansi (D. Don) 
+DC.
+Root/Rhizome
+Safety/Toxicity Profile: Acute and sub-acute toxicity studies revealed no toxic effects of the drug.1 
+Clinical Efficacy:
+Clinical studies on 273 subjects were carried out at three peripheral research Institutes/Units of the 
+Council to ascertain the efficacy of Ayush-56 in the treatment of Epilepsy (Apasmara). The study showed 
+significant reduction (65%) in frequency and duration of epileptic fits. It is found useful as an add on 
+therapy to the modern anti-epileptic treatment. No adverse event in prescribed doses was reported. Further, 
+no withdrawal effect was observed after slowly tapering the modern medicine with this drug.2,3. The overall 
+effect of the drug Ayush-56 is given in the Table-1.
+Table- 1: Showing the overall effect of the drug Ayush-56 (n = 273)
+Sl. No.
+Result
+No. of cases
+1.
+Complete control
+87
+2.
+Marked control
+48
+3.
+Moderate control
+41
+4.
+No control
+Central Council for Research in Ayurvedic Sciences (CCRAS)
+
+AYUSH-56 An Ayurvedic Anti-Epileptic Drug
+Recommended Dose
+Adults : Two tablets (250 mg each), three times a day for six months or as directed by physician
+Children 
+: One tablet (250 mg each), three times a day for six months or as directed by physician
+Ingredients
+Jatamansi (Nardostachys jatamansi DC. )
+Sunisannaka (Marsilea minuta Linn)
+REFERENCES
+1. 
+Pharmacological Investigations of certain Medicinal Plants and Compound Formulations 
+used in Ayurveda and Siddha; Central Council for Research in Ayurveda & Siddha (CCRAS), 
+1996.
+2. 
+CCRAS Research an Overview; Central Council for Research in Ayurveda 
+& Siddha 
+(CCRAS), Year: 2002, Page no. 22-23.
+3. 
+Ayush-56 An Ayurvedic Anti- Epileptic Drug; Central Council for Research in Ayurveda & 
+Siddha (CCRAS), 1997.
+Drug Development for Select Diseases: Evidence Based Approach
+
+3. AYUSH-82
+An Ayurvedic Drug for Diabetes Mellitus
+Background
+Diabetes mellitus (Madhumeha) is a group of metabolic diseases marked by high level of blood glucose 
+resulting from defects in insulin production, insulin action or both. Diabetes may lead to serious 
+complications involving multiple organs. Ayurvedic literatures vividly describe about the aetiology, 
+pathogenesis, prognosis, complications, its management and scientifically attributed the causal relationship 
+of dietary, lifestyle, environmental and genetic factors.
+CCRAS has developed a polyherbal formulation, Ayush-82 for the management of Diabetes mellitus.
+Drug Profile
+Sl.No.
+Drug name
+Botanical/English name
+Part used
+1.
+Jambu
+Syzygium cumini (L.) Skeels
+Seed
+2.
+Karvellaka
+Momordica charantia Linn.
+Seed
+3.
+Meshashringi
+Gymnema sylvestre R.Br.
+Leaf
+4.
+Amra
+Mangifera indica Linn.
+Seed
+Safety/toxicity profile
+Acute Toxicity Studies of Ayush-82 administered orally in Swiss Albino (I.B) mice revealed no pre-terminal 
+deaths, no toxic signs and abnormal behavior in the animals at 10 times of intended therapeutic dose.
+Sub-Acute Toxicity Studies of Ayush -82 in Wistar rats showed no significant effect in the blood 
+biochemistry, haematology and weight of the vital organs in comparison to the control suggestive of its 
+safety.
+Clinical efficacy
+The study has been carried out on 886 patients (497 completed cases and 389 drop outs) at Council’s 
+peripheral Central Research Institutes wherein Ayush-82 was administered thrice daily. The results 
+indicate statistically significant reduction in fasting and post prandial blood sugar level along with clinical 
+improvement. No adverse events were reported during the treatment period1,2,3’4.
+Central Council for Research in Ayurvedic Sciences (CCRAS)
+
+AYUSH-82 An Ayurvedic Drug For Diabetes Mellitus
+Figure-3
+Recommended Dose
+15 g per day in 3 divided doses along with 500 mg Shuddha Shilajita twice daily3,4. 
+Ingredients
+Jambu (Syzygium cumini (L.) Skeels)
+Meshashringi (Gymnema sylvestre R.Br)
+Amra (Mangifera indica Linn.) 
+Karvellaka (Momordica charantia Linn.)
+pDrug Development for Select Diseases: Evidence Based Approach
+
+References:
+1. 
+CCRAS Research an Overview, Central Council for Research in Ayurveda & Siddha (CCRAS), 
+Year:2002, Page no. 21.
+2. 
+Annual Report of Central Council for Research in Ayurveda & Siddha (CCRAS), 1982-2007.
+3. 
+Hypoglycemic effect of a coded formulation : Ayush-82, D.P.Chowdhary et al, JRAS, Vol. XIX, no. 
+3-4,(1998) pp.107-115.
+4. 
+An effective Ayurvedic hypoglycaemic formulation, VN.Pandey et al, JRAS, Vol. XVI, no. 
+1-2,(1995) pp.1-14.
+AYUSH-82 An Ayurvedic Drug For Diabetes Mellitus
+Central Council for Research in Ayurvedic Sciences (CCRAS)
+
+4. NIMBATIKTAM
+An Ayurvedic Drug for Psoriasis and Duodenal ulcer 
+Background
+Nimba is one of the most commonly used plant in Ayurveda. Ayurveda mentions the therapeutic use 
+of it’s fruits, seeds, seed oil, stem bark, leaves & flowers. Ayurveda classics advocate the use of seed 
+oil in various disease conditions like skin disease, ulcers, diabetes, fever etc. Owing to its therapeutic 
+importance, Central Council for Research in Ayurvedic Sciences has developed Nimbatiktam , the major 
+bitter component obtained from the seed oil of Nimba (Azadirachta indica A. Juss. ) . The Council has 
+conducted studies of Nimbatiktakam for its efficacy in Psoriasis and Duodenal Ulcer
+Drug Profile
+Ingredients
+Botanical name
+Part used
+Nimba
+Azadirachta indica A. Juss
+Seed Oil
+Safety/toxicity profile:
+In albino rats and mice acute toxicity studies, Nimbatiktam showed no toxicity up to 2000 mg/kg orally 
+and 1000mg/kg intra peritoneally. Sub acute toxicity studies in albino rats up to 100 mg/kg daily for 6
+weeks and 10 and 20 mg/kg orally in dogs for 4 weeks did not reveal any systemic toxicity. Teratogenic
+studies in rats also did not reveal any toxic manifestations or foetal abnormalities.1
+I. NIMBATIKTAM FOR PSORIASIS 
+Clinical efficacy
+> 
+Nimbatiktam with Lajjalukeram
+A combination of internal administration of Nimbatiktam 200 mg twice daily and Lajjalukeram as external 
+application for 60 days were taken for trial at Councils peripheral institute. The trial has been conducted on 
+386 patients and about 56% of the patients have shown good and fair response.2,3
+> 
+Nimbatiktam with Aragwadha kera
+A double blind clinical study was carried out on 40 patients randomly grouped into 2 groups (20 in each) 
+at Council’s peripheral institute to assess the therapeutic activity of Nimbatiktam in Psoriasis (Discoid 
+Psoriasis). One group was treated with Nimbatiktam 200 mg capsule twice daily and the other group with
+Drug Development for Select Diseases: Evidence Based Approach
+
+NIMBATIKTAM An Ayurvedic Drug for Psoriasis and Duodenal ulcer
+Lactose (Placebo) 200 mg capsule orally for 60 days and Aragwadha kera 50 ml for external application 
+daily in both the groups. This double-blind study proved that the effect of Nimbatiktam in the treatment of 
+psoriasis is statistically significant at 5% level. P<0.05 than the placebo.4
+Case Report: A 60 year old male patient with well defined psoriatic lesions and no complication was 
+administered Nimbatiktam 100mg (Capsule) thrice daily orally and 1g Nimbatiktam mixed in 100 g of 
+Coconut oil externally for 72 days. The patient recovered from all the symptoms of Psoriasis.5
+II. 
+NIMBATIKTAM FOR DUODENAL ULCER 
+Pharmacological Profile:
+Antiulcer effects6
+• 
+In rats, Nimbatiktam in 20 mg/kg dose level given orally, exhibited significant protection (P<0.001) 
+against Shay ulcers in rats. Significant reduction was observed in both free and total acid output 
+(P<0.001) and peptic activity (P<0.05) of the gastric fluid. At 80 mg/kg daily for 10 days it showed 
+significant (P<.05) reduction in ulcer index with a healing rate of 57.8% in acetic acid induced 
+gastric ulcers in rats. The drug significantly suppressed the chronic glandular stomach lesions 
+induced by steroid in rats. The test drug also significantly suppressed serotonin (SHT) induced 
+gastric ulcers in rats.
+• 
+In guinea pigs, Nimbatiktam in 20 mg and 40 mg/kg doses administered orally gave significant 
+(P<0.01) protection against histamine ulceration. At 40mg/kg dose, the intensity of ulceration was 
+considerably reduced and ulcer score was observed to be lower than the controls(P<0.001). The 
+test drug showed significant(P<0.02) antipeptic activity.
+• 
+In histamine-induced duodenal ulcers in guinea pigs, Nimbatiktam at 80 mg/kg prior to histamine, 
+significantly (P<.01) reduced ulcer incidence and severity.
+• 
+In mongrel dogs, oral dosing of Nimbatiktam (10 & 20 mg/kg) for 28 days significantly accelerated 
+the healing of acetic acid induced chronic gastric ulcers. It significantly prevented gastric lesions 
+induced by non-steroidal anti-inflammatory compounds (NOSAC) like aspirin (ASA) and 
+indomethacin and this effect was more marked at the higher dose level of 80 mg/kg.
+The drug in 20 mg/kg dose level (p.o) was found to have significant anti ulcer activity in shay ulcers 
+in rats and histamine ulcer in guinea pigs. The same dose had significant anti peptic activity in rats and 
+guinea pigs. However, 40 mg/kg dose possessed anti-secretary effect in shay rats. The ulcer healing 
+effect of Nimbatiktam could be attributed to its antisecretary and anti-peptic activity associated with an 
+enhancement of local healing process.
+Central Council for Research in Ayurvedic Sciences (CCRAS) ^ 
+n
+
+NIMBATIKTAM An Ayurvedic Drug for Psoriasis and Duodenal ulcer
+Clinical efficacy
+> 
+Nimbidin Extract 100 mg was administered twice daily in 13 cases of active duodenal ulcer for 60 
+days. Ulcer completely healed as observed in the review endoscopy in 3 patients, ulcer healing was 
+in process in 5 patients, no healing effect was observed in 5 patients at the end of trial.7
+> 
+Nimbatiktam 150 mg was administered thrice daily with water for 30 days at Council’s peripheral 
+institute. The results seem quite significant as 16 (40%) cases had relief of more than 75% and 
+4(10%) cases had moderate relief ( 51%-74%).8
+Recommended Dose
+• 
+For Psoriasis : Nimbatiktam 200mg twice daily orally for 60 days along with external application 
+lajjalu kera or Aragwadha kera
+• 
+For Duodenal ulcer: Nimbatiktam 100mg-150 mg twice or thrice daily orally for 30-60 days
+INGREDIENT OF NIMBATIKTAM
+*
+ 
+a  V
+; 
+^
+\
+t
+o
+'
+Nimba (Azadirachta indica A. Juss)
+References
+1. 
+Pillai N.R et al “Toxicity studies on Nimbidin (Nimbatiktham), a potential anti ulcer drug”. Planta
+Medica , Vol. 50, No.2, 1984, pg 146-148.
+2. 
+CCRAS Research an Overview, Central Council for Research in Ayurveda & Siddha (CCRAS),
+Year: 2002, Page no.48.
+3. 
+Annual Report of Central Council for Research in Ayurveda & Siddha (CCRAS), Year 1981-1999
+4. 
+B.K.R. Pillai, et.al. , “The effect of Nimbathiktha (Nimbidin) in Kitibha (Psoriasis)-A double blind
+clinical study”, J.R.A.S. Vol. XXIII, No. 1-2, (2002), pp.42-50.
+1 2  
+pDrug Development for Select Diseases: Evidence Based Approach
+
+NIMBATIKTAM An Ayurvedic Drug for Psoriasis and Duodenal ulcer
+5. 
+Rajasekharam S et.al., Effect of Nimbidin in Psoriasis, A Case Report , JRAS, Vol.1 No.1, 
+P-52-58( 1982)
+6. 
+Pillai N.R. et.al Anti-Gastric Ulcer Activity of Nimbidin, Indian J Med Res 68, July 1978, pp 
+169-175
+7. 
+K.VDevidas et.al., Effect of Nimbidin in the treatment of Parinamasula, J.R.A.S. Vol.XX, 
+No.3-4, (1999) pp.187-190
+8. 
+Padhi MM et.al. “Effect of Nimbatiktam in the management of Parinamashula: A Clinical 
+evaluation”, JRAS Vol.XXI,No.3-4,(2000) pp.103-111
+Central Council for Research in Ayurvedic Sciences (CCRAS)
+
+5. AYUSH POSHAK YOGA AND PEYA
+For Immunomodulatory, Antistress and General Health Promotion 
+Background
+Ayurveda emphasizes on prevention of disease and improve the quality of health as well as life span. 
+A number of medicinal plants have been recommended for this purpose. These plants provide specific 
+resistance and make the body strong to counteract any adverse physical, chemical or biological stress.
+The people belonging to Antarctica region are exposed to environmental stress viz. cold, mental and 
+nutritional stress including others factors like radiations, food preservatives etc. which generate free- 
+radicals in the body thus suppressing the immune system and causing early ageing. To combat such 
+adverse situations, Council developed Ayush poshakyoga andpeya for improving general well being.
+Drug profile
+Ayush Poshak Yoga
+Sl.No
+Name
+Botanical/English name
+Part Used
+1.
+Kaju
+Anacardium occidentale L.
+kernel
+2.
+Badam
+Prunus amygdalus Stokes
+kernel
+3.
+Pista
+Pistacia vera L.
+kernel
+4.
+Akhrot
+Juglans regia L.
+Cotyledons
+5.
+Khas khas
+Papaver somniferum L.
+Seeds
+6.
+Safed musli
+Chlorophytum tuberosum (Roxb.) Baker
+Tuberous root
+7.
+Pumpkin
+Cucurbitapepo L.
+Seed
+8.
+Trapush
+Cucumis sativus L.
+Seed
+9.
+Tarbooj
+Citrullus vulgaris Schrad.
+Seed
+10.
+Kharbooj
+Cucumis melo var. Utilissimus Dutt & Fueller
+Seed
+11.
+Shunthi
+Zingiber officinale Rosc.
+Rhizome
+12.
+Pippali
+Piper longum L.
+Fruit
+13.
+Maricha
+Piper nigrum L.
+Fruit
+14.
+Aswagandha
+Withania somnifera (L.) Dunal.
+Root
+15.
+Saunf
+Foeniculum vulgare Mill.
+Fruit
+16.
+Guduchi
+Tinospora cordifolia (Willd.) Miers
+Stem
+17.
+Sita
+Sugar Candy
+-
+Drug Development for Select Diseases: Evidence Based Approach
+
+AYUSH POSHAK YOGA AND PEYA
+For Immunomodulatory, Antistress and General Health Promotion
+Ayush Poshak Peya
+Sl. No.
+Sanskrit / Local Name
+Botanical name
+Part Used
+1.
+Tea Leaf
+Camellia sinensis (L.) O.Kuntze
+Leaf
+2.
+Sukshmaila
+Elettaria cardamomum Maton
+Seed
+3.
+Tvak
+Cinnamomum verum Breyn.
+Stem bark
+4.
+Kumkuma
+Crocus sativus L.
+Style & Stigma
+5.
+Arjuna
+Terminalia arjuna (Roxb.) Wight & Am.
+Stem bark
+Clinical efficacy
+The combined intake of Ayush Poshak Yog and Peya helped in the management of stress related symptoms 
+as evident by notable changes in immunoglobulin level and antioxidant enzymes. The formulations 
+significantly improved quality of life of individuals. 1 2
+Effect of APY and APP on igA
+Effect of APY and APP on igG
+Effect of APY and APP on igM
+Central Council for Research in Ayurvedic Sciences (CCRAS) ^ 
+^
+
+AYUSH POSHAK YOGA AND PEYA
+For Immunomodulatory, Antistress and General Health Promotion
+Effect of APY and APP on Catalaes
+Effect of APY and APP on Malondladohyde (MDA)
+Effect of APY and APP on Vitamin E
+Effect of APY and APP on 
+Suparoxldedismutase (SOD)
+Source: Unpublished technical dossier on Ayush Poshak Yoga and Peya(CCRAS).
+Recommended Dose
+• 
+Ayush Poshak Yoga 45-50gm.
+Ayush Poshak Peya 125-150 ml.
+1 6  
+pDrug Development for Select Diseases: Evidence Based Approach
+
+AYUSH POSHAK YOGA AND PEYA
+For Immunomodulatory, Antistress and General Health Promotion
+SOME IMPORTANT INGREDIENTS OF AYUSH POSHAK YOGA
+Badam (Prunus amygdalus Batsch) 
+Kaju (Anacardium occidentale Linn)
+Akhrot (Juglans regia Linn.) Pista (Pistacia vera Linn.) 
+Saunf (Foeniculum vulgare Mill.)
+Ashwagandha (Withania somnifera (L.) Dunal.) 
+Guduchi (Tinospora cordifolia (Willd) Miers)
+Central Council for Research in Ayurvedic Sciences (CCRAS) ^ 
+^
+
+AYUSH POSHAK YOGA AND PEYA
+For Immunomodulatory, Antistress and General Health Promotion
+Ingredients of Ayush Poshak Peya:
+Tea Leaf (Camellia sinensis) (L.) O. Kuntze
+Sukshmaila (Flettaria cardamomum Maton)
+Arjun (Terminalia arjuna (Roxb.) Wight & Arn)
+Drug Development for Select Diseases: Evidence Based Approach
+
+AYUSH POSHAK YOGA AND PEYA
+For Immunomodulatory, Antistress and General Health Promotion
+References
+1. 
+P.Bansal et.al, Effect of certain established Ayurvedic Rasayana Food Supplements on Aging 
+Process at Antarctica -A  Review, Indian Antarctic Expedition Ministry of Earth Sciences, 
+Technical Publication no. 21 ,PP 361-375|Edition-23rd |.
+2. 
+P.Bansal et.al., Effect of Traditionally Designed Nutraceutical on Stress Induced Immunoglobulin 
+Changes at Antarctica, African Journal of Biochemistry Research,|Year :April 2009|Volume :3(4)| 
+PP :084-088|.
+Central Council for Research in Ayurvedic Sciences (CCRAS)
+■\ 19
+
+6. SHUNTHI GUGGULU
+For Rheumatoid Arthritis (Amavata)
+Background
+Rheumatoid Arthritis (Amavata) is an autoimmune inflammatory disease that causes pain, swelling, 
+stiffness, destruction, and functional disability in the affected joints. In chronic cases, the disease may 
+cause deformity and total incapacitation. Descriptions concerning aetiopathogenesis, clinical features and 
+line of management are detailed under Amavata in Ayurveda. According to Ayurveda, the main cause of 
+the disease is formation of Ama due to Agnimandya i.e gastrointestinal dysfunction.
+The cardinal features of Amavata are swelling and severe pain that seems to be of scorpion bite over the 
+joints and other symptoms include body pain, loss of appetite, excessive thirst, laziness, heaviness of the 
+body and fever. The general principles of treatment of this disease in Ayurveda lay emphasis on stimulating 
+and normalizing the impaired Agni for the correction of digestion and metabolism. Based on the cardinal 
+features and other associated features, use of different herbal, herbo-mineral preparations & regimens are 
+described in Ayurvedic classics. CCRAS has developed a herbal safe Ayurvedic Drug Shunthi Guggulu 
+for Rheumatoid Arthritis (Amavata) through a series of clinical studies.
+Drug Profile
+Sl. No.
+Ingredient
+Botanical Name
+Part Used
+1.
+Shunthi
+Zingiber officinale Rosc.
+Rhizome
+2.
+Guggulu
+Commiphora wightii (Arn.) Bhandari
+Gum resin
+Clinical efficacy
+Multicentre observational study revealed satisfactory improvement of symptoms viz. reduction in pain, 
+morning stiffness, swelling in joints besides reduction in ESR levels. The observations made on 497 
+patients showed that about 2/3rd patients (67%) have very good effect under a course of 6 weeks treatment. 
+General functional capability and improvement in general condition of the patients was noticed.1, 2 3
+The clinical study was conducted at then CRI, Bhubaneswar on 63 patients of Amavata (Rheumatoid 
+arthritis) recruited into 2 groups viz. Group-A (Shunthi Guggulu) & Group-B (Yogaraja guggulu, Amavata- 
+Rasa/ Vatagajankusha-rasa & Maharasanadi-kwatha).
+, Drug Development for Select Diseases: Evidence Based Approach
+20 I -------------------------------------------------------------------------------
+
+SHUNTHI GUGGULU For Rheumatoid Arthritis (Amavata)
+The result indicated better effect of Shunthi guggulu (Group-A) as compared to the other set of medicines 
+(Group-B) Figure-1. 2
+Figure-1
+Source: Prem Kishore et.al., Clinical Studies on the treatment of Amavata-Rheumatoid Arthritis with 
+Shunthi-Guggulu, JRAS, 1988 vol.3, No3 & 4, pp-133-146).
+The observations in another clinical trial of Shunthi-Guggulu on 50 patients of Amavata-Rheumatoid 
+Arthritis showed significant effect as about 80% of the patients who completed full course of treatment 
+showed either marked or complete relief (table-1).3
+S. No.
+Results
+No. Of cases
+1.
+Complete relief
+13
+2.
+Marked relief
+19
+3.
+Moderate relief
+5
+4.
+Mild relief
+2
+5.
+No relief
+-
+6.
+Dropout
+1
+Total
+50
+Table-1
+Source: Prem Kishore et.al., Further Clinical Evaluation of Shunthi Guggulu in the Treatment of Amavata- 
+Rheumatoid Arthritis, JRAS, | Year : 1988 |Volume : IX | Issue : 3-4 | Page : -89-104).
+Central Council for Research in Ayurvedic Sciences (CCRAS)
+
+SHUNTHI GUGGULU For Rheumatoid Arthritis (Amavata)
+Recommended Dose
+2 gm- 4 g thrice a day for six weeks with warm water. 
+Ingredients of Shunthi Guggulu
+Guggulu (Commiphora wightii) 
+Shunthi (Zingiber officinale)
+References:
+1. 
+CCRAS Research an Overview, Central Council for Research in Ayurveda & Siddha (CCRAS), 
+Year:2002, page no.49-50.
+2. 
+Prem Kishore et.al., Clinical Studies on the treatment of Amavata-Rheumatoid Arthritis with 
+Shunthi-Guggulu, JRAS, 1988 vol.3, No3 & 4, pp-133-146).
+3. 
+Prem Kishore et.al., Further Clinical Evaluation of Shunthi Guggulu in the Treatment of Amavata- 
+Rheumatoid Arthritis, JRAS, | Year : 1988 |Volume : IX | Issue : 3-4 | Page : -89-104).
+, Drug Development for Select Diseases: Evidence Based Approach 
+k -------------------------------------------------------------------------------
+
+7. KSHARASUTRA
+In Ano Rectal Disorders
+Background
+Improper food habits and faulty life styles are the main causes of ill health. This may lead to abnormal 
+bowel movement, which if persists, causes various ano-rectal diseases. Besides the above, heredity also 
+has its contribution towards this disease. Commonly occurring ano-rectal diseases are fistula-in-ano, piles 
+and fissure in-ano. Ayurveda classifies fistula-in ano and piles under Mahagadas (major diseases). The 
+chronicity and recurrent nature of these diseases leaves physical and psychological agony to the sufferer.
+Ksharasutra, a unique para surgical measure is advocated in Ayurveda to treat these disorders. Ksharasutra 
+involves insertion of a medicated thread into the fistulous tract. It has many advantages over the modern 
+surgical measure. Application of Ksharasutra is an OPD measure; which does not require hospitalization, 
+heavy medication and is completely safe with an advantage of simultaneous cutting and healing. Tissue 
+damage is very less, hence chance of infection is very minimal and rate of recurrence is negligible .It is 
+economic and minimal invasive and the patients can carry out their routine work during the treatment. 
+This measure has been very well accepted/ adopted by the practitioners of Ayurveda and such services are 
+being provided at various clinical facilities of CCRAS in the country.
+Drug Profile
+Sl.No
+Ingredients name
+Botanical Name
+Part Used
+1.
+Snuhi
+Euphorbia nerrifolia L.
+Latex
+2.
+Apamarga
+Achyranthus aspera L.
+Whole plant
+3.
+Haridra
+Curcuma longa L.
+Rhizome
+Clinical efficacy
+A study was conducted at Clinical research enquiry on Ksharasutra Therapy (unit of CCRAS) at Institute 
+of Medical Science, Banaras Hindu University, Varanasi. In this study total 805 patients were registered 
+and 700 patients (500 non-recurrent cases and 200 recurrent cases) completed the study1.
+The Ksharasutra result showed efficacy in almost all patients (98.77%). Out of 700 cases, 
+691 were 
+completely cured. Further, out of 200 recurrent cases 197(98.5%) patients were cured without much 
+difficulty (Figure-1).
+Central Council for Research in Ayurvedic Sciences (CCRAS) 
+.
+----------------------------------------------------------------------------j 23
+
+KSHARASUTRA In Ano Rectal Disorders
+The result also revealed that the average Unit Cutting Time(UCT) in the total (n=700) patients was 5.68 
+days/cm and the average UCT in recurrent (n=200) was 6.55 days/cm (Figure-2).
+Figure-1 Result of treatment in regular and recurrent patients. 
+Figure-2 Relative average unit cutting time of regular and
+recurrent patients.
+Source: Management of Bhagandara (Fistula-in-Ano) with Ksharasutra, Central Council for Research 
+in Ayurveda & Siddha (CCRAS), Year:1989
+Further studies on 395 patients have been conducted in the Council’s peripheral Research Institutes and 
+386 (97.72%) patients responded to the procedure2.
+Ingredients of Kshara Sutra
+Snuhi (Euphorbia nerrifolia) 
+Haridra (Curcuma longa) 
+Apamarg (Achyranchus aspera)
+References
+1. 
+Management of Bhagandara (Fistula-in-Ano) with Ksharasutra, Central Council for Research in 
+Ayurveda & Siddha (CCRAS), Year:1989.
+2. 
+CCRAS Research an Overview, Central Council for Research in Ayurveda & Siddha (CCRAS).
+Drug Development for Select Diseases: Evidence Based Approach
+
+8. AYUSH BALARASAYANA
+For Promotion of Health in Children
+Background
+Malnutrition is the underlying contributing factor in about 45% of all child deaths under the age of 5. 
+It makes children more vulnerable to severe diseases. From the end of the neonatal period and through 
+the first 5 years of life, the main causes of death are preterm birth complications, intrapartum-related 
+complications, diarrhoea, pneumonia and malaria. According to WHO, the mortality rate of children under 
+5 is very alarming. 5.9 million Children under the age of five, died in 2015, at the approximate rate of 
+16,000 every day.
+Ayurveda, the ancient science of life provides utmost focus on promotion & maintenance of health. The 
+susceptibility of young children towards various infections or diseases is mainly due to their poor immunity. 
+The Rasayana drugs provide longevity, optimum strength of physique, improves memory and intelligence.
+Considering the general ailments affecting the infants and children, the AYUSH BALARASAYANA has 
+been scientifically developed by the Central Council for Research in Ayurvedic Sciences for promotion 
+of health in children and patented through National Research and Development Corporation, New Delhi. 
+( Patent No:196916)
+Drug Profile
+A. 
+Balarasayana for Health Promotion in Children
+Sl. No.
+Ingredient
+Botanical /English Name
+Part used
+1.
+Shatavari
+Asparagus racemosus Willd.
+Root
+2.
+Amalaki
+Emblica officinalis Gaertn
+Fruit
+3.
+Guduchi
+Tinospora cordifolia (Willd.) Miers
+Stem
+4.
+Bhumyamalaki
+Phyllanthus fraternus G. L. Webster
+Whole Plant
+5.
+Bala
+Sida cordifolia L.
+Root
+6.
+Mandukparni
+Centella asiatica (L.) Urb.
+Whole plant
+6.
+Mukta Shukti Bhasma
+Calcined shell o f pearl oyster (Ostrea edulis)
+Shell
+Clinical efficacy
+Clinical studies conducted by CCRAS, New Delhi at its various peripheral centres to establish the efficacy 
+of Balarasayana showed significant improvement in immunity. Also significant improvement in duration
+Central Council for Research in Ayurvedic Sciences (CCRAS) 
+.
+--------------------------J .------------ 25
+
+AYUSH BALARASAYANA For Promotion of Health in Children
+and episodes of excess cry, diarrhoea and vomiting was observed. Highly significant improvement in 
+episodes of cough/cold and fevers was also observed when compared to placebo.1
+Recommended Dose
+Balarasayana: 1 tablet (250mg) twice a day up to 5 years of age
+2 tablets (250mg) twice a day for more than 5 years of age
+Some important ingredients:
+Shatavari (Asparagus racemosus)
+Amalaki (Emblica officinalis)
+References
+Bala (Sida cordifolia)
+Guduchi (Tinospora cordifolia)
+1. 
+Family Welfare Research Programme, Central Council for Research in Ayurveda & Siddha 
+(CCRAS) Annual Report 2000-2001.
+I *
+26 
+|-
+Drug Development for Select Diseases: Evidence Based Approach
+
+9. AYUSH GHUTTI
+For Prevention of Diarrhoea and Fever in Children
+Background
+Infant mortality rate amounts very high in tropical countries like India due to infantile diarrhoea. In spite 
+of enormous expenditure incurred to improve health standards of the masses, diarrhoea still poses the 
+same threat especially in rural areas. Although it is not a deadly disease as such yet due to ignorance, lack 
+of medical facilities and late treatment ,children suffer heavily and by the time they reach some proper 
+medical institution the cases turn complicated to the extent of irreversible state.1 Considering the gravity of 
+the disease, the AYUSH GHUTTI has been scientifically developed by the Central Council for Research 
+in Ayurvedic Sciences (CCRAS) to prevent diarrhoea and fever in children. This is useful for development 
+of proper digestion and assimilation as well as prevents the said disease conditions in childhood. The drug 
+is patented through National Research and Development Corporation, New Delhi.( Patent No:193336)
+Drug Profile
+AYUSH - Ghutti (Prevention of Diarrhoea and Fever)
+Sl. No.
+Ingredient
+Botanical Name
+Part used
+1.
+Dadima
+Punica granatum L.
+Fruit rind
+2.
+Amra
+Mangifera indica L.
+Seed Kernel
+3.
+Kamala
+Nelumbo nucifera Gaertn.
+Seed Kernel
+4.
+Haritaki
+Terminalia chebula Retz.
+Fruit
+5.
+Sunthi
+Zingiber officinale Rosc.
+Rhizome
+6.
+Bilwa
+Aegle marmelos (L.) Correa
+Fruit pulp
+7.
+Jahar Mohara pisti (Serpentine stone)
+Calx
+Clinical Efficacy
+Clinical studies to establish the efficacy of AYUSH Ghutti were carried out at RSSCA, Varanasi. 
+AYUSH Ghutti was tried in 50 cases each in trial and control group. Significant improvement was noted 
+in the episodes and duration of diarrhoea and excess cry. Significant improvement in C3 and C4 levels 
+(enhancement of immunity) was also reported.2
+Dosage Schedule
+❖ 
+Ayush -  Ghutti: 1 -  3 ml twice a day
+Central Council for Research in Ayurvedic Sciences (CCRAS) ^
+
+AYUSH GHUTTI For Prevention of Diarrhoea and Fever in Children
+Some Important Ingredients:
+Bilva (Aegle marmelos)
+Amra (Mangifera indica)
+References
+1. 
+Ancient Science of Life, Vol No. III No. 3 January 1984, Pages 136 -  139.
+2. 
+Family Welfare Research Programme, Central Council for Research in Ayurveda & Siddha 
+(CCRAS), Annual Report 2000-2001.
+, Drug Development for Select Diseases: Evidence Based Approach
+28 I -------------------------------------------------------------------------------
+
+10. AYURVEDIC FORMULATIONS
+For Antenatal Care
+Background
+Pregnancy and child birth is a joyful event in every woman’s life. The growing foetus is totally dependent 
+on its own mother in every aspect. Thus a proper antenatal care would result in a good maternal and foetal 
+outcome. Any negligence towards her health may lead to untoward effects and thus cause maternal & 
+foetal complications or even could be fatal.
+Ayurveda has described “Garbhini Paricharya " i.e. antenatal care right from conception up to the birth 
+of the baby. In Ayurveda, antenatal care comprises of Aahar (dietary regimens), Vihara (life style) and 
+Aushadhi (medicines). In view of the potential of Ayurveda in promoting the health of pregnant women 
+and foetus, it is high time to mainstream Ayurvedic management. The Central Council for Research in 
+Ayurvedic Sciences, New Delhi has developed certain formulations viz. AYUSH AG Tablet, AYUSH PG 
+Tablet, AYUSH GG Tablet and AYUSH AD candy for antenatal care to promote the health of pregnant 
+women and foetus and to minimize the complications associated with pregnancy and mortality rate of the 
+mother and foetus.
+Drug Profile: 1
+1. 
+AYUSH AG Tablet for Promotion of general health of woman and fetal growth
+Sl. No.
+Ingredient
+Botanical Name
+Part used
+1.
+Ashwagandha
+Withania somnifera (L.) Dunal
+Root
+2.
+Shatavari
+Asparagus racemosus Willd.
+Tuber
+3.
+Amalaki
+Emblica officinalis Gaertn.
+Fruit
+4.
+Mandur bhasma
+Calcined iron rust
+5.
+Mukta shukti Bhasma
+Calcined shell o f oyster pearl
+2. 
+AYUSH GG tablet for Edema during pregnancy
+Sl. No.
+Ingredient
+Botanical Name
+Part used
+1.
+Gokshura
+Tribulus terrestris L.
+Fruit
+Central Council for Research in Ayurvedic Sciences (CCRAS) 
+.
+----------------------------------------------------------------------------J 29
+
+3. 
+AYUSH PG tablet for Pregnancy Induced Hypertension (PIH)
+AYURVEDIC FORMULATIONS For Antenatal Care
+Sl. No.
+Ingredient
+Botanical Name
+Part used
+1.
+Gokshura
+Tribulus terrestris L.
+Fruit
+2.
+Punarnava
+Boerhavia diffusa L.
+Whole plant
+4. 
+AYUSH AD tablet for prevention of Nausea and Vomiting during pregnancy
+Sl. No.
+Ingredient
+Botanical Name
+Part used
+1.
+Amalaki
+Emblica officinalis Gaertn.
+(Juice/powder of fruit)
+2.
+Draksha
+Vitis vinifera L.
+Fruit
+3.
+Ela
+Elettaria cardamomum Maton
+Seed
+Safety/Toxicity profile:
+1. 
+AYUSH AG Tablet
+Acute Toxicity Study: No mortality in mice was reported at graded doses of Ayush-AG (100, 200, 500, 
+1000 and 2000/Kg, P.O).
+Sub-Acute Toxicity Study: Sub-Acute studies in 40 albino rats revealed that no significant changes in the 
+haematology, blood biochemistry and weight of the vital organs in comparison to the control at the graded 
+dose level of 200, 800 and 1600 mg/Kg continuous up to 15 days were observed.
+2. 
+AYUSH PG tablet
+Acute Toxicity Study: No mortality in mice was reported at graded doses of Ayush-PG (100, 200, 500, 
+1000 and 2000/Kg, P.O).
+Sub-Acute Toxicity Study:
+Sub-Acute studies in 40 albino rats revealed that no significant changes in the haematology, blood 
+biochemistry and weight of the vital organs in comparison to the control at the graded dose level of 100, 
+500 and 1000 mg/Kg continuous up to 15 days.
+Clinical efficacy
+Clinical studies to ascertain the efficacy of above four coded Ayurvedic formulations were carried out by 
+Central Council for Research in Ayurvedic Sciences (CCRAS), Ministry of AYUSH, Govt. of India with 
+technical support from Indian Council of Medical Research (ICMR), Government of India in selected 
+areas of two districts viz. Mandi & Kangra at Himachal Pradesh. Total 2465 participants were enrolled 
+in the study. But data of 1746 participants was analyzed. It is observed that the mean of Hb% at baseline 
+(1st trimester) was 9.78 ± 0.79 and 10.11± 0.77 at the end of treatment which is statistically significant
+, Drug Development for Select Diseases: Evidence Based Approach 
+L-------------------------------------------------------------------------------
+
+AYURVEDIC FORMULATIONS For Antenatal Care
+(p<0.001). Further, significant improvement in various outcome indicators such as minimal complications
+during pregnancy, achievement of full term pregnancy and no still birth and neonatal death were observed
+in the study. It is interesting to note that birth weight of most of the baby was comparable to standard i.e.
+> 2.5 kg, which indicated the effect of interventions on neonatal health.
+Dosage Schedule:
+A. 
+AYUSH PG (Pregnancy Induced Hypertension): 1 tablet (500 mg) BD for 7 to 15 days with 
+water
+B. 
+AYUSH AD (Prevention of Nausea and Vomiting during pregnancy): To be kept in mouth SOS 
+but not more than 8 in a day.
+C. 
+AYUSH AG Tablet (Promotion of general health of woman and fetal growth): 
+1 tablet (500
+mg) TDS, from 3rd month onwards of pregnancy up to post delivery -  3 months with water.
+D. 
+AYUSH GG tablet: 1 tablet (500 mg) BD during 6th to 8th month of pregnancy.
+Some Important Ingredients
+Punarnava (Boerrhavia diffusa) 
+Ela ^lettaria cardamomum) 
+Shatavari (Asparagus racemosus)
+References
+1. 
+Feasibility of Introducing Indian Systems of Medicine (Ayurveda and Siddha) In the National 
+Reproductive Child Health (RCH) Services at the Primary Health Care (PHC) level -  Hand book 
+for service providers.
+Central Council for Research in Ayurvedic Sciences (CCRAS) ^ 
+3 ^
+
+
+I S B N  
+T a f l B f i m s a - t .
+S 3
+f l t M a  □ i
+Central Council for Research in Ayurvedic Sciences (CCRAS)
+Ministry of AYUSH, Govt, of India
+Jawahar Lai Nehru Bhartiya Chikitsa Evam Homoeopathy, 
+Anusandhan Bhawan, 61-65, Institutional Area,
+Opp. ‘D’ Block, Janakpuri, New Delhi-110058

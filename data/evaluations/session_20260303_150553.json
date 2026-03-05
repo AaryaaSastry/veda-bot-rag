@@ -1,0 +1,182 @@
+{
+  "session_summary": {
+    "start_time": "2026-03-03T14:47:16.616247",
+    "end_time": "2026-03-03T15:05:53.925175",
+    "total_turns": 14,
+    "total_safety_alerts": 0,
+    "diagnosis_completed": true
+  },
+  "safety_alerts": [],
+  "diagnosis": "DIAGNOSIS: Escalation advised\nREASONING: Red flags present: severe_or_worst_pain",
+  "conversation_turns": [
+    {
+      "turn_number": 1,
+      "timestamp": "2026-03-03T14:48:04.059193",
+      "user_input": "HI, I HAVE SWELING IN MY EG",
+      "assistant_response": "To provide an accurate Ayurvedic assessment, could you share your age and gender? (Evidence_based_Ayurvedic_Practice)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "swelling swelling swelling"
+    },
+    {
+      "turn_number": 2,
+      "timestamp": "2026-03-03T14:48:41.222526",
+      "user_input": "I AM 33 FEMALE",
+      "assistant_response": "What are the specific characteristics of the swelling in your leg – is it painful, warm to the touch, or accompanied by any discoloration? (ayurvedic_treatment_file1)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "I AM 33 FEMALE"
+    },
+    {
+      "turn_number": 3,
+      "timestamp": "2026-03-03T14:49:04.296475",
+      "user_input": "WARM TO TOUCH",
+      "assistant_response": "Is the swelling accompanied by any discomfort or pain, and if so, can you describe the nature of the pain – is it sharp, dull, or throbbing? (ayurvedic_treatment_file1)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "WARM TO TOUCH"
+    },
+    {
+      "turn_number": 4,
+      "timestamp": "2026-03-03T14:49:20.403193",
+      "user_input": "SHARP PAIN ",
+      "assistant_response": "What is your typical diet like, including the types of foods you frequently consume? (Evidence_based_Ayurvedic_Practice)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "SHARP PAIN "
+    },
+    {
+      "turn_number": 5,
+      "timestamp": "2026-03-03T14:50:08.365541",
+      "user_input": "I AM ON KETO DIET",
+      "assistant_response": "Considering you are following a ketogenic diet, could you describe any other dietary restrictions or preferences you have? (Evidence_based_Ayurvedic_Practice)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "I AM ON KETO DIET"
+    },
+    {
+      "turn_number": 6,
+      "timestamp": "2026-03-03T14:51:41.550274",
+      "user_input": "I FOLLOW THE TYPICAL KETO DIET, NO CHANGES.JUST NO MEAT RELATED FOOD, BUT I HAVE EGGS",
+      "assistant_response": "Considering your keto diet excluding meat but including eggs, have you noticed any correlation between specific foods within your diet and the swelling or pain in your leg? (Evidence_based_Ayurvedic_Practice)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "I FOLLOW THE TYPICAL KETO DIET, NO CHANGES.JUST NO MEAT RELATED FOOD, BUT I HAVE EGGS"
+    },
+    {
+      "turn_number": 7,
+      "timestamp": "2026-03-03T14:51:57.830807",
+      "user_input": "NO",
+      "assistant_response": "Have you experienced any other symptoms alongside the swelling and pain, such as headache, breathlessness, or discomfort in the chest? (24052018_CCRAS_Cardiac_disorders)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "NO"
+    },
+    {
+      "turn_number": 8,
+      "timestamp": "2026-03-03T14:52:20.872263",
+      "user_input": "YES, DISCOMFORT IN CHEST ",
+      "assistant_response": "Considering the discomfort in your chest alongside the leg swelling and pain, could you describe the nature of this chest discomfort – is it a sharp pain, a pressure, or a burning sensation? (24052018_CCRAS_Cardiac_disorders)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "YES, DISCOMFORT IN CHEST "
+    },
+    {
+      "turn_number": 9,
+      "timestamp": "2026-03-03T14:54:05.528804",
+      "user_input": "DISCOMFORT ",
+      "assistant_response": "Considering the discomfort in your chest, have you noticed any specific triggers or activities that seem to worsen or relieve this sensation? (24052018_CCRAS_Cardiac_disorders)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "DISCOMFORT "
+    },
+    {
+      "turn_number": 10,
+      "timestamp": "2026-03-03T14:55:23.455890",
+      "user_input": "NO, IDK",
+      "assistant_response": "--- USER-FRIENDLY OUTPUT ---\n📋 DIAGNOSIS:\n• Raktagatavata (Vata aggravated in blood)\n\n📖 EXPLANATION:\n• Sharp pain in the leg and warmth to the touch are indicative of Vata aggravation (ayurvedic_treatment_file1).\n• Swelling in the legs is a symptom associated with Raktagatavata as described in Ayurvedic texts (24052018_CCRAS_Cardiac_disorders).\n• Chest discomfort alongside leg symptoms suggests Vata moving in the blood channels (24052018_CCRAS_Cardiac_disorders).\n• Raktagatavata involves multiple joints with severe pain and swelling (ayurvedic_treatment_file1).\n• Conditions like Rheumatoid Arthritis can present similarly to Raktagatavata (ayurvedic_treatment_file1).\n\n⚠️ IS IT SERIOUS?\n• Yes\n• The presence of chest discomfort alongside leg swelling raises concern for potential cardiac involvement (24052018_CCRAS_Cardiac_disorders).\n• Raktagatavata, if left untreated, can lead to chronic pain and disability (ayurvedic_treatment_file1).\n• Cardiac disorders can be life-threatening and require prompt medical attention (24052018_CCRAS_Cardiac_disorders).\n\n🏠 CAN IT BE TREATED AT HOME?\n• No\n• While Ayurvedic principles can support management, the combination of symptoms necessitates professional evaluation to rule out serious underlying conditions (24052018_CCRAS_Cardiac_disorders).\n• Chest discomfort requires immediate medical assessment to determine the cause (24052018_CCRAS_Cardiac_disorders).\n• Self-treating without a proper diagnosis could delay appropriate care and worsen the condition (ayurvedic_treatment_file1).\n\nWould you like home-based remedies, do's and don'ts, and lifestyle recommendations?\n*\n\n--- END USER OUTPUT ---",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "NO, IDK"
+    },
+    {
+      "turn_number": 11,
+      "timestamp": "2026-03-03T14:56:26.639260",
+      "user_input": "YES",
+      "assistant_response": "What is your typical daily diet? (24052018_CCRAS_Cardiac_disorders)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "YES"
+    },
+    {
+      "turn_number": 12,
+      "timestamp": "2026-03-03T14:56:45.476168",
+      "user_input": "NORMAL KETO FOOD",
+      "assistant_response": "What specific types of fats and proteins are included in your normal keto food intake? (24052018_CCRAS_Cardiac_disorders)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "NORMAL KETO FOOD"
+    },
+    {
+      "turn_number": 13,
+      "timestamp": "2026-03-03T14:57:29.000510",
+      "user_input": "NO I DONT ",
+      "assistant_response": "--- USER-FRIENDLY OUTPUT ---\n📋 DIAGNOSIS:\n• Raktagatavata (Raktagatavata)\n\n📖 EXPLANATION:\n• Symptoms include headache, vertigo, and discomfort/pain in the chest (24052018_CCRAS_Cardiac_disorders).\n• Swelling in the legs is a common symptom (24052018_CCRAS_Cardiac_disorders).\n• The condition can be caused by obesity and a sedentary lifestyle (24052018_CCRAS_Cardiac_disorders).\n• Excessive intake of oily, salty, sour, and spicy foods can contribute to the condition (24052018_CCRAS_Cardiac_disorders).\n• Psychological factors like stress, anxiety, and anger may also be contributing factors (24052018_CCRAS_Cardiac_disorders).\n\n⚠️ IS IT SERIOUS?\n• Yes\n• Chest discomfort raises concern for potential cardiac involvement (24052018_CCRAS_Cardiac_disorders).\n• Raktagatavata, if untreated, can lead to chronic pain and disability (ayurvedic_treatment_file1).\n• Cardiac disorders can be life-threatening and require prompt medical attention (24052018_CCRAS_Cardiac_disorders).\n\n🏠 CAN IT BE TREATED AT HOME?\n• No\n• The combination of symptoms necessitates professional evaluation to rule out serious underlying conditions (24052018_CCRAS_Cardiac_disorders).\n• Chest discomfort requires immediate medical assessment to determine the cause (24052018_CCRAS_Cardiac_disorders).\n• Self-treating without a proper diagnosis could delay appropriate care and worsen the condition (ayurvedic_treatment_file1).\n\nWould you like home-based remedies, do's and don'ts, and lifestyle recommendations?\n*\n--- END USER OUTPUT ---",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "NO I DONT "
+    },
+    {
+      "turn_number": 14,
+      "timestamp": "2026-03-03T14:58:03.432657",
+      "user_input": "YES",
+      "assistant_response": "--- USER-FRIENDLY OUTPUT ---\n📋 DIAGNOSIS:\n• Raktagatavata (Raktagatavata)\n\n📖 EXPLANATION:\n• The condition can be caused by obesity and a sedentary lifestyle (24052018_CCRAS_Cardiac_disorders).\n• Excessive intake of oily, salty, sour, and spicy foods can contribute to the condition (24052018_CCRAS_Cardiac_disorders).\n• Psychological factors like stress, anxiety, and anger may also be contributing factors (24052018_CCRAS_Cardiac_disorders).\n• Symptoms include headache, vertigo, and discomfort/pain in the chest (24052018_CCRAS_Cardiac_disorders).\n• Swelling in the legs is a common symptom (24052018_CCRAS_Cardiac_disorders).\n\n⚠️ IS IT SERIOUS?\n• Yes\n• Chest discomfort raises concern for potential cardiac involvement (24052018_CCRAS_Cardiac_disorders).\n• Raktagatavata, if untreated, can lead to chronic pain and disability (ayurvedic_treatment_file1).\n• Cardiac disorders can be life-threatening and require prompt medical attention (24052018_CCRAS_Cardiac_disorders).\n\n🏠 CAN IT BE TREATED AT HOME?\n• No\n• The combination of symptoms necessitates professional evaluation to rule out serious underlying conditions (24052018_CCRAS_Cardiac_disorders).\n• Chest discomfort requires immediate medical assessment to determine the cause (24052018_CCRAS_Cardiac_disorders).\n• Self-treating without a proper diagnosis could delay appropriate care and worsen the condition (ayurvedic_treatment_file1).\n\nWould you like home-based remedies, do's and don'ts, and lifestyle recommendations?\n*\n--- END USER OUTPUT ---",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "YES"
+    }
+  ],
+  "retrieval_statistics": []
+}

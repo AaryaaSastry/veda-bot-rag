@@ -71,7 +71,7 @@ class HybridFusionRetriever:
         self.k1 = 1.2
         self.b = 0.75
 
-    def _bm25_top_indices(self, query, top_k, source_filter=None):
+    def _bm25_top_indices(self, query, top_k, source_filter=None, metadata_filter=None):
         if self.num_docs == 0:
             return []
 
@@ -85,6 +85,19 @@ class HybridFusionRetriever:
 
         if source_filter:
             candidate_ids = {i for i in candidate_ids if self.doc_sources[i] == source_filter}
+
+        if metadata_filter:
+            # metadata_filter: {"category": "skin", "dosha": "pitta"}
+            filtered_ids = set()
+            for i in candidate_ids:
+                match = True
+                for key, val in metadata_filter.items():
+                    if val and self.metadata[i].get(key) != val:
+                        match = False
+                        break
+                if match:
+                    filtered_ids.add(i)
+            candidate_ids = filtered_ids
 
         if not candidate_ids:
             return []
@@ -110,12 +123,12 @@ class HybridFusionRetriever:
         ranked = sorted(scores.items(), key=lambda x: x[1], reverse=True)
         return [doc_id for doc_id, _ in ranked[:top_k]]
 
-    def retrieve(self, query, k=config.K_DEFAULT, source_filter=None):
+    def retrieve(self, query, k=config.K_DEFAULT, source_filter=None, metadata_filter=None):
         dense_k = max(k, self.dense_candidates)
         bm25_k = max(k, self.bm25_candidates)
 
-        dense_results = self.dense_retriever.retrieve(query, k=dense_k, source_filter=source_filter)
-        bm25_ids = self._bm25_top_indices(query, top_k=bm25_k, source_filter=source_filter)
+        dense_results = self.dense_retriever.retrieve(query, k=dense_k, source_filter=source_filter, metadata_filter=metadata_filter)
+        bm25_ids = self._bm25_top_indices(query, top_k=bm25_k, source_filter=source_filter, metadata_filter=metadata_filter)
 
         # Build rank maps for RRF fusion.
         dense_rank = {}

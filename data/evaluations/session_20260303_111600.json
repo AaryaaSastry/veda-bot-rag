@@ -1,0 +1,207 @@
+{
+  "session_summary": {
+    "start_time": "2026-03-03T11:07:03.631428",
+    "end_time": "2026-03-03T11:16:00.952987",
+    "total_turns": 11,
+    "total_safety_alerts": 2,
+    "diagnosis_completed": true
+  },
+  "safety_alerts": [
+    {
+      "turn": 1,
+      "input": "swelling in my left leg",
+      "risks": [
+        {
+          "risk_type": "vascular_infection",
+          "similarity_score": 0.6847392320632935
+        },
+        {
+          "risk_type": "deep_vein_thrombosis",
+          "similarity_score": 0.6807758212089539
+        },
+        {
+          "risk_type": "heart_failure_exacerbation",
+          "similarity_score": 0.7147786021232605
+        }
+      ]
+    },
+    {
+      "turn": 1,
+      "input": "swelling in my left leg",
+      "risks": [
+        {
+          "risk_type": "vascular_infection",
+          "similarity_score": 0.6847392320632935
+        },
+        {
+          "risk_type": "deep_vein_thrombosis",
+          "similarity_score": 0.6807758212089539
+        },
+        {
+          "risk_type": "heart_failure_exacerbation",
+          "similarity_score": 0.7147786021232605
+        }
+      ]
+    }
+  ],
+  "diagnosis": "DIAGNOSIS: Yoni Arsha (Vaginal Hemorrhoids/Piles)\nCONFIDENCE: 0.45\nUNCERTAINTY: high\nDIFFERENTIAL_1: Yoni Arsha (Vaginal Hemorrhoids/Piles) (0.45)\nDIFFERENTIAL_2: Bhagandara (Fistula-in-Ano) (0.30)\nDIFFERENTIAL_3: Inflammatory Skin Condition (e.g., Alasaka, Dadru) (0.25)",
+  "conversation_turns": [
+    {
+      "turn_number": 1,
+      "timestamp": "2026-03-03T11:07:21.013243",
+      "user_input": "swelling in my left leg",
+      "assistant_response": "[SAFETY WARNING - Continuing with clarification]",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": false,
+        "matched_risks": [
+          {
+            "risk_type": "vascular_infection",
+            "similarity_score": 0.6847392320632935
+          },
+          {
+            "risk_type": "deep_vein_thrombosis",
+            "similarity_score": 0.6807758212089539
+          },
+          {
+            "risk_type": "heart_failure_exacerbation",
+            "similarity_score": 0.7147786021232605
+          }
+        ]
+      }
+    },
+    {
+      "turn_number": 1,
+      "timestamp": "2026-03-03T11:07:34.394374",
+      "user_input": "swelling in my left leg",
+      "assistant_response": "What is the nature of the swelling – is it hard, soft, pitting, or non-pitting? (Source 2)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": false,
+        "matched_risks": [
+          {
+            "risk_type": "vascular_infection",
+            "similarity_score": 0.6847392320632935
+          },
+          {
+            "risk_type": "deep_vein_thrombosis",
+            "similarity_score": 0.6807758212089539
+          },
+          {
+            "risk_type": "heart_failure_exacerbation",
+            "similarity_score": 0.7147786021232605
+          }
+        ]
+      },
+      "retrieval_query": "swelling in my left leg"
+    },
+    {
+      "turn_number": 2,
+      "timestamp": "2026-03-03T11:07:43.600478",
+      "user_input": "suresure",
+      "assistant_response": "Is the swelling associated with pain, and if so, can you describe the nature of the pain – is it sharp, dull, throbbing, or something else? (Source 2)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "suresure"
+    },
+    {
+      "turn_number": 3,
+      "timestamp": "2026-03-03T11:07:56.582592",
+      "user_input": "",
+      "assistant_response": "Is the swelling accompanied by any discoloration of the skin, such as redness, bruising, or a change in skin temperature? (Source 2)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      }
+    },
+    {
+      "turn_number": 4,
+      "timestamp": "2026-03-03T11:08:30.743596",
+      "user_input": "yes,it is reddish",
+      "assistant_response": "Is the redness accompanied by any burning sensation or pain, and if so, can you describe the intensity of the burning or pain? (Source 1)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "yes,it is reddish"
+    },
+    {
+      "turn_number": 5,
+      "timestamp": "2026-03-03T11:09:08.095487",
+      "user_input": "yes, it does pain sometimes,not always",
+      "assistant_response": "What is your typical diet like, including the types of foods you frequently consume? (Evidence_based_Ayurvedic_Practice)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "yes, it does pain sometimes,not always"
+    },
+    {
+      "turn_number": 6,
+      "timestamp": "2026-03-03T11:09:25.477675",
+      "user_input": "i like having spicy food",
+      "assistant_response": "How long have you been experiencing this swelling and redness in your left leg? (24052018_CCRAS_Cardiac_disorders)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "i like having spicy food"
+    },
+    {
+      "turn_number": 7,
+      "timestamp": "2026-03-03T11:09:44.406646",
+      "user_input": "2 weeks now",
+      "assistant_response": "Do you experience any fever or chills accompanying the swelling and redness? (Source 3)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "2 weeks now"
+    },
+    {
+      "turn_number": 8,
+      "timestamp": "2026-03-03T11:09:58.705628",
+      "user_input": "no",
+      "assistant_response": "Have you noticed any correlation between your spicy food consumption and the onset or worsening of the swelling and redness? (Source 1)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "no"
+    },
+    {
+      "turn_number": 9,
+      "timestamp": "2026-03-03T11:10:34.263837",
+      "user_input": "no,idts.i  havent observed it properly ",
+      "assistant_response": "What other symptoms, if any, are you experiencing alongside the swelling and redness, such as burning sensation, pain, or discharge? (Source 2)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "no,idts.i  havent observed it properly "
+    },
+    {
+      "turn_number": 10,
+      "timestamp": "2026-03-03T11:11:58.091134",
+      "user_input": "occationally there is a white-ish discharge",
+      "assistant_response": "--- USER-FRIENDLY OUTPUT ---\n📋 DIAGNOSIS:\n• Yoni Arsha (Vaginal Hemorrhoids/Piles)\n\n📖 EXPLANATION:\n• The presence of reddish swelling suggests a possible inflammatory process, aligning with descriptions of Arsha (Source 1).\n• Whitish discharge is noted in descriptions of Yoni Arsha, indicating a potential correlation (Source 2).\n• Pain, though occasional, is a feature associated with Arsha, particularly with inflammation (Source 1).\n• The discharge can be tawny, whitish, or reddish and slimy, matching the observed discharge (Source 1).\n• Yoni Arsha can manifest with a foul smell and reddish-white discharge upon examination (Source 2).\n\n⚠️ IS IT SERIOUS?\n• Yes\n• The presence of discharge indicates a potential infection or inflammation requiring attention (Source 2).\n• Swelling and redness can signify an underlying pathological process that needs diagnosis and management (Source 2).\n• While not immediately life-threatening, untreated conditions can lead to discomfort and complications (Source 1).\n\n🏠 CAN IT BE TREATED AT HOME?\n• No\n• Due to the potential for infection and the need for accurate diagnosis, especially given the patient’s age, home treatment is not recommended.\n• Discharge requires professional evaluation to determine the underlying cause and appropriate treatment (Source 2).\n• Swelling and redness necessitate a clinical assessment to rule out more serious conditions (Source 2).\n• The patient’s age of 2 makes self-diagnosis and treatment inappropriate (Source 1).\n\nWould you like home-based remedies, do's and don'ts, and lifestyle recommendations?\n\n--- END USER OUTPUT ---\n\nINTERNAL ANALYSIS (For your reference only):\nTop 3 conditions in bullet point:\n * Yoni Arsha (Vaginal Hemorrhoids/Piles) [0.45]\n     -> Reddish swelling and whitish discharge are consistent with Arsha descriptions (Source 1, Source 2).\n     -> Discharge can be reddish and slimy, aligning with observed symptoms (Source 1).\n\n * Bhagandara (Fistula-in-Ano) [0.3]\n        -> Redness, swelling, and whitish discharge are features of Bhagandara (Source 3).\n        -> Pain is also a symptom associated with this condition (Source 3).\n\n* Inflammatory Skin Condition (e.g., Alasaka, Dadru) [0.25]\n        -> Redness and swelling are common in various skin conditions (Source 4).\n        -> Occasional whitish discharge and burning sensation can occur (Source 4).",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "occationally there is a white-ish discharge"
+    }
+  ],
+  "retrieval_statistics": []
+}

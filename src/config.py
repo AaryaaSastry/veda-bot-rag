@@ -23,5 +23,34 @@ DIAGNOSIS_CONFIDENCE_THRESHOLD = 0.70
 MAX_REMEDY_INTERVENTIONS = 3
 ENABLE_CONSERVATIVE_FIRST_POLICY = True
 ENABLE_TREATMENT_RISK_GATE = True
+VERIFY_ALL_CASES = False
+MAX_VERIFICATION_TARGETED_QUESTIONS = 3
+MAX_VERIFICATION_REFINEMENT_CYCLES = 2
+AUTO_PRINT_REMEDIES_AFTER_VERIFIED_DIAGNOSIS = True
 
 HEADER_FOOTER_THRESHOLD = 0.7
+
+# --- Conversation/Safety behavior ---
+PEDIATRIC_AGE_THRESHOLD = 18
+PEDIATRIC_ESCALATION_ENABLED = True
+MINOR_SWELLING_KEYWORDS = [
+    "swelling",
+    "edema",
+    "oedema",
+    "pitting",
+]
+LOWER_LIMB_KEYWORDS = [
+    "leg",
+    "ankle",
+    "foot",
+    "feet",
+    "calf",
+]
+PEDIATRIC_SYSTEMIC_RISK_KEYWORDS = [
+    "fever",
+    "breathlessness",
+    "shortness of breath",
+    "chest pain",
+    "reduced urine",
+    "dark urine",
+]

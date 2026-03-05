@@ -1,0 +1,2188 @@
+[
+  {
+    "disease": "Kushta (Skin Disease)",
+    "symptoms": [
+      "Kushta",
+      "Kilasa",
+      "Visarpa"
+    ],
+    "dosha": "Unknown",
+    "srotas": "Unknown",
+    "treatments": [
+      "Samshamana (palliation)",
+      "Dosha sodhana (bio-cleansing procedures)",
+      "Nidana parivarjana (avoiding causative factors)",
+      "Pathya (dietetics suitable for disease pacification)"
+    ],
+    "diet": [
+      "Wholesome foods",
+      "Unwholesome foods"
+    ],
+    "lifestyle": [
+      "Dinacharya(Daily regimen)",
+      "Rithucharya(Seasonal regimen)",
+      "Sadvritta (Ethical Regimen)"
+    ],
+    "source_references": [
+      "CENTRAL COUNCIL FOR RESEARCH IN AYURVEDIC SCIENCES.pdf"
+    ]
+  },
+  {
+    "disease": "Kusta (Skin Disease)",
+    "symptoms": [],
+    "dosha": null,
+    "srotas": null,
+    "treatments": [
+      "Panchakarma for detoxification",
+      "Swedana (Sudation) prior to Vamana or Virechana",
+      "Vamana (Therapeutic Emesis) with Kutaja, Madanaphala, and Madhuka",
+      "Virechana (Therapeutic Purgation) with Trivrt, Danti, and Triphala"
+    ],
+    "diet": [
+      "Wholesome foods",
+      "Avoid excess salty and sour food items",
+      "Avoid newly harvested food",
+      "Avoid virudhanna (mutually contradictory food)"
+    ],
+    "lifestyle": [
+      "Neecha roma nakha (cut hair and nails regularly)",
+      "Abhyanga with karanja taila",
+      "Regular snana (bathing daily)",
+      "Udwarthana (dry massage with medicated powder)",
+      "Parisheka with khadira kashaya",
+      "Avoid Divaswapna (daytime sleep)",
+      "Avoid vegavarodha (suppression of natural urges)",
+      "Avoid shoka krodha (grief and anger)",
+      "Avoid hima/atapa (exposure to cold/heat)",
+      "Follow sadvritta (ethical conduct)"
+    ],
+    "source_references": []
+  },
+  {
+    "disease": "Kusta (Skin Disease)",
+    "symptoms": [],
+    "dosha": null,
+    "srotas": null,
+    "treatments": [
+      "Vilwadigulika",
+      "Guggulu tiktaka ghritam",
+      "Tiktakam ghritam",
+      "Mahatiktaka ghritam",
+      "Kalyanakam ghritam",
+      "Satadhoutaghritam",
+      "Aragwadhadi panchatikta ghritam",
+      "Avipattikara churnam",
+      "Rajanyadi churnam",
+      "Nimbadi churnam",
+      "Vara churnam",
+      "Sudarsanamchurnam",
+      "Guggulu marichadi tailam",
+      "Vajraka tailam",
+      "Maha vajraka tailam",
+      "Durvadya tailam",
+      "Maha marichady tailam",
+      "Somaraji tailam",
+      "Jeevantyadi yamakam",
+      "Eladi tailam",
+      "Dinesa eladi tailam",
+      "Dinesa valyadi tailam",
+      "Pamantaka tailam",
+      "Gandhaka tailam",
+      "Markava tailam",
+      "Chemparathyadikeram",
+      "Malatyadikeram",
+      "Dhurdhoorapatradikeram",
+      "Karappan tailam",
+      "Kumkuma tailam",
+      "Sindhuradi lepam",
+      "Avalgujabeejadi lepam",
+      "Rasottamadi lepam",
+      "Rasakarpura lepam",
+      "Talakeswara ras",
+      "Rasa manikyam",
+      "Rasasindhuram",
+      "Vyadhiharana rasa"
+    ],
+    "diet": [
+      "Punarnava"
+    ],
+    "lifestyle": [],
+    "source_references": []
+  },
+  {
+    "disease": "Diabetes Mellitus (Madhumeha)",
+    "symptoms": [
+      "Disturbed metabolism"
+    ],
+    "dosha": "Disturbed Doshas",
+    "srotas": "Not mentioned",
+    "treatments": [
+      "Ghee processed with bitter drugs",
+      "Purgation",
+      "Bloodletting",
+      "Coolant diet",
+      "Light diet"
+    ],
+    "diet": [
+      "Preserved rice",
+      "Wheat",
+      "Barley",
+      "Mutton soups",
+      "Hot, sweet, sour and salty food",
+      "Milk",
+      "Sugarcane",
+      "Rice",
+      "Oils",
+      "Fats",
+      "Apple",
+      "Anar",
+      "Citrus fruits",
+      "Papaya",
+      "Guava",
+      "Pineapple",
+      "Roasted chana",
+      "Dhokala",
+      "Murmura chat",
+      "Paneer",
+      "Chana and mudga dal",
+      "Lauki",
+      "Tinda",
+      "Torai",
+      "Cabbage",
+      "Methi",
+      "Bathua",
+      "Spinach",
+      "Milk without sugar"
+    ],
+    "lifestyle": [
+      "Practicing Sadvritta (Rules of good conduct)",
+      "Maintaining a healthy mind",
+      "Balance and harmony to the mind"
+    ],
+    "source_references": [
+      "Srikanth N. Haripriya N., Singh Renu, Manjula ,Tewari Devesh, Diabetes Mellitus (Madhumeha) And Ayurvedic Management: An Evidence Based Approach, World Journal Of Pharmacy And Pharmaceutical Sciences, Volume 4, Issue 08, 881-892.pdf"
+    ]
+  },
+  {
+    "disease": "Kshaya (Tuberculosis/Rajayakshma)",
+    "symptoms": [
+      "Anorexia (Aruchi)",
+      "Feverish feeling (Jwaranubhuti)",
+      "Muco-purulent (greenish) sputum with foul smell",
+      "Emaciated and debilitated general condition",
+      "Raised body temperature",
+      "Raised pulse",
+      "Blood stained sputum (Kshataja)"
+    ],
+    "dosha": "Vata, Pitta, Kapha (imbalance varies)",
+    "srotas": "Not explicitly mentioned in the provided text",
+    "treatments": [
+      "Pippalyadi Ghrita (10ml twice daily with warm water)",
+      "Rasna Ghrita (10ml twice daily with warm water)",
+      "Talishadi Choorna (3gm twice daily with ghee and honey)",
+      "Dashmoola Kwatha (10ml twice daily with sharkara and ghrita)",
+      "Agastya Haritaki Avaleha (6-12gm with warm water/milk)",
+      "Hemogram with ESR (Level 2)",
+      "Sputum examination (Level 2)",
+      "X-Ray Chest PA View (Level 2)"
+    ],
+    "diet": [
+      "Not explicitly mentioned in the provided text"
+    ],
+    "lifestyle": [
+      "Snehana with ghee (Vataja Kasa)",
+      "Peya/Yusha/Kshira prepared with Vataghna drugs (Vataja Kasa)",
+      "Abhyanga (Vataja Kasa)",
+      "Parisheka (Vataja Kasa)",
+      "Snigdha Sveda (Vataja Kasa)"
+    ],
+    "source_references": [
+      "level_1_ayurveda_physician.pdf"
+    ]
+  },
+  {
+    "disease": "Cough (Kasa)",
+    "symptoms": [
+      "Cough"
+    ],
+    "dosha": "Vata and Kapha",
+    "srotas": "Not specified in provided text",
+    "treatments": [
+      "Snehapana (Ghrita with Peya, Mudagyusha or milk)",
+      "Snigdha Swedana (Abhyanga with Sneha on chest, hot fomentation with warm water bag or Erand Patra)",
+      "Parisheka (Snigdha Parisheka with Ushna Jala Siddha, Tila Taila, or Erand Patra)",
+      "Dhoomapana (Snaihika or Vairechanika Dhooma with Maricha, Pippali, Ela, Surasamanjari)"
+    ],
+    "diet": [
+      "Not specified in provided text"
+    ],
+    "lifestyle": [
+      "Not specified in provided text"
+    ],
+    "source_references": [
+      "hard stool"
+    ]
+  },
+  {
+    "disease": "Kasa (Cough)",
+    "symptoms": [],
+    "dosha": "Kapha",
+    "srotas": [],
+    "treatments": [
+      "Kushmand Avaleha (10g twice daily for 2-3 weeks with warm milk)",
+      "Draksharishta (10-20 ml twice daily for 2-3 weeks with same quantity of water)",
+      "Shwasakuthara Rasa (125-250 mg 3-4 times a day for 2-3 weeks with honey)",
+      "Malla Sindura (30 mg twice daily for 1 week with Vyaghri Haritaki / honey)",
+      "Shringarabhra Rasa (125-250 mg twice daily for 2-3 weeks with Sitopaladi and honey)",
+      "Shwaskaschintamani Rasa (125-250 mg twice daily for 2-3 weeks with Sitopaladi and honey)",
+      "Trivrit Virechana (with Madhura Dravya for Tanu Kapha)",
+      "Trivrit Virechana (with Tikta Dravya for Ghana Kapha)",
+      "Shirovirechana"
+    ],
+    "diet": [],
+    "lifestyle": [],
+    "source_references": []
+  },
+  {
+    "disease": "Kasa (Cough)",
+    "symptoms": [],
+    "dosha": "Vata",
+    "srotas": [
+      "Purisha",
+      "Adhovayu"
+    ],
+    "treatments": [
+      "Niruha Basti",
+      "Anuvasana Basti (for Vataja Kasa)",
+      "Apamarga",
+      "Tulsi",
+      "Shigru Patra",
+      "Katphala"
+    ],
+    "diet": [],
+    "lifestyle": [],
+    "source_references": [
+      "Charaka Samhita",
+      "The Ayurvedic Pharmaco­poeia of India",
+      "The Ayurvedic Formulary of India",
+      "Bhaishajya Ratnavali"
+    ]
+  },
+  {
+    "disease": "Tamaka Swasa (Bronchial Asthma)",
+    "symptoms": [
+      "Breathlessness triggered by dust",
+      "Breathlessness triggered by cloudy atmosphere",
+      "Breathlessness triggered by direct wind",
+      "Breathlessness triggered by cold water",
+      "Cough",
+      "Wheezing"
+    ],
+    "dosha": "Kaphadhika / Vatadhika",
+    "srotas": "Annavaha Srotas Roga",
+    "treatments": [
+      "Avaleha (5-10 gm before meal twice daily for 2-3 weeks)",
+      "Shirisharishta (10-20 ml after meal/ twice daily for 2-3 weeks)",
+      "Suvarnamalini Vasanta Churna/Vati (125-250 mg / 1-2 Vati after meal/twice daily for 2-3 weeks)",
+      "Swasakuthara mishrana – Swasakuthara Rasa (1-2 gm powder 3-4 times a day during attack)",
+      "Laxmivilasa Rasa (250 mg powder after food thrice a day for 2-3 weeks)",
+      "Mrityunjaya Rasa (250 mg powder after food thrice a day for 2-3 weeks)",
+      "Snigdha Mridu Virechana with Eranda Taila (15-20 ml) and milk (50-75 ml) - for Vatadhika variant",
+      "Dhanwantarm Gutika in frequent doses with Jeeraka water - for increased distress"
+    ],
+    "diet": [
+      "Same as Level 1 (details not provided in chunks)",
+      "Wholesome foods (details not provided in chunks)",
+      "Foods to avoid (details not provided in chunks)"
+    ],
+    "lifestyle": [
+      "Same as Level 1 (details not provided in chunks)",
+      "Early diagnosis and therapeutic intervention is important"
+    ],
+    "source_references": [
+      "The Ayurvedic Formulary of India, Part 1",
+      "The Ayurvedic Formulary of India, Part 2",
+      "The Ayurvedic Pharmaco­poeia of India, Part 1 Vol. 3",
+      "The Ayurvedic Pharmaco­poeia of India, Part 1 Vol. 4",
+      "Sushruta Samhita",
+      "Charaka Samhita",
+      "Bhaishajya Ratnavali"
+    ]
+  },
+  {
+    "disease": "Acid Pitting (Amlapitta)",
+    "symptoms": [],
+    "dosha": "Not explicitly mentioned in the provided text",
+    "srotas": "Not explicitly mentioned in the provided text",
+    "treatments": [
+      "Shunthi Churna",
+      "Amalaki Churna",
+      "Yashtimadhu Churna",
+      "Hingwashtaka Churna",
+      "Shivakshara Pachana Churna",
+      "Avipattikara Churna",
+      "Kamadudha Rasa",
+      "Pravala Panchamrita Rasa",
+      "Sutashekhara Rasa",
+      "Shankha Bhasma",
+      "Narikela Lavana Churna",
+      "Pravala Bhasma",
+      "Kapardika Bhasma",
+      "Patoladi Kwatha",
+      "Kalyanaka Kshara Churna",
+      "Virechana Karma (with Dadimadi Ghrita, Vidaryadi Ghrita, Gau Ghrita, Trivritta Lehya, Panchasakara Churna, Eranda Bhrishta Haritaki)",
+      "Vamana (with Madanaphala, Vacha, Patola, Nimba Kalka, Yashtimadhu Phanta, Saindhava Lavana Jala)",
+      "Virechana"
+    ],
+    "diet": [
+      "Patola, Kushmanda, Dadima, Amalaki, Kapittha, Godugdha, Mamsarasa, Sharkara, Madhu, Narikelodaka",
+      "Heavy food, Vidahi, Viruddha Ahara, Kulatha, Udada, Navanna, Tila, fermented foods like bread, excessive intake of curd, spicy food, bakery food, untimely food habit, deep fried food, alcohol intake and smoking"
+    ],
+    "lifestyle": [
+      "Follow dinacharya, Yogasana",
+      "Avoid suppression of urges, worry, anger, stress, day sleep"
+    ],
+    "source_references": [
+      "Table 3.1",
+      "Table 3.2"
+    ]
+  },
+  {
+    "disease": "Ascites (Jalodara)",
+    "symptoms": [],
+    "dosha": null,
+    "srotas": "Udakavaha Srotas",
+    "treatments": [],
+    "diet": [],
+    "lifestyle": [],
+    "source_references": [
+      "The Ayurvedic Formulary of India, Ministry of Health and Family Welfare, Govt. of India, Part I (7/2), 2000.",
+      "The Ayurvedic Formulary of India, Ministry of Health and Family Welfare, Govt. of India, Part I (18/8), 2000.",
+      "The Ayurvedic Formulary of India, Ministry of Health and Family Welfare, Govt. of India, Part I (18/18), 2000.",
+      "The Ayurvedic Formulary of India, Ministry of Health and Family Welfare, Govt. of India, Part I (20/52), 2000.",
+      "The Ayurvedic Formulary of India, Ministry of Health and Family Welfare, Govt. of India, Part II (16/37), 2000."
+    ]
+  },
+  {
+    "disease": "Jalodara (Ascites)",
+    "symptoms": [
+      "Distended abdomen",
+      "Excessive thirst",
+      "Anal wetness",
+      "Averted umbilicus",
+      "Shifting dullness",
+      "Fluid thrill",
+      "Engorged vessels over abdomen"
+    ],
+    "dosha": "Not explicitly mentioned in the provided text",
+    "srotas": "Not explicitly mentioned in the provided text",
+    "treatments": [
+      "Diet restriction",
+      "Indrayana Churna",
+      "Punarnavashtaka Kwatha",
+      "Dashamoola Kwatha",
+      "Phalatrikadi Kwatha",
+      "Pathyadi Kwatha",
+      "Gomutra Haritaki Churna",
+      "Narayana Churna",
+      "Kumaryasava",
+      "Abhaya Vati",
+      "Shilajatu Churna"
+    ],
+    "diet": [
+      "Yavagu, Yusha, Tilanala Kshara, Palasha Kshara, Swarjika Kshara (semi liquids)",
+      "Yava along with Vastuka (Bathua leaves), Karela (Karavellaka)",
+      "Restricted salt and water intake",
+      "Avoid heavy food, green peas, black eyed beans, lentils, yellow gram, raw vegetables"
+    ],
+    "lifestyle": [
+      "Timely meals",
+      "Relaxation techniques",
+      "Maintain input-output chart for fluid regulation",
+      "Record of abdominal girth"
+    ],
+    "source_references": [
+      "Table 4.1"
+    ]
+  },
+  {
+    "disease": "Ascites (Jalodara)",
+    "symptoms": [],
+    "dosha": "Unknown",
+    "srotas": "Unknown",
+    "treatments": [
+      "Refer to level 2 facilities for non-responsive cases, fluid imbalance, jaundice, cardiac failure, renal failure, or hepatic encephalopathy"
+    ],
+    "diet": [
+      "Wholesome foods: Diet with Deepana (digestive) and Laghu (light to digest) property",
+      "Foods to avoid: salads, refined foods such as white flour (Maida- bread, pizza, biscuits), sprouts"
+    ],
+    "lifestyle": [
+      "Avoid physical and mental stress",
+      "Avoid excessive exercise",
+      "Avoid suppression of natural urges",
+      "Avoid day sleep",
+      "Avoid blood-letting"
+    ],
+    "source_references": []
+  },
+  {
+    "disease": "Ascites (Jalodara)",
+    "symptoms": [],
+    "dosha": null,
+    "srotas": null,
+    "treatments": [
+      "Chitraka Ghrita (3-5 gm before meal / twice a day for 2-3 weeks with lukewarm water)",
+      "Jalodaradi Rasa Vati (1-2 Vati after meal / thrice a day for 2-3 weeks with water)",
+      "Arogyavardhini Rasa Churna / Vati (250–500 mg (1-2 Vati) after meal / thrice a day for 2-3 weeks with water)",
+      "Icchabhedi Rasa Vati (1 Vati early morning empty stomach 2 times a week with water)"
+    ],
+    "diet": [
+      "Same as level 1"
+    ],
+    "lifestyle": [
+      "Same as level 1"
+    ],
+    "source_references": [
+      "Govind Das Sen, Bhaishajya Ratnavali"
+    ]
+  },
+  {
+    "disease": "Amavata (Rheumatoid Arthritis)",
+    "symptoms": [
+      "Severe pain",
+      "Swelling",
+      "Stiffness",
+      "Fever",
+      "Loss of appetite",
+      "Polyuria",
+      "Monoarthritis (rarely)"
+    ],
+    "dosha": "Ama and Vata",
+    "srotas": "Rasavaha Srotas",
+    "treatments": [
+      "Nidana Parivarjana",
+      "Shodhana Chikitsa (Virechana, Basti, Raktamokshana)",
+      "Shamana Chikitsa (Langhana, Swedana, Rukshana, Pachana, Deepana)",
+      "Lepa",
+      "Upanaha",
+      "Rasayana Chikitsa",
+      "Treatment according to Doshik involvement"
+    ],
+    "diet": [
+      "Pathya - Apathya (Diet and lifestyle education) - details not provided in the text"
+    ],
+    "lifestyle": [
+      "Pathya - Apathya (Diet and lifestyle education) - details not provided in the text"
+    ],
+    "source_references": [
+      "Rogadhikar.pdf",
+      "Bhaishaishajya Ratnavali.pdf",
+      "The Ayurvedic Formulary of India.pdf"
+    ]
+  },
+  {
+    "disease": "Amavata (Rheumatoid Arthritis)",
+    "symptoms": [
+      "Raised body temperature",
+      "Anhidrosis",
+      "Body ache",
+      "Anorexia",
+      "Headache",
+      "Fatigue",
+      "Weakness",
+      "Lethargy",
+      "Joint deformities",
+      "Muscle wasting",
+      "Anaemia"
+    ],
+    "dosha": "Aggravated Vata and Ama",
+    "srotas": "Not explicitly mentioned in the provided text",
+    "treatments": [
+      "Hot water bath",
+      "Sun bath",
+      "Swedana with Dhanyamla Dhara",
+      "Rooksha Pinda Sweda",
+      "Nadi Sweda",
+      "Agni Lepa",
+      "Abhyanga with Visha Garbha Taila, Pancha Guna Taila, Kottamchukadi Taila, Brihat Saindhavadi Taila, Karpooradi Taila",
+      "Ajmodadi Churna",
+      "Amrutadi Kashaya",
+      "Dashamoola Kwatha",
+      "Sanjivani Vati",
+      "Amapachana Vati",
+      "Eranda Taila",
+      "Shunti Churna",
+      "Rasanasaptaka Kwatha",
+      "Agnitundi Vati",
+      "Simhanada Guggulu",
+      "Saubhagyasunthi Paka Churna",
+      "Amavatari Rasa"
+    ],
+    "diet": [
+      "Buttermilk",
+      "Horse gram (Kulattha)",
+      "Crab soup",
+      "Rasona",
+      "Foods that reduce Agni and Ama should be avoided",
+      "Avoid fried items",
+      "Sweets",
+      "Dairy products except buttermilk",
+      "Dadhi",
+      "Matsya",
+      "Guda",
+      "Ksheera",
+      "Upodika",
+      "Masha",
+      "Pishta preparations made of green peas",
+      "Raw vegetables and salads",
+      "Potatoes",
+      "Sour food like tomato, lemon, tamarind"
+    ],
+    "lifestyle": [
+      "Timely eating",
+      "Following daily & seasonal regimen properly",
+      "Avoid day sleeping",
+      "Avoid night awakening",
+      "Avoid eating without appetite",
+      "Avoid overeating",
+      "Avoid eating at odd timings",
+      "Avoid physical exertion just after eating",
+      "Avoid exposure to cold",
+      "Avoid sedentary lifestyle"
+    ],
+    "source_references": [
+      "unknown"
+    ]
+  },
+  {
+    "disease": "Diarrhoea (Atisara)",
+    "symptoms": [
+      "Diarrhoea",
+      "Diminished sleep (Nidraalpta)",
+      "Vomiting (Vami)"
+    ],
+    "dosha": "Unknown",
+    "srotas": "Unknown",
+    "treatments": [
+      "Unknown"
+    ],
+    "diet": [
+      "Unknown"
+    ],
+    "lifestyle": [
+      "Unknown"
+    ],
+    "source_references": []
+  },
+  {
+    "disease": "Fever (Jwara)",
+    "symptoms": [
+      "Sore in mouth",
+      "Heaviness",
+      "Cold",
+      "Nausea",
+      "Horripilation",
+      "Excessive sleep",
+      "Vomiting"
+    ],
+    "dosha": "Vata-Pitta, Kapha",
+    "srotas": "Not specified",
+    "treatments": [
+      "Line of treatment planned considering Doshika involvement and cause"
+    ],
+    "diet": [
+      "Water or food, sprouts",
+      "Avoid cold food and beverages, junk foods, fried food, bakery items"
+    ],
+    "lifestyle": [
+      "Physical and mental exertion",
+      "Exposure to cold",
+      "Suppression of natural urges",
+      "Taking bath with cold water"
+    ],
+    "source_references": []
+  },
+  {
+    "disease": "Fever (Jwara)",
+    "symptoms": [
+      "Sneezing",
+      "Insomnia",
+      "Giddiness",
+      "Numbness",
+      "Anorexia",
+      "Immobility",
+      "Malaise",
+      "Emaciation",
+      "Heaviness",
+      "Persistent emotions",
+      "Ushna (warmth)",
+      "Skin eruptions",
+      "Thirst",
+      "Burning sensation",
+      "Delirium",
+      "Internal heat",
+      "Trishna (thirst)",
+      "Moha (delusion)",
+      "Glani (malaise)",
+      "Gatra Vikshepa (muscle twitching)",
+      "Swelling",
+      "Cough",
+      "Difficulty breathing",
+      "Shukra Moksha (impotence)",
+      "Death"
+    ],
+    "dosha": "Vata, Pitta, Kapha (Sannipatika)",
+    "srotas": "Rasa, Rakta, Mamsa, Meda, Asthi, Majja, Shukra",
+    "treatments": [
+      "Rasa Pa",
+      "Rakta Pachaka (Patola, Sariva, Musta, Patha, Kutki)",
+      "Vireka (purgation)",
+      "Upavasa (fasting)",
+      "Seka (application of medicated liquids)",
+      "Pradeha (unctuous application)",
+      "Samshaman (palliation)",
+      "Niruha and Anuvasana Basti (enema)",
+      "Pathyadi Kwatha"
+    ],
+    "diet": [],
+    "lifestyle": [],
+    "source_references": []
+  },
+  {
+    "disease": "Fever (Jwara)",
+    "symptoms": [
+      "Sudden-onset fever",
+      "Headache",
+      "Muscle & joint pains",
+      "Rashes",
+      "Fever with rigor",
+      "Fatigue",
+      "Vomiting",
+      "Running nose",
+      "Sore throat",
+      "Muscle pain",
+      "Coughing",
+      "No desire to have food",
+      "Watery eyes",
+      "Lethargy",
+      "Chills",
+      "Sweating"
+    ],
+    "dosha": "Vata, Pitta, Kapha (depending on fever type - Sannipataj, Vishama, Vata-Shlesmika)",
+    "srotas": "Not specified in the provided text",
+    "treatments": [
+      "Amrutottaram Kwatha (20-40 ml thrice daily for 1-2 weeks with warm water)",
+      "Amritarishta (10-20 ml thrice daily for 1-2 weeks with equal quantity of water)",
+      "Tribhuvanakirti Rasa Vati (125-250 mg thrice daily for 1-2 weeks with water/madhu)",
+      "Ananda Bhairava Rasa (125-250 mg thrice daily for 1-2 weeks with water/madhu)",
+      "Jayamangala Rasa (125-250 mg thrice daily for 1-2 weeks with water/madhu)",
+      "Sanjivani Vati (specifically indicated in Amavastha of Jwara)",
+      "Jayamangala Rasa (specifically indicated in Sannipatika Jwara)",
+      "Tribhuvanakirti Rasa (specifically indicated in Shlaishmika Jwara)",
+      "Ananda Bhairavarasa (specifically indicated in Jwara with Atisara)"
+    ],
+    "diet": [
+      "Not specified in the provided text, but Pathya - Apathya is same as Level 1"
+    ],
+    "lifestyle": [
+      "Not specified in the provided text"
+    ],
+    "source_references": [
+      "Table 6.7"
+    ]
+  },
+  {
+    "disease": "Fever (Jwara)",
+    "symptoms": [],
+    "dosha": null,
+    "srotas": null,
+    "treatments": [
+      "Kalingadi Kashaya (20-40 ml before meals twice a day for 5-7 days)",
+      "Patoladi Kwath (10-20 ml before meals twice a day for 1 week with honey)",
+      "Truna Panchamoola Kashaya (40 ml 2-3 times a day for 5-7 days)",
+      "Sudarshana Churna (2-4 gm 2-3 times a day for 3 days with warm water)",
+      "Tribhuvankirti Rasa (125-250 mg twice a day for 3 days with Madhu, Ardraka Swarasa, Tulsi Patra Swarasa)",
+      "Naradiya Laxmi Vilasa Rasa (250 mg 2-3 times a day for 3-4 days with Tambu)",
+      "Talisadya Churna (3 gm three times a day for 1 week with Madhu)",
+      "Chandramrit Rasa (250 mg 2-3 times a day for 1 week with Madhu, Ardraka Swarasa, juice of Vasa leaves)",
+      "Shrungyadi Churna (250 mg to 1 gm three times a day for 1 week with Madhu)",
+      "Karpuradi Churna (1 to 2 gm twice a day for 3-5 days with Madhu)",
+      "Jwarahara Kashaya (40 ml twice a day for 10 days)",
+      "Barihat Kasturi Bhairava Rasa (125 mg 1-2 times a day for 2-3 days with Ardraka Swarasa, Madhu)",
+      "Mrutyunjaya Rasa (125 mg 2 times a day for 3-5 days with Fresh ginger juice, Madhu)",
+      "Laxminarayana Rasa (250 mg twice a day for 3-5 days with Madhu, Tambula Swarasa)",
+      "Ayush 64 (4 Tab (500 mg) twice a day for 5-7 days with Water)",
+      "Kirata Tiktakadi Kwath (20-40 ml twice a day for 15 days with Water)",
+      "Vishama Jwarantak Lauha (125 mg twice a day for 15 days with Madhu)",
+      "Sarva Jwarahara Lauha (125 mg twice a day for 5-7 days with Madhu)",
+      "Jayamangal Rasa (125 mg twice a day for 7 days with Madhu/Guduchi Swarasa)",
+      "Brihat Kasturi Bhairava Rasa (125 mg twice a day for 3-5 days with Madhu, Ardrak Swarasa)",
+      "Vardhaman Pippali Prayoga (0.5-5gm daily dose changes once in morning for 21 days)"
+    ],
+    "diet": [],
+    "lifestyle": [],
+    "source_references": [
+      "Sri Govinda Dasa, Bhaishajya Ratnavali",
+      "Anonymous, The Ayurvedic Formulary of India"
+    ]
+  },
+  {
+    "disease": "Anemia (Pandu)",
+    "symptoms": [
+      "Pallor",
+      "Fatigue",
+      "Malaise",
+      "Fever",
+      "Weight loss",
+      "Night sweats",
+      "Palpitation",
+      "Dyspnoea on mild exertion",
+      "Depleted functions of Dhatus",
+      "Kshaya of Varna",
+      "Kshaya of Bala",
+      "Kshaya of Sneha",
+      "Raktalpata",
+      "Alpa Meda",
+      "Debility of Karmendriya",
+      "Debility of Jnanendriya",
+      "Discoloration"
+    ],
+    "dosha": "Pitta",
+    "srotas": "Rasa Dhatu",
+    "treatments": [],
+    "diet": [],
+    "lifestyle": [],
+    "source_references": [
+      "Charaka Samhita.pdf",
+      "Sahasrayoga.pdf",
+      "Bhaishajya Ratnavali.pdf",
+      "Ashtanga Hrudaya.pdf"
+    ]
+  },
+  {
+    "disease": "Pakshaghata (Hemiplegia)",
+    "symptoms": [
+      "Facial palsy",
+      "Vatika stage",
+      "Arditha",
+      "Mada",
+      "Moorcha"
+    ],
+    "dosha": "Vata",
+    "srotas": "Not specified in provided chunks",
+    "treatments": [
+      "Nirooha Basti (Erandamooladi Basti, Madhutailika, Siddha Basti, Rajayapana Basti)",
+      "Nasya (Anutaila/ Ksheerabala (Avarthi), Dhanwantahara (Avarthi), Shandbindhu Taila)",
+      "Ksheera Dhooma",
+      "Pradhamana Nasya (Nasika Choorna, Vacha, Katphala)"
+    ],
+    "diet": [
+      "Not specified in provided chunks"
+    ],
+    "lifestyle": [
+      "Classical Shodhana for Vata"
+    ],
+    "source_references": [
+      "9"
+    ]
+  },
+  {
+    "disease": "Pandu (Anemia)",
+    "symptoms": [
+      "Loss of appetite"
+    ],
+    "dosha": "Not explicitly mentioned",
+    "srotas": "Not explicitly mentioned",
+    "treatments": [
+      "Amalaki Churna",
+      "Pippali Churna",
+      "Chausastha Prahari Pippali Churna",
+      "Guda Haritaki Churna",
+      "Drakshavaleha",
+      "Punarnava Mandoora",
+      "Dadimadya Ghrita",
+      "Dhatri Lauha",
+      "Gomutra Haritaki",
+      "Navayasa Lauha",
+      "Vidangadi Lauha",
+      "Swarnamakshika Bhasma",
+      "Kasisa Bhasma",
+      "Lohasava",
+      "Draksharishta",
+      "Punarnavasava",
+      "Shilajitvadi Loha",
+      "Brahma Rasayana"
+    ],
+    "diet": [
+      "Purana Shali",
+      "Yava",
+      "Laja",
+      "Amraphala",
+      "Draksha",
+      "Dadima",
+      "Matulunga",
+      "Kadaliphala",
+      "Kharjura",
+      "Avoid Kshara",
+      "Avoid Amla",
+      "Avoid Lavana",
+      "Avoid Katu",
+      "Avoid Kashaya",
+      "Avoid Atiushna",
+      "Avoid Tikshna",
+      "Avoid Rukshanna",
+      "Avoid Viruddha Asatmya Bhojana",
+      "Avoid Masha",
+      "Avoid Tila",
+      "Avoid Mridbhakshana",
+      "Avoid Dusta Jala"
+    ],
+    "lifestyle": [
+      "Following of daily and seasonal regimen",
+      "Avoid Atinidra",
+      "Avoid Ativyayama",
+      "Avoid Atiayasa",
+      "Avoid psychological stress",
+      "Avoid Divaswapna",
+      "Avoid Ratri Jagarana",
+      "Avoid Vegavarodha"
+    ],
+    "source_references": [
+      "book_name_1.pdf"
+    ]
+  },
+  {
+    "disease": "Pandu (Anemia)",
+    "symptoms": [],
+    "dosha": "Not specified",
+    "srotas": "Raktavaha Srotas (blood channels)",
+    "treatments": [
+      "Koshtha Shuddhi with Avipattikara Churna 5-10 gm with Phalatrikadi Kashaya",
+      "Virechana with Aragwadha Phala Majja/ Avipattikara Churna/ Sushka Draksha Kwatha",
+      "Vardhamana Pippali Rasayana",
+      "Swarna Malini Vasant Rasa",
+      "Panchakarma procedures (if needed)"
+    ],
+    "diet": [
+      "Same as Level 1",
+      "Wholesome foods (as per Level 1)"
+    ],
+    "lifestyle": [
+      "Same as Level 1",
+      "Recommended habits (as per Level 1)",
+      "Precautions (as per Level 1)"
+    ],
+    "source_references": [
+      "Vagbhatta, Ashtanga Hridaya",
+      "Agnivesha, Charaka Samhita",
+      "Govind Das Sen, Bhaishajya Ratnavali",
+      "Sharangdharacharya, Sharangadhara Samhita"
+    ]
+  },
+  {
+    "disease": "Ekakushtha (Psoriasis)",
+    "symptoms": [],
+    "dosha": "Not specified in provided text",
+    "srotas": "Not specified in provided text",
+    "treatments": [
+      "Sarivadyasava",
+      "Mahamanjisthadi Kwatha",
+      "Gandhaka Rasayana Vati",
+      "Khadirarishta",
+      "Aragwadharishta",
+      "Vamana",
+      "Virechana",
+      "Raktamokshana (Siravedha, Jalookavach)",
+      "Local application (same as Level 1)"
+    ],
+    "diet": [
+      "Laghu Anna (light food)",
+      "Tikta Shaka (bitter leafy vegetables)",
+      "Purana Dhanya (seasoned grain)",
+      "Yava (barley)",
+      "Godhuma (wheat)",
+      "Mudga (green gram)",
+      "Patola",
+      "Khichadi prepared from old rice (Purana Shali)",
+      "green gram",
+      "Draksha (dried grapes)",
+      "sugarcane juice",
+      "Shritashita Jala (boiled and cooled water)",
+      "Patola (Trichosanthes dioica)",
+      "gourd",
+      "Haridra",
+      "Ardrak",
+      "Heavy food",
+      "fried food articles",
+      "pungent food articles like chilli",
+      "alcohol"
+    ],
+    "lifestyle": [
+      "Complete rest",
+      "Avoid excessive physical exercise",
+      "Avoid day sleep"
+    ],
+    "source_references": []
+  },
+  {
+    "disease": "Pandu (Anemia)",
+    "symptoms": [
+      "Gaurava (heaviness in body)",
+      "Tandra (sleepiness)",
+      "Panduta (pallor)",
+      "Klama (fatigue)",
+      "Svasa (dyspnea on exertion)",
+      "Aalasya (lethargy)",
+      "Aruchi (loss of appetite)"
+    ],
+    "dosha": "Not explicitly mentioned in the provided chunks",
+    "srotas": "Not explicitly mentioned in the provided chunks",
+    "treatments": [
+      "Not explicitly mentioned in the provided chunks"
+    ],
+    "diet": [
+      "Not explicitly mentioned in the provided chunks"
+    ],
+    "lifestyle": [
+      "Not explicitly mentioned in the provided chunks"
+    ],
+    "source_references": [
+      "Vagbhata, Ashtanga Hridaya, Atridev Gupt, Vidyotini hindi commentary, Chaukhambha Prakashana, Edition Reprint 2008, Varanasi, Chikitsa Sthana Pandu Chikitsa 16/13, p. no. 540",
+      "Vagbhata, Ashtanga Hridaya, Atridev Gupt, Vidyotini hindi commentary, Chaukhambha Prakashana, Edition Reprint 2008, Varanasi, Chikitsa Sthana Pandu Chikitsa 16/16-19, p. no. 540",
+      "Agnivesha, Charaka, Dridhabala, Charaka Samhita, Edited by Vaidya Yadavji Trikamji, Reprint Edition, Chaukhambha Surbharti Publication, 2011 Chikitsa Sthana Pandu Chikitsa Adhyaya 16"
+    ]
+  },
+  {
+    "disease": "Hypothyroidism (Gandamala)",
+    "symptoms": [],
+    "dosha": "Unknown",
+    "srotas": "Unknown",
+    "treatments": [
+      "Diet restrictions",
+      "Advice (initial stage)"
+    ],
+    "diet": [
+      "Wholesome foods",
+      "Foods to avoid"
+    ],
+    "lifestyle": [],
+    "source_references": [
+      "ha"
+    ]
+  },
+  {
+    "disease": "Hypothyroidism (Hypothyroidism)",
+    "symptoms": [
+      "Excessive urination",
+      "Excessive thirst",
+      "Excessive hunger",
+      "Lethargy",
+      "Numbness or burning sensation in the extremities",
+      "Calf muscle cramps",
+      "Sudden loss of weight"
+    ],
+    "dosha": "Not specified",
+    "srotas": "Not specified",
+    "treatments": [
+      "Kanchnara Guggulu",
+      "Chitrakadi Vati",
+      "Trikatu Churna",
+      "Vyoshadi Guggulu",
+      "Varuna Shigru Kwatha",
+      "Shuddha Guggulu",
+      "Varanadi Kwatha",
+      "Dashamoola Kwatha",
+      "Gomutra Haritaki Vati",
+      "Amapachana Vati",
+      "Arogyavardhini Rasa",
+      "Thrivrita Lehya",
+      "Vamana Karma",
+      "Virechana Karma",
+      "Lekhana Basti",
+      "Bhallataka Rasayana",
+      "Gudardraka Prayoga"
+    ],
+    "diet": [
+      "Yava (barley)",
+      "Bajra (millet)",
+      "Jovar (pearl millet)",
+      "Ragi",
+      "Radish",
+      "Sarshapa",
+      "Drumsticks",
+      "Gandeera (coleus)",
+      "Shunthi",
+      "Jeeraka",
+      "Trikatu",
+      "Buttermilk",
+      "Ushna Jala (Luke warm water)",
+      "Avoid heavy food articles and fried preparations",
+      "Avoid refined foods such as white flour",
+      "Avoid black gram",
+      "Avoid peas",
+      "Avoid potatoes",
+      "Avoid curd",
+      "Avoid milk",
+      "Avoid fermented and bakery items"
+    ],
+    "lifestyle": [
+      "Regular exercises",
+      "Yogasanas",
+      "Pranayama like Surya Bhedana, Kapalbhati",
+      "Avoid sedentary life style",
+      "Avoid day sleep",
+      "Avoid munching"
+    ],
+    "source_references": [
+      "Table 10.1",
+      "Table 10.2",
+      "Table 10.3"
+    ]
+  },
+  {
+    "disease": "Pramahajanya Jwara (Diabetes Mellitus)",
+    "symptoms": [
+      "Excessive thirst",
+      "Excessive urination",
+      "Sweet taste in urine",
+      "Body weakness",
+      "Lethargy"
+    ],
+    "dosha": "Kapha and Vata",
+    "srotas": "Rasa, Meda, and Mutra Vaha Srotas",
+    "treatments": [
+      "Light and dry diet",
+      "Exercise",
+      "Herbs like Guduchi, Neem, and Turmeric",
+      "Formulations like Chandrakala Rasa (Ayurvedic Formulary of India, Part A, Pg. 206)",
+      "Prameha Ghritam (Sri Govindacharya, Bhaisajya Ratnavali, Pg. 713)"
+    ],
+    "diet": [
+      "Old barley",
+      "Honey",
+      "Light cereals",
+      "Avoid sweet, oily, and heavy foods"
+    ],
+    "lifestyle": [
+      "Regular exercise",
+      "Avoid daytime sleep",
+      "Maintain a balanced routine"
+    ],
+    "source_references": [
+      "Charaka Samhita (Chikitsa Sthana 16/23,24)",
+      "The Ayurvedic Formulary of India, Part A",
+      "Sri Govindacharya, Bhaisajya Ratnavali",
+      "The Ayurvedic Formulary of India, Part B"
+    ]
+  },
+  {
+    "disease": "Prameha (Prameha)",
+    "symptoms": [
+      "Polyuria with turbidity in urine"
+    ],
+    "dosha": "Kapha",
+    "srotas": "Not specified in the provided text",
+    "treatments": [
+      "Not specified in the provided text"
+    ],
+    "diet": [
+      "Not specified in the provided text"
+    ],
+    "lifestyle": [
+      "Not specified in the provided text"
+    ],
+    "source_references": [
+      "Agnivesha, Charaka, Charaka Samhita: Charaka Chikitsasthana 1-3/32-34",
+      "Agnivesha, Charaka, Charaka Samhita: Charaka Chikitsasthana 1-3/13-17"
+    ]
+  },
+  {
+    "disease": "Madhumeha (Diabetes Mellitus)",
+    "symptoms": [],
+    "dosha": "Kapha / Pitta / Vata",
+    "srotas": [],
+    "treatments": [
+      "Diet restriction",
+      "Vijayasaradi Kwatha (Decoction)",
+      "Phalatrikadi Kwatha (Decoction)",
+      "Sapta Rgangyadi Vati",
+      "Gokshuradi Guggulu",
+      "Triphala Powder / Tab",
+      "Panchakarma procedures (Udavartana, Snehapana, Vamana Karma, Anuvasana Basti, Shirodhara, Sarvanga taila / Kseeradhara)"
+    ],
+    "diet": [
+      "Yava (Barley), godh£ma (wheat), kodrava, udd¡laka, Kangu, Madhulika, Shyamaka",
+      "Navapatola, young banana vegetables, tanduleyaka, vastukam, bitter vegetables, methika (Fenugreek leaves), Karavellaka (Bitter gourd), Bimbi (Kovai), Shigru fruits and leaves (Drum stick), Vrintaka (Brinjal), Rakta vrintaka (Tomato), Putiha (mint leaves), Suran (amorhophellus), Curry leaves, Mulaka (radish), Kushmanda (Ash Gourd), Kritavedhana (Ridge gourd), Alabu (Bottle gourd)",
+      "Jambu (Syzigium cumini), Kapitha (Feronia limonia), Amlaki (Phyllanthus embilica), Bilva (Bael - Aegle marmelos), Dadima (Pomegranate - Punica granatum), Naranga (Orange - Citrus aurantium), Parushaka (Falsa - Gravia asiatica), Udumbara (Cluster Fig – Ficus racemosa)",
+      "Birds like Kapota (Pigeon), Titira (Grey Francolin)"
+    ],
+    "lifestyle": [
+      "Pathya - Apathya (Diet and life style education)",
+      "Moderately nourishing articles which do not aggravate Kapha and Meda"
+    ],
+    "source_references": [
+      "The Ayurvedic Formulary of India",
+      "The Ayurvedic Pharmacopoeia of India"
+    ]
+  },
+  {
+    "disease": "Prameha (Diabetes)",
+    "symptoms": [
+      "Impaired glucose utilization",
+      "Loss of muscle tone"
+    ],
+    "dosha": "Kapha",
+    "srotas": "Not specified in the text",
+    "treatments": [
+      "Weight training exercises (low intensity, gradually increased)",
+      "Regular exercise at fixed timings"
+    ],
+    "diet": [
+      "Wholesome foods: Not specified",
+      "Foods to avoid: Sweets, fruit salad, Sugarcane, Mango, Watermelon, Chikoo, Dates, Jack fruits, Custard apple, Banana, Grapes, Cashew nuts, cold drinks, oil, Hydrogenated Ghee, fried food, meat (especially wetland animals), eating before previous food is digested, improper timing and quantity of food"
+    ],
+    "lifestyle": [
+      "Proper sleep before exercise",
+      "Digestion of food before exercise",
+      "Avoid daytime sleep after meals"
+    ],
+    "source_references": [
+      "unknown"
+    ]
+  },
+  {
+    "disease": "Diabetes Mellitus (Madhumeha)",
+    "symptoms": [
+      "Overweight/obese",
+      "BMI more than 25 (kg/m2)",
+      "Waist circumference >80cm (female), >102cm (male)",
+      "Impotence",
+      "Neuropathy",
+      "Diabetic nephropathy",
+      "Peripheral neuropathy"
+    ],
+    "dosha": "Not explicitly mentioned in the provided text",
+    "srotas": "Not explicitly mentioned in the provided text",
+    "treatments": [
+      "Diet restriction",
+      "Physical exercise",
+      "Lifestyle modification",
+      "Trikatu powder (3-6gm, twice daily, before meal, for 2-3 weeks)",
+      "Haritaki, Guduchi and Shunthi powder (3-6gm, twice daily, before meal, for 2-3 weeks)",
+      "Triphala (as laxative)",
+      "Shiva Gutika (1-2 tablets, twice daily, before meal)",
+      "Vanga Bhasma (125-250mg, twice daily, after meal)",
+      "Trivanga Bhasma (125-250mg, twice daily, after meal)",
+      "Vasanta Kusumakara Rasa (125-250mg, twice daily, after meal)",
+      "Arogyavardhini Vati (1-2 tablets, thrice daily, before meal)",
+      "Chandraprabha Vati (2-3 tablets, thrice daily, before meal)",
+      "Virechana Karma with Triphala Kwatha and Eranda oil",
+      "Tikshna Basti (Kshara Basti, Lekhana Basti)",
+      "Shilajatu Rasayana Kalpa",
+      "Amalaki Rasayana Kalpa",
+      "Vardhamana Pippali Rasayana Kalpa",
+      "Vidangadi Rasayana Kalpa",
+      "Haritakyadi Rasayana Kalpa",
+      "Mridu Virechana with Haritaki powder"
+    ],
+    "diet": [
+      "Same as Level 1 (not specified in provided text)",
+      "Avoid/use oil instead of Ghrita"
+    ],
+    "lifestyle": [
+      "Same as Level 1 (not specified in provided text)"
+    ],
+    "source_references": [
+      "The Ayurvedic Formulary of India, Ministry of Health and Family Welfare, Govt. of India"
+    ]
+  },
+  {
+    "disease": "Fissure-in-Ano (Parikartika)",
+    "symptoms": [
+      "Painful defecation",
+      "Bleeding per rectum (moderate to severe)"
+    ],
+    "dosha": "Not explicitly mentioned in the provided text",
+    "srotas": "Not explicitly mentioned in the provided text",
+    "treatments": [
+      "Haritaki Churna",
+      "Triphala Churna",
+      "Draksha (dried fruit)",
+      "Aragvadha Churna",
+      "Castor Oil",
+      "Avipattikara Churna",
+      "Takrarishta",
+      "Abhayarishta",
+      "Surana Vataka",
+      "Local Application: Arka, Eranda, Bilvapatra Kwatha (Parisheka)",
+      "Triphala Kwatha, Panchavalkala Kwatha (Avagaha)",
+      "Arkamoola and Shamipatra (Dhoopana)",
+      "Jatyadi Taila, Murivenna (Abhyanga)",
+      "Jatyadi Taila, Pippalyadi Taila (Matra Basti)",
+      "Kshara Karma (potential cauterization)",
+      "Agni Karma (direct cauterization)",
+      "Shastra Karma (surgical management)",
+      "Classical Virechana Karma",
+      "Kshara Sutra Suturing (KSS)",
+      "Anuvasana Basti (with Anu Taila)",
+      "Sitz bath"
+    ],
+    "diet": [
+      "Green gram",
+      "Draksha (fruits)",
+      "Orange juice",
+      "Sweet lemon juice",
+      "Musk melon",
+      "Salads (cabbage, cucumber, carrot, spinach)",
+      "Green leafy vegetables",
+      "Surana",
+      "Patola",
+      "Sufficient quantity of water"
+    ],
+    "lifestyle": [
+      "Avoid hard seats",
+      "Avoid suppression of natural urges (urination & defecation)"
+    ],
+    "source_references": [
+      "Table 17.1",
+      "PARIKARTIKA"
+    ]
+  },
+  {
+    "disease": "Haemorrhoids (Piles)",
+    "symptoms": [
+      "Severe bleeding per rectum"
+    ],
+    "dosha": "Not specified",
+    "srotas": "Not specified",
+    "treatments": [
+      "Arogyvardhini Vati (1-2 Vati at bed time or early morning empty stomach for 1-2 weeks with luke warm water)",
+      "Kankayana Vati (1-2 Vati at bed time or early morning empty stomach for 1-2 weeks with luke warm water)",
+      "Phalatrikadi Kwatha (20-40 ml empty stomach/twice daily for 1-2 weeks)",
+      "Erandamoola Kwatha (20-40 ml empty stomach/twice daily for 1-2 weeks)",
+      "Pathya-Apathya (Diet and lifestyle education - same as level 1)"
+    ],
+    "diet": [
+      "Wholesome foods (as per level 1)",
+      "Foods to avoid (as per level 1)"
+    ],
+    "lifestyle": [
+      "Recommended habits (as per level 1)",
+      "Precautions (as per level 1)"
+    ],
+    "source_references": []
+  },
+  {
+    "disease": "Insomnia (Anidra)",
+    "symptoms": [],
+    "dosha": "Unknown",
+    "srotas": "Unknown",
+    "treatments": [
+      "Mamsyadi Kwatha",
+      "Drakshadi Kwatha",
+      "Sarswatarishta",
+      "Nidrodaya Rasa",
+      "Shirodhara (Chandanadi Taila, Ksheerabala Taila)",
+      "Shirobasti (Chandanadi Taila, Ksheerabala Taila)",
+      "Basti Karma (Tikta Ksheera Basti, Yapana Basti, Matra Basti)",
+      "Nasya (Gau ghrita, Brahmi Ghrita)",
+      "Shatavari Churna",
+      "Lashuna Kalka",
+      "Saraswata Arishta",
+      "Smrutisagar Rasa"
+    ],
+    "diet": [
+      "Wheat (Godhuma)",
+      "Black gram (Masha)",
+      "Seasoned rice (Purana Shali)",
+      "Green gram",
+      "Milk and Ghee"
+    ],
+    "lifestyle": [
+      "Avoid day sleep",
+      "Avoid mental and physical excitement before bed",
+      "Avoid suppression of natural urges",
+      "Avoid adventurous activities, deep water, standing on edges at heights, fireplaces"
+    ],
+    "source_references": [
+      "The Ayurvedic Pharmacopoeia of India",
+      "The Ayurvedic Formulary of India"
+    ]
+  },
+  {
+    "disease": "Insomnia (Anidra)",
+    "symptoms": [
+      "Insufficient sleep",
+      "Delayed onset of sleep",
+      "Frequent awakening at night",
+      "Early awakening",
+      "Poor concentration",
+      "Headache",
+      "Fatigue",
+      "Muscle fatigue",
+      "Restlessness"
+    ],
+    "dosha": "Vata",
+    "srotas": "Not specified in the provided text",
+    "treatments": [
+      "Nidana Parivarjana",
+      "Shodhana Chikitsa (Virechana, Nasya)",
+      "Shamana Chikitsa (Snehana, Murdhataila, Shirolepa, Dhara)",
+      "Medhya Rasayana",
+      "Treatment according to Doshik involvement"
+    ],
+    "diet": [
+      "Not specified in the provided text"
+    ],
+    "lifestyle": [
+      "Not specified in the provided text"
+    ],
+    "source_references": [
+      "The Ayurvedic Formulary of India, Part 1",
+      "The Ayurvedic Pharmaco­poeia of India, Part 1 Vol. 1",
+      "The Ayurvedic Pharmaco­poeia of India, Part 1 Vol. 6"
+    ]
+  },
+  {
+    "disease": "Depressive Disorders (Vishada)",
+    "symptoms": [
+      "Disturbance of hunger",
+      "Disturbance of bowel",
+      "Disturbance of urine",
+      "Disturbance of emotions"
+    ],
+    "dosha": "Not explicitly mentioned in the provided text",
+    "srotas": "Not explicitly mentioned in the provided text",
+    "treatments": [
+      "Sattvavajaya (counseling)",
+      "Vacha Churna",
+      "adi Kwatha Decoction",
+      "Saraswatarishta Arishta",
+      "Panchagavya Ghrita",
+      "Brahmi Ghrita",
+      "Drakshadi Kashaya Decoction",
+      "Kushmanda Avaleha",
+      "Nasya (with Hingu Ghrita, Panchagavya Ghrita)",
+      "Vamana Karma (with Dhamargava after Snehapana with Panchagavya Ghrita)",
+      "Virechana Karma (with Trivrita Lehya and Avipatikara powder)",
+      "Yapana Basti",
+      "Shilajatu Rasayana Kalpa",
+      "Amalaki Rasayana Kalpa",
+      "Mridu Virechana (with Avipatikara Churna)"
+    ],
+    "diet": [
+      "Wholesome foods: Fresh and Satvika food, Godhuma, Mudga, Raktashali, Godugdha, Ghrita, Kushmanda, Parval, Vastuka, coconut, Draksha, Kapittha",
+      "Foods to avoid: Liquor, Viruddhashan, spicy food, stale food"
+    ],
+    "lifestyle": [
+      "Proper sleep",
+      "Meditation",
+      "Techniques for self control",
+      "Personal hygiene",
+      "Avoid excessive stress",
+      "Avoid suppression of natural urges"
+    ],
+    "source_references": [
+      "The Ayurvedic Formulary of India",
+      "Bhaishajya Ratnavali",
+      "Charaka Samhita",
+      "Sushruta Samhita"
+    ]
+  },
+  {
+    "disease": "Urinary Calculus (Ashmari)",
+    "symptoms": [
+      "Pain at renal angle",
+      "Painless haematuria (initial stages)",
+      "Colicky pain in iliac fossa",
+      "Haematuria",
+      "Signs of cystitis"
+    ],
+    "dosha": "Not explicitly stated, but Vata aggravation is implied in treatment",
+    "srotas": "Urinary system",
+    "treatments": [
+      "Gokshura Churna",
+      "Punarnava Churna",
+      "Guduchi Churna",
+      "Parnabeeja Churna",
+      "Pashanbheda Churna",
+      "Rasayana Churna",
+      "Gokshuradi Guggulu",
+      "Ashmarihara Kwatha",
+      "Punaravashtaka Kwatha",
+      "Varuna Shigru Kwatha",
+      "Trinapanchamula Kwatha",
+      "Palasha Kshaara Churna",
+      "Varunadi Ghrita",
+      "Ushirasava",
+      "Chandanasava",
+      "Sarivadyasava",
+      "Triphala Guggulu",
+      "Sarjika Kshara",
+      "Ajamodadi Churna"
+    ],
+    "diet": [
+      "Intake of excess fluid",
+      "Dietary items having Vataanulomana and Mutrala properties",
+      "Avoid heavy to digest substances",
+      "Avoid milk products in excess",
+      "Avoid Rhubarb, strawberries, plums, spinach, asparagus, Kapittha Phala, Jambu Phala, dried dates, astringent foods",
+      "Avoid brinjal, beans, lady finger, capsicum, tomato, cucumber, spinach, black grapes, kiwi, strawberries, chickoo, pear, refined wheat flour (Maida), papaya, garlic, yogurt, cashew nut, dried food items"
+    ],
+    "lifestyle": [
+      "Avoid excessive exercise/ physical work",
+      "Avoid over eating",
+      "Avoid unhealthy food combinations",
+      "Avoid suppression of natural urges"
+    ],
+    "source_references": [
+      "unknown"
+    ]
+  },
+  {
+    "disease": "Chronic Renal Failure (Mutraghata)",
+    "symptoms": [
+      "Albuminuria",
+      "Reduced blood sugar levels in diabetics with renal insufficiency",
+      "Hyperuricemia (may be secondary)",
+      "Glomerular Filtration Rate (GFR) less than 60 mL/min/1.73 m2 (persistent for > 3 months)",
+      "Altered or loss of cortico-medullary differentiation on ultrasound",
+      "Raised cortical echo-texture of the kidney on ultrasound",
+      "Smaller kidney size on ultrasound"
+    ],
+    "dosha": "Not specified in provided text",
+    "srotas": "Not specified in provided text",
+    "treatments": [
+      "Management mentioned in Level 1",
+      "Drugs as per patient requirement and status (see Table 22.2)"
+    ],
+    "diet": [
+      "Not specified in provided text"
+    ],
+    "lifestyle": [
+      "Not specified in provided text"
+    ],
+    "source_references": [
+      "Not specified in provided text"
+    ]
+  },
+  {
+    "disease": "Vatarakta (Gout)",
+    "symptoms": [],
+    "dosha": "Vata and Rakta (aggravated)",
+    "srotas": [],
+    "treatments": [
+      "External application (Pinda Taila, Ksheerabala Taila, Griha dhumadi Lepa, Nagaradi Lepa)",
+      "Abhyanga",
+      "Parisheka",
+      "Upanaha",
+      "Virechana",
+      "Asthapan",
+      "Snehapan",
+      "Guduchi Swarasa / Churna",
+      "Kokilaksham Kashayam",
+      "Rasna Erandadi Kwatha",
+      "Laghu Manjistada Guggulu",
+      "Nimbadi Churna",
+      "Triphala Kwatha",
+      "Amrutadi Kwatha",
+      "Brhat manjistadi Kwatha",
+      "Amrutadi Guggulu",
+      "Panchtikta Guggulu Ghrita",
+      "Sukumara Ghrita",
+      "Madhu-yashtyadi Tailam"
+    ],
+    "diet": [
+      "Wholesome foods (not specified)",
+      "Foods to avoid: Black gram, horse gram, Nishpava, Kalaya, Kshara, Anupa Mamsa, refined foods such as white flour, peas, spinach, potatoes, butter milk, curd, tomato, fermented foods, red meat, cold beverages, liquor, cold water"
+    ],
+    "lifestyle": [
+      "Avoid suppression of natural urges (hunger, bowel, urine, emotions)",
+      "Avoid day sleep",
+      "Avoid excessive physical activity",
+      "Avoid exposure to sun"
+    ],
+    "source_references": []
+  },
+  {
+    "disease": "Ankylosing Spondylitis (Katigraha)",
+    "symptoms": [
+      "Ansashoola",
+      "Krostrukshirsha",
+      "Lumbar spine pain",
+      "Hip joint pain"
+    ],
+    "dosha": "Vata (aggravated)",
+    "srotas": "Not explicitly mentioned",
+    "treatments": [
+      "Rooksha Sweda",
+      "Pachana",
+      "Shodhana",
+      "Local Snehana",
+      "Snigdha Sweda",
+      "Basti",
+      "Katibasti",
+      "Snigdha Veshtana (bandages)",
+      "Nagaradi Lepa",
+      "Dashanga Lepa",
+      "Gandhabiroja Lepa",
+      "Maidalakdi Lepa",
+      "Katipichu",
+      "Murivenna",
+      "Dhanwataram Taila"
+    ],
+    "diet": [
+      "Avoid Chanaka (Bengal gram)",
+      "Avoid Kalaya (lathyrus)",
+      "Avoid Kordusha (millets)",
+      "Avoid Shyamaka",
+      "Avoid Rajmasha",
+      "Avoid Sheetambu (cold water)",
+      "Avoid pungent/astringent foods (red chilies, excessive spices)",
+      "Avoid low water content foods (wafers, biscuits)"
+    ],
+    "lifestyle": [
+      "Avoid Chinta (excessive thinking)",
+      "Avoid Prajagarana (improper sleep)",
+      "Avoid Vega Vidharana (suppression of natural urges)",
+      "Avoid Shrama (excess hard work)",
+      "Avoid hard exercises",
+      "Avoid sponge-like mattresses and easy chairs",
+      "Caution with forward bending and lifting"
+    ],
+    "source_references": [
+      "book_name_1.pdf"
+    ]
+  },
+  {
+    "disease": "Katigraha (Lumbago)",
+    "symptoms": [
+      "Local inflammatory responses"
+    ],
+    "dosha": "Apana Vata Prakopa",
+    "srotas": "Not specified",
+    "treatments": [
+      "Absolute bed rest initially",
+      "External application of Murivenna/ Sahachardi Taila/ Kuzhampu, Karpasasthydi Taila / Kuzhampu, Dhanwntharam Taila / Kuzhampu, Nirgundyadi Taila, Bala Taila etc",
+      "Abhyanga / Sthanika Mridu Snehana with Mahanarayana Taila, Masha Taila, Kshirbala Taila, Ashwagandha Balalakshadi Taila",
+      "Swedana (medicated fomentation): Ekanga or Sarvanga Sweda with decoction of Nirgundi, Dashamula, Eranda, Balamula, etc.",
+      "Patra Pinda Sweda: local fomentation by Pottali made from leaves of Nirgundi, Eranda etc."
+    ],
+    "diet": [
+      "Easily digesting, nutritional and anti flatulent type of food",
+      "Fiber rich foods (leafy vegetables, green salads, fruits, barley)",
+      "Vata alleviating food articles prepared with ghee or any suitable oil, Udada (black gram), Shigru Shaka (drumstick), brinjal etc",
+      "Patola, Rasona, Dadima, Parushaka, Badara, Dra"
+    ],
+    "lifestyle": [
+      "Avoid situations leading to Apana Vata Prakopa"
+    ],
+    "source_references": []
+  },
+  {
+    "disease": "Katigraha (Lumbago)",
+    "symptoms": [
+      "Severe pain",
+      "Heaviness of back",
+      "Stiffness",
+      "Spinal canal stenosis",
+      "Low back pain",
+      "Localised oedema",
+      "Wasting",
+      "Weakness"
+    ],
+    "dosha": "Vata/Kapha",
+    "srotas": "Not explicitly mentioned",
+    "treatments": [
+      "Shamana management",
+      "Rasaushadhi and Kashthoushadhi (herbo-mineral drugs)",
+      "Churnapinda Sweda",
+      "Patrapinda Sweda",
+      "Jambeera Pinda Sweda",
+      "Shashtika Pinda Sweda / Shashtika Lepana",
+      "Acharadi Kashaya",
+      "Maharasnadi Kashaya",
+      "Yogaraja Guggulu",
+      "Swedana (Tapa, Ushma)",
+      "Abhyanga",
+      "Traction massages",
+      "Panchakarma treatment"
+    ],
+    "diet": [
+      "Light Vatanuloman diet (Shigru Shaka, brinjal, Methi, Jeerak, Hingu, Saindhava, Yoosha, Mamsarasa)",
+      "Avoid Vata aggravating diet (pulses, peas, wafers, biscuits, cold food, cold drinks, stale food, excessive chilly)"
+    ],
+    "lifestyle": [
+      "Correct postures while sitting or lifting weight",
+      "Regular suitable Yogasana",
+      "Abhyanga",
+      "Hot water bath",
+      "Fomentation",
+      "Comfortable seats and bed",
+      "Attend to bowel and bladder urges timely",
+      "Avoid exposure to cold",
+      "Avoid heavy physical work",
+      "Avoid spongy mattresses and easy chairs"
+    ],
+    "source_references": [
+      "Not explicitly mentioned"
+    ]
+  },
+  {
+    "disease": "Katigraha (Lumbago)",
+    "symptoms": [
+      "Pain in the lower back"
+    ],
+    "dosha": "Vata",
+    "srotas": "Not specified",
+    "treatments": [
+      "Local Abhyanga",
+      "Bashpa Sweda",
+      "Traction massage",
+      "Snigdhachurna Pinda Sweda",
+      "Patrapotala Sweda",
+      "Jambheera Pinda Sweda",
+      "Shashtika Pinda Sweda",
+      "Nidana Parivarjana",
+      "Virechana",
+      "Basti",
+      "Siravedha",
+      "Rooksha Lepa (Nagaradi Lepa, Dashanga Lepa)",
+      "Katipichu",
+      "Katibasti",
+      "Mridu Samshodhana with Eranda Taila and Nirgundi Swarasa",
+      "Matra Basti"
+    ],
+    "diet": [
+      "Same as level 1"
+    ],
+    "lifestyle": [
+      "Same as level 1"
+    ],
+    "source_references": [
+      "level 3.pdf"
+    ]
+  },
+  {
+    "disease": "Katigraha (Lumbago)",
+    "symptoms": [
+      "Severe radiating pain starting from the low back to gluteal, posterior aspect of thigh, knee, calf and dorsum of the foot",
+      "Difficulty raising the leg",
+      "Stiffness (Stambha)"
+    ],
+    "dosha": "Vata",
+    "srotas": "Not explicitly mentioned",
+    "treatments": [
+      "Anuvasana Basti",
+      "Dhanwantara Taila",
+      "Sahacharadi Taila",
+      "Nirgundi Swarasa added in Eranda Taila",
+      "Erandamooladi Basti",
+      "Madhutailika Basti",
+      "Vaitarana Basti",
+      "Kshara Basti",
+      "Agnikarma (Shalaka, Ghrita, Taila)",
+      "Rasayana (Rasona Kalka, Bhallataka, Aswagandha, Guduchi, Bala)"
+    ],
+    "diet": [
+      "Same as Level 1"
+    ],
+    "lifestyle": [
+      "Same as Level 1"
+    ],
+    "source_references": [
+      "Vagbhata, Ashtanga Hrudaya",
+      "Govind Das Sen, Bhaishajya Ratnavali",
+      "Sahasrayoga",
+      "Yogaratnakara",
+      "Sharangdhara Samhita"
+    ]
+  },
+  {
+    "disease": "Hemiplegia / Pakshaghata (Pakshaghata)",
+    "symptoms": [
+      "Acute or gradual onset of loss of sensory and / or motor functions on one side of the body",
+      "Changes in vision, gait or ability to speak or understand",
+      "Sudden severe headache",
+      "Altered consciousness",
+      "Clouding of consciousness and confusion (Mada)",
+      "Stupor (Murcchha)",
+      "Coma (Sanyasa)",
+      "Difficulty in speech (Vaksanga / Vakgraha)",
+      "Sensory or motor Aphasia / Dysphasia / Dysarthria",
+      "Generalized Sosha/ Smritikshaya / Nidranasha/ Ojakshaya (in degenerative cases)",
+      "Sensory stroke (Thalamic stroke)"
+    ],
+    "dosha": "Vata (aggravated in degenerative cases), Pitta (predominantly in thalamic stroke)",
+    "srotas": [
+      "Not explicitly mentioned in the provided text"
+    ],
+    "treatments": [
+      "Pradhamana Nasya with Vacha Churna and Rudraksha Churna (for acute cases, avoid in suspected intracranial hemorrhage)",
+      "Urdhwga Raktapitta Chikitsa (except purgation, for suspected intracranial hemorrhage)",
+      "Vatahara palliative care (for degenerative cases)"
+    ],
+    "diet": [
+      "Not explicitly mentioned in the provided text"
+    ],
+    "lifestyle": [
+      "Blood pressure management (history of Hypertension is a risk factor)",
+      "Avoidance of smoking (smoking is a risk factor)"
+    ],
+    "source_references": [
+      "Provided text chunks"
+    ]
+  },
+  {
+    "disease": "Hemiplegia / Stroke / Cerebro Vascular Accident (Pakshaghata)",
+    "symptoms": [
+      "Hemiplegia",
+      "Facial palsy (Ardita)",
+      "Hemi paresis",
+      "Spastic paralysis",
+      "Disuse atrophy"
+    ],
+    "dosha": "Vata",
+    "srotas": "Not explicitly mentioned in the provided text.",
+    "treatments": [
+      "Avapeedaka Nasya",
+      "Taila Shirodhara",
+      "Moordhni Taila (Shiroabhyanga, Shiropichu, Shirodhara, Shirovasti)",
+      "Takradhara",
+      "Upanaha",
+      "Rasnadi Pichu",
+      "Kacchuradi Pichu",
+      "Rasayana drugs"
+    ],
+    "diet": [
+      "Easily digesting, nutritional foods",
+      "Shali, Shashtik, Kulattha, wheat products",
+      "Avoid diet contributing to hypertension, dyslipidaemia and diabetes",
+      "Avoid diet contributing to obesity and vitiation of Vata Rakta"
+    ],
+    "lifestyle": [
+      "Change whole lifestyle, especially in prophylactic cases of TIA or RIND to prevent recurrences"
+    ],
+    "source_references": [
+      "book_name_1.pdf",
+      "book_name_2.pdf"
+    ]
+  },
+  {
+    "disease": "Pakshaghata (Pakshaghata)",
+    "symptoms": [
+      "Motor loss (Akarmani)",
+      "Sensory impairment (Vichetana)",
+      "Facial deviation (Vaktrardha Vakreekarana)",
+      "Hemi paresis",
+      "Spastic paralysis",
+      "Contractures",
+      "Disuse atrophy",
+      "Flaccid paralysis",
+      "Localized swelling",
+      "Stabdha",
+      "Sankocha",
+      "Sosha",
+      "Kaarshnya",
+      "Ushnakamitwa",
+      "Kampa",
+      "Anaha",
+      "Shakritgraha",
+      "Shoola",
+      "Gourava",
+      "Shopha",
+      "Sheeta",
+      "Supta",
+      "Shlathangata"
+    ],
+    "dosha": "Vata and Kapha (depending on stage)",
+    "srotas": "Not explicitly mentioned",
+    "treatments": [
+      "Snehana",
+      "Swedana",
+      "Virechana",
+      "Aasthapana",
+      "Anuvasana",
+      "Nasya",
+      "Upanaha",
+      "Maastishkya",
+      "Shrotra Tarpana",
+      "Akshi Tarpana",
+      "Ksheeradhooma",
+      "Snigdha / Ushna / Brimhana (for Vata predominant)",
+      "Rooksha / Ushna / Langhana (for Kapha predominant)"
+    ],
+    "diet": [
+      "Not explicitly mentioned"
+    ],
+    "lifestyle": [
+      "Prophylactic care",
+      "Rehabilitative care"
+    ],
+    "source_references": [
+      "Provided Chunks"
+    ]
+  },
+  {
+    "disease": "Diabetes (Madhumeha)",
+    "symptoms": [
+      "Excessive thirst",
+      "Excessive urination",
+      "Sweet urine",
+      "Weight loss",
+      "Fatigue",
+      "Blurred vision"
+    ],
+    "dosha": "Kapha and Vata",
+    "srotas": "Rasa, Rakta, Meda, and Mutra Vaha Srotas",
+    "treatments": [
+      "Lifestyle modifications",
+      "Dietary changes",
+      "Herbal remedies like Gudmar, Jamun, and Bitter melon",
+      "Panchakarma therapies"
+    ],
+    "diet": [
+      "Whole grains",
+      "Vegetables",
+      "Fruits with low glycemic index",
+      "Avoid sugary foods",
+      "Avoid processed foods",
+      "Avoid excessive dairy"
+    ],
+    "lifestyle": [
+      "Regular exercise",
+      "Stress management",
+      "Adequate sleep",
+      "Avoid daytime naps",
+      "Maintain a healthy weight"
+    ],
+    "source_references": [
+      "Ayurveda_and_Diabetes.pdf",
+      "Madhumeha_A_Comprehensive_Review.pdf"
+    ]
+  },
+  {
+    "disease": "Abhishyanda",
+    "symptoms": [
+      "Nistodana - pricking sensation",
+      "Stambhana - stiffness",
+      "Romaharsha - horripilation",
+      "Sangharsa - foreign body sensation",
+      "Parushya - roughness",
+      "Siro-abhitapa - headache",
+      "Vishuskabhava - dryness",
+      "Shishiraasrutandu – itching",
+      "Upadeha - stickiness due to increased exudates",
+      "Sitata- whiteness",
+      "Atisaityam - excessive coldness",
+      "Sravomuhuh – frequency of discharge is increased",
+      "Picchila – slimy discharge",
+      "Tamra Asruta - coppery tears",
+      "Lohita Netrata - blood red discoloration of eye",
+      "Samanatat Atilohita Rajyah: Generalized congestion",
+      "Inflammation of the conjunctiva",
+      "Conjunctival hyperaemia",
+      "Watery discharge",
+      "Mucoid discharge",
+      "Mucopurulent discharge",
+      "Purulent discharge"
+    ],
+    "dosha": "Vata, Pitta, Kapha, Rakta",
+    "srotas": "Sroto Syandana (secretions) in all channels of head and neck",
+    "treatments": [],
+    "diet": [],
+    "lifestyle": [],
+    "source_references": [
+      "The Ayurvedic Formulary of India, Part I.pdf"
+    ]
+  },
+  {
+    "disease": "Abhishyanda (Conjunctivitis)",
+    "symptoms": [],
+    "dosha": "Unknown",
+    "srotas": "Unknown",
+    "treatments": [
+      "Vihara (Withdrawing the mind from objects of senses)",
+      "Padabhyanga (Foot massage)",
+      "Shiroabhyanga (scalp massage with oil)",
+      "Netra Prakshalana (eye wash)",
+      "Mukhalepa (face pack with herbal medicines)",
+      "wearing head gear",
+      "always wearing shoes",
+      "Dadim (Punica granatum)",
+      "Almond",
+      "Saindhava (rock salt)",
+      "sugar candy (Sita)",
+      "honey (Kshaudra)",
+      "Amalaki Payasa",
+      "Shatavari Payasa"
+    ],
+    "diet": [
+      "Wholesome foods: Unripe banana (Musa spp.), cooked vegetables, Yava (Hordeum vulgare), Godhuma (Triticum sativum Linn), Lohita Shali (Oryza sativa Linn), Mudga (Phaseolus radiatus), Shatavari (Asparagus racemosus), Patola (Trichosanthes dioica), Kustumburu (Coriander sativum), Surana (Phallus campanulatus)",
+      "Foods to avoid: Excessive and regular intake of horse gram and black gram pulses, Virudha Dhanya (sprouts), chillies and spices, sour and fermented foods like pickles, idali, dosa etc, heavy foods"
+    ],
+    "lifestyle": [
+      "Wearing shoes"
+    ],
+    "source_references": []
+  },
+  {
+    "disease": "Conjunctivitis (Abhishyanda)",
+    "symptoms": [],
+    "dosha": "Pittaja, Kaphaja, Raktaja",
+    "srotas": [],
+    "treatments": [
+      "Nasya with oil processed with Shalaparni, milk and Madhura Gana drugs",
+      "Nasya with ghee processed with Pittahara drugs Shali, Durva, Daruharidra, Sariva, Kashmari and sugarcane juice",
+      "Avapida Nasya with Trikatu, Katphala etc. Kapha Shamaka drugs",
+      "Nasya with Ghritamanda processed with breast milk and Madhuka, Nilotapala",
+      "Ashcyotana with goat’s milk processed with leaves, root and bark of Eranda",
+      "Ashcyotana with goat milk processed with Haridra, Devadaru and Saindhava",
+      "Ashcyotana with goat milk processed with Lodhra, Yastimadhu and ghee",
+      "Decoction of Sunthi, Triphala, Nimba, Vasa, Lodhra",
+      "Triphala, Lodhra, Yasti, Sharkara, Musta with cold water",
+      "Shigrupallav Rasa with Honey",
+      "Triphala decoction",
+      "Parisheka using drugs used in Aschyotana based on respective Doshas",
+      "Anjana with Pashupata Yoga",
+      "Application of fruits of Shigru and Karanja, fruits and flowers of Brihati",
+      "Application of equal parts of Patala, Arjuna, Sriparni, Bilwa, Dhataki, Manjishtha, and Am"
+    ],
+    "diet": [],
+    "lifestyle": [],
+    "source_references": [
+      "htanga Samgraha - Sasilekha Comm. Indu; Uttartantra 19/17",
+      "The Ayurvedic Formulary of India, Ministry of Health and Family Welfare, Govt. of India, Part I (6:13)",
+      "The Ayurvedic Formulary of India, Ministry of Health and Family Welfare, Govt. of India, Part I (20:52)",
+      "The Ayurvedic Formulary of India, Ministry of Health and Family Welfare, Govt. of India, Part I (20:8)",
+      "The Ayurvedic Formulary of India, Ministry of Health and Family Welfare, Govt. of India, Part I (20:45)",
+      "Sushruta Samhita with Nibandhasamgraha commentary, Uttaratantra 9/3-4",
+      "Sushruta Samhita with Nibandhasamgraha commentary, Uttaratantra10/3",
+      "Sushruta Samhita with Nibandhasamgraha commentary, Uttaratantra 12/2-3",
+      "Sushruta Samhita with Nibandhasamgraha commentary, Uttaratantra 9/10-11",
+      "Sushruta Samhita with Nibandhasamgraha commentary Uttaratantra 10/5",
+      "Sushruta Samhita with Nibandhasamgraha commentary, Uttaratantra 11/3-5",
+      "Ashtanga Samgraha - Sasilekha Comm. Indu; Uttartantra, 19"
+    ]
+  },
+  {
+    "disease": "Eye Diseases (Netra Roga)",
+    "symptoms": [],
+    "dosha": null,
+    "srotas": null,
+    "treatments": [
+      "Bloodletting by Leech",
+      "Dhoomapana with Agaru, Guggulu and Ghee",
+      "Dhoomapana with Trikatu, Haridra, Sarshapa, Nimba, Guggalu",
+      "Virechana (mild or thorough)",
+      "Snehapana with Gau Ghrita, Mahatriphala Ghrita, Mahatiktaka Ghrita, Patola Ghrita",
+      "Tilwaka Ghrita with Tilwaka Kashaya"
+    ],
+    "diet": [
+      "Shali (Oryza sativa Linn), Mudga (Phaseolus radiatus), Shatavari (Asparagus racemosus), Patola (Trichosanthes dioica), Kustumburu (Coriander sativum), Surana (Phallus campanulatus), unripe banana (Musa spp.), cooked vegetables of Jeevanti (Leptadenia reticulata), Sunishannaka (Marsilea minuta), Tanduleeya (Amaranthus aspera), Vastuka (Chenopodium album), Karkotaka (Momordica dioica), Karavellaka (Momordia charantia), Shigru (Moringa oleifera), Agastya (Sesbania grandiflorum), Punarnava (Boerrrhavia diffusa), brinjal, carrot, spinach, cow ghee, cow milk, one year old preserved Ghrita, meat of birds and wild animals, Amalaki (Embelica officinalis), Draksha (Vitis vinifera) dried and fresh both, Dadim (Punica granatum), Almond, Saindhava (rock salt), Sita (sugar candy), Kshaudra (honey)",
+      "Amalaki Payasa, Shatavari Payasa",
+      "No foods to avoid are explicitly mentioned."
+    ],
+    "lifestyle": [
+      "Vihara: Withdrawing the mind from objects of senses",
+      "Padabhyanga (Foot massage)",
+      "Shiroabhya"
+    ],
+    "source_references": [
+      "Sushruta Samhita",
+      "Vrindamadhava or Siddhayoga",
+      "The Ayurvedic Formulary of India"
+    ]
+  },
+  {
+    "disease": "Adhimantha (Glaucoma)",
+    "symptoms": [
+      "Intense feeling in the eye, as if being extracted and churned",
+      "Involvement of half the head",
+      "Tenderness",
+      "Bleeding",
+      "Pricking type of pain",
+      "Visualizes flames in all directions",
+      "Pain",
+      "Difficulty in visual perception"
+    ],
+    "dosha": "Not explicitly stated in the provided chunks",
+    "srotas": "Not explicitly stated in the provided chunks",
+    "treatments": [],
+    "diet": [],
+    "lifestyle": [],
+    "source_references": [
+      "The Ayurvedic Formulary of India, Ministry of Health and Family Welfare, Govt. of India, Part I (5:5), 2000.",
+      "Vrindamadhava or Siddhayoga, 61/65",
+      "The Ayurvedic Formulary of India, Ministry of Health and Family Welfare, Govt. of India, Part II (4:16), 2000.",
+      "Vrindamadhava or Siddhayoga, 61/71.72",
+      "The Ayurvedic Formulary of India, Ministry of Health and Family Welfare, Govt. of India, Part I (4:24), 2000.",
+      "The Ayurvedic Formulary of India, Ministry of Health and Family Welfare, Govt. of India, Part II (11:1), 2000.",
+      "The Ayurvedic Formulary of India, Ministry of Health and Family Welfare, Govt. of India, Part II (4:9), 2000.",
+      "Yogaratnakara",
+      "Sushruta Samhita Dalhana Comm. - Nibandhasamgraha, Uttaratantra 17/50-51",
+      "The Ayurvedic Formulary of India, Ministry of Health and Family Welfare, Govt. of India, Part I (6:34), 2000.",
+      "The Ayurvedic Formulary of India, Ministry of Health and Family Welfare, Govt. of India, Part I (6:28), 2000.",
+      "The Ayurvedic Formulary of India, Ministry of Health and Family Welfare, Govt. of India, Part I (7:2), 2000.",
+      "The Ayurvedic Formulary of India, Ministry of Health and Family Welfare, Govt. of India, Part I (4:13), 2000.",
+      "Ashtanga Samgraha - Sasilekha Comm. Indu, Uttartantra, 19/10"
+    ]
+  },
+  {
+    "disease": "Glaucoma (Adhimantha)",
+    "symptoms": [],
+    "dosha": "Vata, Pitta, Kapha",
+    "srotas": [],
+    "treatments": [
+      "Avapidana Nasya with Trikatu, Katphala etc. Kaphashamaka drugs",
+      "Tarpana with processed milk (Vataja: Panchamula, Jivaniya, Kukkuta flesh; Pittaja: Shankha, Shukti, Madhu, Draksha, Yashti, Kataka; Kaphaja: goat’s liver, Agaru, Priyangu, Devadaru)",
+      "Ashchyotana (Vataja: Eranda leaf/root/bark processed goat milk; Pittaja: Haridra, Devadaru, Saindhava processed goat milk; Kaphaja: Lodhra, Yastimadhu, ghee processed goat milk; Raktaja: Sunthi, Triphala, Nimbi, Vasa, Lodhra decoction)"
+    ],
+    "diet": [],
+    "lifestyle": [],
+    "source_references": [
+      "Bhavprakash of Sri Bhavmisra",
+      "Vrddha Vagbhata, Ashtanga Samgraha",
+      "The Ayurvedic Formulary of India"
+    ]
+  },
+  {
+    "disease": "Adhimantha (Glaucoma)",
+    "symptoms": [],
+    "dosha": [],
+    "srotas": [],
+    "treatments": [
+      "Siramokshana after sudation (for Vataja Adhimantha)",
+      "Siravyadhana (for Pittaja Adhimantha)",
+      "Dhoopana blood-letting followed by Virechana (for Kaphaja Adhimantha)",
+      "Leeches applied around the eye to induce blood-letting (for Raktaja Adhimantha)",
+      "Dhoomapana with Agaru, Guggulu and Ghrita etc. (Snaihika)",
+      "Dhoomapana with Trikatu, Haridra, Sarshapa, Nimba, Guggulu etc. (Kaphahara Dravya)"
+    ],
+    "diet": [
+      "Spicy and sour food to avoid",
+      "Curd to avoid",
+      "Butter milk to avoid",
+      "Masha soup (soup of black beans) to avoid",
+      "Any preparations of "
+    ],
+    "lifestyle": [
+      "Regular mouth washes with normal water or lukewarm water or camphor water",
+      "Betel leaf chewing",
+      "Dhumapana"
+    ],
+    "source_references": [
+      "Sushruta Samhita Dalhana Comm. – Nibandha sangraha, Uttaratantra 6/12-13",
+      "Sharangdhara Samhita, Tra."
+    ]
+  },
+  {
+    "disease": "Periodontitis (Dantaveshta)",
+    "symptoms": [
+      "Bleeding from gums (Raktasrava)",
+      "Pus discharge from gums (Pooyasrava from Dantamansa)",
+      "Mobility of tooth/teeth (Danta Chalatva)"
+    ],
+    "dosha": "Not explicitly mentioned in the provided text.",
+    "srotas": "Not explicitly mentioned in the provided text.",
+    "treatments": [
+      "Irimedadi Taila (gum massage)",
+      "Khadiradi Gutika (gum massage)",
+      "Triphala Guggulu"
+    ],
+    "diet": [
+      "Not explicitly mentioned in the provided text."
+    ],
+    "lifestyle": [
+      "Not explicitly mentioned in the provided text."
+    ],
+    "source_references": [
+      "ruta, Sushruta Samhita with Nibandhasamgraha commentary, Uttaratantra 10/3",
+      "Shri Dalhana Acharya, Sushruta, Sushruta Samhita with Nibandhasamgraha commentary, Uttaratantra 19/30",
+      "Shri Dalhana Acharya, Sushruta, Sushruta Samhita with Nibandhasamgraha commentary, Uttaratantra 12/8",
+      "Vrddha Vagbhata, Ashtanga Samgraha - Sasilekha Comm. Indu; Uttartantra, 19/11",
+      "Shri Dalhana Acharya, Sushruta, Sushruta Samhita with Nibandhasamgraha commentary Uttaratantra 11/3-5"
+    ]
+  },
+  {
+    "disease": "Shiroroga (Headache)",
+    "symptoms": [],
+    "dosha": "Vata, Pitta, Kapha",
+    "srotas": [],
+    "treatments": [
+      "Shirodhara (with lukewarm cow milk for Vata, cold milk/sugarcane juice/Madhu Jala/Mastu for Pitta)",
+      "Upanaha Sweda",
+      "Marsha Nasya (with Bala Taila/Rasnadi Taila for Vata, Pitta pacifying Ghrita for Pitta, Jeevaniya Ghrita for Suryavarta)",
+      "Lepa on forehead (with Pittaghna Aushadha Sidhdha Ghrita)",
+      "Virechana (with Trivrita Avaleha/Ghrita)",
+      "Pradhaman Nasya (with Katphala Churna)",
+      "Shirolepa (with Trivrittadi Lepa)",
+      "Fomentation (with water)",
+      "Ghritapana (with cow ghee or Vata pacifying Aushadha Siddha ghee)",
+      "Shirobasti (with lukewarm cow milk)"
+    ],
+    "diet": [],
+    "lifestyle": [],
+    "source_references": [
+      "amji Acharya, Chaukhamba Surbharati Prakashan Varanasi, 2008",
+      "Anonymous, The Ayurvedic Formulary of India, Ministry of Health and Family Welfare, Govt. of India, part 2 (8:6), 2000",
+      "Shri Dalhana Acharya on, Sushruta Samhita with Nibandha Samgraha commentary, Uttaratantra 26/31-33, edited by Vaidya Jadavji Trikamji Acharya, Chaukhamba Surbharati Prakashan Varanasi, 2008",
+      "Anonymous, The Ayurvedic Formulary of India, Ministry of Health and Family Welfare, Govt. of India, Part I (6:16), 2000",
+      "Shri Dalhana Acharya on, Sushruta Samhita with Nibandha Samgraha commentary, Uttaratantra 26/39, edited by Vaidya Jadavji Trikamji Acharya, Chaukhamba Surbharati Prakashan Varanasi, 2008"
+    ]
+  },
+  {
+    "disease": "Headache (Shirashoola)",
+    "symptoms": [
+      "Gourava / Avasaada",
+      "Tandraa / Aalasya",
+      "Agnisaada / Praseka",
+      "Sandhivishlesha",
+      "Trushnaa / Nidraa",
+      "Naasha / Dourbalya",
+      "Antardaaha / Hriddrava",
+      "Bhrama",
+      "Aamaashayetara Shlema-aasaya Shunyataa",
+      "Shirasasa cha Sunyataa",
+      "Kandu",
+      "Sthairya",
+      "Gourava",
+      "Upalepa",
+      "Alasya",
+      "Kleebata",
+      "Utsaha"
+    ],
+    "dosha": "VATA, PITTA, KAPHA",
+    "srotas": "Rasa & Rasavaha Srotasa",
+    "treatments": [],
+    "diet": [],
+    "lifestyle": [],
+    "source_references": [
+      "Shri Dalhana Acharya on, Sushruta Samhita",
+      "Shri Govindacharya, Bhaisajya Ratnavali",
+      "Anonymous, The Ayurvedic Formulary of India"
+    ]
+  },
+  {
+    "disease": "Vata Imbalance (Vata Vikriti)",
+    "symptoms": [
+      "Dryness",
+      "Anxiety",
+      "Irregular digestion"
+    ],
+    "dosha": "Vata",
+    "srotas": "Not specified in provided chunks",
+    "treatments": [
+      "Warm herbs",
+      "Oil therapies"
+    ],
+    "diet": [
+      "Not specified in provided chunks"
+    ],
+    "lifestyle": [
+      "Not specified in provided chunks"
+    ],
+    "source_references": []
+  }
+]

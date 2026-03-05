@@ -1,0 +1,267 @@
+{
+  "session_summary": {
+    "start_time": "2026-03-03T12:48:30.501735",
+    "end_time": "2026-03-03T13:03:42.347532",
+    "total_turns": 16,
+    "total_safety_alerts": 2,
+    "diagnosis_completed": true
+  },
+  "safety_alerts": [
+    {
+      "turn": 1,
+      "input": "i have swelling in my leg",
+      "risks": [
+        {
+          "risk_type": "vascular_infection",
+          "similarity_score": 0.694139301776886
+        },
+        {
+          "risk_type": "deep_vein_thrombosis",
+          "similarity_score": 0.667750358581543
+        },
+        {
+          "risk_type": "heart_failure_exacerbation",
+          "similarity_score": 0.7213853597640991
+        }
+      ]
+    },
+    {
+      "turn": 1,
+      "input": "i have swelling in my leg",
+      "risks": [
+        {
+          "risk_type": "vascular_infection",
+          "similarity_score": 0.694139301776886
+        },
+        {
+          "risk_type": "deep_vein_thrombosis",
+          "similarity_score": 0.667750358581543
+        },
+        {
+          "risk_type": "heart_failure_exacerbation",
+          "similarity_score": 0.7213853597640991
+        }
+      ]
+    }
+  ],
+  "diagnosis": "DIAGNOSIS: Escalation advised\nREASONING: Red flags present: functional_loss",
+  "conversation_turns": [
+    {
+      "turn_number": 1,
+      "timestamp": "2026-03-03T12:48:44.125318",
+      "user_input": "i have swelling in my leg",
+      "assistant_response": "[SAFETY WARNING - Continuing with clarification]",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": false,
+        "matched_risks": [
+          {
+            "risk_type": "vascular_infection",
+            "similarity_score": 0.694139301776886
+          },
+          {
+            "risk_type": "deep_vein_thrombosis",
+            "similarity_score": 0.667750358581543
+          },
+          {
+            "risk_type": "heart_failure_exacerbation",
+            "similarity_score": 0.7213853597640991
+          }
+        ]
+      }
+    },
+    {
+      "turn_number": 1,
+      "timestamp": "2026-03-03T12:49:06.498971",
+      "user_input": "i have swelling in my leg",
+      "assistant_response": "To provide an accurate Ayurvedic assessment, could you share your age and gender? (Source 1)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": false,
+        "matched_risks": [
+          {
+            "risk_type": "vascular_infection",
+            "similarity_score": 0.694139301776886
+          },
+          {
+            "risk_type": "deep_vein_thrombosis",
+            "similarity_score": 0.667750358581543
+          },
+          {
+            "risk_type": "heart_failure_exacerbation",
+            "similarity_score": 0.7213853597640991
+          }
+        ]
+      },
+      "retrieval_query": "i have swelling in my leg"
+    },
+    {
+      "turn_number": 2,
+      "timestamp": "2026-03-03T12:49:29.129810",
+      "user_input": "im 31 female",
+      "assistant_response": "What other symptoms are you experiencing alongside the swelling in your leg, such as headache, breathlessness, or discomfort in your chest? (Source 1)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "im 31 female"
+    },
+    {
+      "turn_number": 3,
+      "timestamp": "2026-03-03T12:51:37.439950",
+      "user_input": "yes, i feel discomfort in my chest sometimes",
+      "assistant_response": "What is your typical diet like, including the types of oils, salts, spices, and food items you consume regularly? (Source 1)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "yes, i feel discomfort in my chest sometimes"
+    },
+    {
+      "turn_number": 4,
+      "timestamp": "2026-03-03T12:52:25.056435",
+      "user_input": "yeah i have pretty oily food, i get acne also because of it",
+      "assistant_response": "Considering your consumption of oily foods and the occurrence of acne, could you describe your typical daily routine, including your level of physical activity and sleep patterns? (Source 1)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "yeah i have pretty oily food, i get acne also because of it"
+    },
+    {
+      "turn_number": 5,
+      "timestamp": "2026-03-03T12:55:11.968921",
+      "user_input": "i sleep 8 hours sharp , i sleep ay 11 and get up by 6/7 depends, then go office n come back by evening 6. ",
+      "assistant_response": "Considering your routine involves a sedentary lifestyle due to office work, could you describe the nature of your physical activity during your free time, and how often do you engage in it? (Source 2)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "i sleep 8 hours sharp , i sleep ay 11 and get up by 6/7 depends, then go office n come back by evening 6. "
+    },
+    {
+      "turn_number": 6,
+      "timestamp": "2026-03-03T12:55:44.230144",
+      "user_input": "i walk n stroll around",
+      "assistant_response": "What specific types of oils are included in your regular diet? (Source 3)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "i walk n stroll around"
+    },
+    {
+      "turn_number": 7,
+      "timestamp": "2026-03-03T12:56:11.773839",
+      "user_input": "coconut oil n peanut oil",
+      "assistant_response": "Do you experience any burning sensation or numbness alongside the swelling in your legs? (Source 1)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "coconut oil n peanut oil"
+    },
+    {
+      "turn_number": 8,
+      "timestamp": "2026-03-03T12:58:14.654357",
+      "user_input": "no",
+      "assistant_response": "Considering your diet includes coconut and peanut oil, have you noticed any correlation between consuming these oils and the onset or worsening of your chest discomfort or leg swelling? (Source 3)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "no"
+    },
+    {
+      "turn_number": 9,
+      "timestamp": "2026-03-03T13:00:02.346526",
+      "user_input": "no",
+      "assistant_response": "Have you noticed any specific triggers that seem to worsen your chest discomfort or leg swelling, such as changes in weather, physical activity, or emotional stress? (24052018_CCRAS_Cardiac_disorders)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "no"
+    },
+    {
+      "turn_number": 10,
+      "timestamp": "2026-03-03T13:00:32.893345",
+      "user_input": "no",
+      "assistant_response": "--- USER-FRIENDLY OUTPUT ---\n📋 DIAGNOSIS:\n• Hridroga (Cardiac Disorders)\n\n📖 EXPLANATION:\n• Your symptoms of chest discomfort and leg swelling, alongside a diet rich in oily foods and a sedentary lifestyle, align with indicators of Hridroga (Source 1).\n• Excessive intake of oily and spicy foods is a known cause of cardiac disorders according to Ayurveda (Source 3).\n• A sedentary lifestyle and lack of physical exercise contribute to the development of Hridroga (Source 1).\n• Symptoms like discomfort in the chest and swelling in the legs are specifically mentioned as potential signs of this condition (Source 1).\n• The consumption of oils like coconut and peanut oil, while not directly linked to symptom worsening in your case, is generally discouraged in excess due to their potential to aggravate Hridroga (Source 3).\n\n⚠️ IS IT SERIOUS?\n• Yes\n• Your symptoms warrant attention due to the potential severity of cardiac disorders (Source 1).\n• Chest discomfort can be a sign of underlying heart issues that require medical evaluation (Source 1).\n• Swelling in the legs, when accompanied by chest discomfort, can indicate fluid retention related to cardiac dysfunction (Source 1).\n• A sedentary lifestyle and oily diet further increase the risk of developing more serious cardiac complications (Source 1).\n\n🏠 CAN IT BE TREATED AT HOME?\n• No\n• While Ayurvedic principles emphasize preventative measures, your current symptoms require a professional assessment and personalized treatment plan (Source 1).\n• Dietary modifications and lifestyle changes are crucial, but should be guided by a qualified Ayurvedic practitioner (Source 1).\n• Self-treating cardiac symptoms can be dangerous and may delay appropriate medical intervention (Source 1).\n• The complexity of Hridroga necessitates a thorough diagnosis and tailored approach beyond home remedies (Source 1).\n\nWould you like home-based remedies, do's and don'ts, and lifestyle recommendations?\n\n--- END USER OUTPUT ---\n\nINTERNAL ANALYSIS (For your reference only):\nTop 3 conditions in bullet point:\n * Hridroga (Cardiac Disorders) [Confidence: 90%]\n     -> Symptoms of chest discomfort and leg swelling align with Hridroga (Source 1).\n     -> Oily diet and sedentary lifestyle are contributing factors (Source 1).\n\n * Amavata (Rheumatoid Arthritis) [Confidence: 60%]\n        -> Swelling in legs can be a symptom of Amavata (Source 4).\n        -> Pain and stiffness are common features of Amavata (Source 4).\n\n* Vataja Vikara (Vata Imbalance) [Confidence: 40%]\n        -> Headache and breathlessness can be associated with Vata imbalance (Source 1).\n        -> Sedentary lifestyle can aggravate Vata dosha (Source 1).\n\nNext ASK THE USER ONLY ONE QUESTION about remedies consent: \"Would you like home-based remedies, do's and don'ts, and lifestyle recommendations?\"",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "no"
+    },
+    {
+      "turn_number": 11,
+      "timestamp": "2026-03-03T13:01:20.311841",
+      "user_input": "yes",
+      "assistant_response": "What types of food do you typically consume? (Source 1)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "yes"
+    },
+    {
+      "turn_number": 12,
+      "timestamp": "2026-03-03T13:02:06.182594",
+      "user_input": "fruits and noodels",
+      "assistant_response": "What is your typical daily activity level? (Source 1)",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "fruits and noodels"
+    },
+    {
+      "turn_number": 13,
+      "timestamp": "2026-03-03T13:02:30.038837",
+      "user_input": "",
+      "assistant_response": "--- USER-FRIENDLY OUTPUT ---\n📋 DIAGNOSIS:\n• Hridroga (Cardiac Disorders)\n\n📖 EXPLANATION:\n• The incidence of lifestyle diseases, including cardiac disorders, is increasing globally and in India (Source 6).\n• Improper diet and irregular eating habits contribute to the development of health problems, including cardiac issues (Source 3).\n• Consumption of unsuitable food based on constitution, appetite, and digestive capacity can lead to disease (Source 3).\n• Factors like overweight/obesity, hypertension, diabetes mellitus, and dyslipidemia are associated with cardiovascular diseases (Source 1).\n• Ayurveda emphasizes the importance of considering the quality, quantity, and timing of food intake, which vary based on individual factors (Source 3).\n\n⚠️ IS IT SERIOUS?\n• Yes\n• Cardiovascular disorders are a major cause of mortality, representing about 30% of all deaths worldwide (Source 1).\n• The prevalence of these diseases has reached alarming proportions due to rapid economic development and urbanization (Source 1).\n• Cardiac involvement should be ruled out in patients with positive ASO (Antistreptolysin O Titers) through echocardiography (Source 4).\n• Timely intake of balanced diet and regular physical exercise are crucial for prevention (Source 5).\n\n🏠 CAN IT BE TREATED AT HOME?\n• No\n• While lifestyle modifications are important, Hridroga requires a thorough diagnosis and tailored approach beyond home remedies (Source 1).\n• Self-treating cardiac symptoms can be dangerous and may delay appropriate medical intervention (Source 1).\n• Ayurvedic principles emphasize preventative measures, but current symptoms necessitate a professional assessment and personalized treatment plan (Source 1).\n• Regular blood pressure check-ups and practice of Yoga/Meditation under expert supervision are recommended, but do not replace medical care (Source 5).\n\n--- END USER OUTPUT ---\n\nINTERNAL ANALYSIS (For your reference only):\nTop 3 conditions in bullet point:\n * Hridroga (Cardiac Disorders) [Confidence: 90%]\n     -> The incidence of lifestyle diseases like hypertension, diabetes mellitus, dyslipidemia, and overweight/obesity associated with cardiovascular diseases is on the rise (Source 1).\n     -> Improper diet and irregular eating habits contribute to the development of health problems, including cardiac issues (Source 3).\n\n * Amavata (Rheumatoid Arthritis) [Confidence: 60%]\n        -> Swelling in legs can be a symptom of Amavata (Source 4).\n        -> Liver Function Test to rule out disease related or drug related hepatic impairment (Source 4).\n\n* Vataja Vikara (Vata Imbalance) [Confidence: 40%]\n        -> Headache and breathlessness can be associated with Vata imbalance (Source 1).\n        -> Sedentary lifestyle can aggravate Vata dosha (Source 1).\n\nNext ASK THE USER ONLY ONE QUESTION about remedies consent: \"Would you like home-based remedies, do's and don'ts, and lifestyle recommendations?\"\nIMPORTANT: When user responds to remedies question, ALWAYS provide remedies - do NOT ask more questions!",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      }
+    },
+    {
+      "turn_number": 14,
+      "timestamp": "2026-03-03T13:03:11.306613",
+      "user_input": "yes",
+      "assistant_response": "--- USER-FRIENDLY OUTPUT ---\n📋 DIAGNOSIS:\n• Hridroga (Cardiac Disorders)\n\n📖 EXPLANATION:\n• The incidence of lifestyle diseases like hypertension, diabetes mellitus, dyslipidemia, and overweight/obesity associated with cardiovascular diseases is on the rise (Source 2).\n• Cardiovascular disorders and other allied conditions contributing to cardiac illness are spreading due to rapid economic development and urbanization (Source 1).\n• Ayurveda offers a comprehensive and personalized approach for cardiac conditions (Source 1).\n• Improper diet and irregular eating habits contribute to the development of cardiac issues (Source 3).\n• The role of Vyana Vayu and Ojus are major functional attributes that contribute to the health and disease of the cardio-vascular system (Source 1).\n\n⚠️ IS IT SERIOUS?\n• Yes\n• Cardiovascular disorders continue to be the major cause of mortality, representing about 30% of all deaths worldwide (Source 2).\n• Prevention and management of these conditions are pivotal to reduce the disease burden and also facilitate to cut the health costs grossly (Source 1).\n• Self-treating cardiac symptoms can be dangerous and may delay appropriate medical intervention (Source 1).\n\n🏠 CAN IT BE TREATED AT HOME?\n• No\n• While lifestyle modifications are important, Hridroga requires a thorough diagnosis and tailored approach beyond home remedies (Source 1).\n• Regular blood pressure check-ups and practice of Yoga/Meditation under expert supervision are recommended, but do not replace medical care (Source 5).\n• Ayurveda emphasizes preventative measures, but current symptoms necessitate a professional assessment and personalized treatment plan (Source 1).\n\n--- END USER OUTPUT ---\n\nINTERNAL ANALYSIS (For your reference only):\nTop 3 conditions in bullet point:\n * Hridroga (Cardiac Disorders) [Confidence: 90%]\n     -> The incidence of lifestyle diseases like hypertension, diabetes mellitus, dyslipidemia, and overweight/obesity associated with cardiovascular diseases is on the rise (Source 2).\n     -> Cardiovascular disorders and other allied conditions contributing to cardiac illness are spreading due to rapid economic development and urbanization (Source 1).\n\n * Amavata (Rheumatoid Arthritis) [Confidence: 60%]\n        -> Swelling in legs can be a symptom of Amavata (Source 4).\n        -> Liver Function Test to rule out disease related or drug related hepatic impairment (Source 4).\n\n* Vataja Vikara (Vata Imbalance) [Confidence: 40%]\n        -> Headache and breathlessness can be associated with Vata imbalance (Source 1).\n        -> Sedentary lifestyle can aggravate Vata dosha (Source 1).\n\n📋 HOME REMEDIES,  & , AND LIFESTYLE RECOMMENDATIONS FOR HRIDROGA (CARDIAC DISORDERS):\n\n✅ DO'S:\n• Regular exercise, especially walking (Source 3).\n• Regular practice of Yoga and Meditation under the supervision of a specialist (Source 3, Source 5).\n• Consume a diet appropriate for your Prakriti (body constitution) – Vata, Pitta, or Kapha (Source 2).\n\n❌ DON'TS:\n• Avoid sugarcane juice, jaggery, sugar, and milk products (Source 3).\n• Avoid a sedentary lifestyle (Source 3).\n• Avoid sleeping during the day and excessive sleeping (Source 3).\n• Avoid alcohol consumption (Source 3).\n• Avoid prolonged fasting (Source 3).\n• Avoid cold drinks, ice cream, burgers, pizza, and other fast foods (Source 3).\n\n🌿 ADDITIONAL RECOMMENDATIONS:\n• Guggulu (Commiphora wightii) 12-16gm/day in divided doses with lukewarm water for 3 months to control hyperlipidaemia (Source 5).\n• Pushkara Guggulu - 2gm thrice a day for 6 months for angina (Vatika Hridroga) (Source 5).",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "yes"
+    },
+    {
+      "turn_number": 15,
+      "timestamp": "2026-03-03T13:03:40.695702",
+      "user_input": "thank u",
+      "assistant_response": "--- USER-FRIENDLY OUTPUT ---\n📋 DIAGNOSIS:\n• Amavata (Rheumatoid Arthritis) [Confidence: 60%]\n\n📖 EXPLANATION:\n• Swelling in legs can be a symptom of Amavata (Source 4).\n• Cardiovascular disorders are spreading due to rapid economic development and urbanization (Source 1).\n• Lifestyle diseases like hypertension, diabetes, and obesity are on the rise (Source 2).\n• A sedentary lifestyle can aggravate Vata dosha (Source 1).\n• Ayurveda offers a comprehensive and personalized approach for cardiac conditions (Source 4).\n\n⚠️ IS IT SERIOUS?\n• Yes\n• Cardiovascular disorders are a major cause of mortality, representing about 30% of all deaths worldwide (Source 1).\n• The prevalence of these diseases has reached alarming proportions among Indians in recent years (Source 1).\n• Prevention and management of these conditions are pivotal to reduce disease burden and health costs (Source 4).\n\n🏠 CAN IT BE TREATED AT HOME?\n• Lifestyle interventions can be as effective as medication and are considered safe (Source 5).\n• Regular exercise, especially walking, is recommended (Source 3).\n• Regular practice of Yoga and Meditation under supervision is suggested (Source 3).\n• Dietary adjustments based on your Prakriti (body constitution) are beneficial (Source 2).\n\nWould you like home-based remedies, do's and don'ts, and lifestyle recommendations?\n\n--- END USER OUTPUT ---\n\nINTERNAL ANALYSIS (For your reference only):\nTop 3 conditions in bullet point:\n * Amavata (Rheumatoid Arthritis) [60%]\n     -> Swelling in legs can be a symptom of Amavata (Source 4).\n     -> Liver Function Test to rule out disease related or drug related hepatic impairment (Source 4).\n\n * Hridroga (Cardiac Disorder) [Confidence: Not explicitly stated, inferred from context]\n        -> The incidence of lifestyle diseases associated with cardiovascular diseases is on the rise (Source 2).\n        -> Cardiovascular disorders are spreading due to urbanization (Source 1).\n\n* Vataja Vikara (Vata Imbalance) [Confidence: 40%]\n        -> Headache and breathlessness can be associated with Vata imbalance (Source 1).\n        -> Sedentary lifestyle can aggravate Vata dosha (Source 1).\n\nNext ASK THE USER ONLY ONE QUESTION about remedies consent: \"Would you like home-based remedies, do's and don'ts, and lifestyle recommendations?\"",
+      "chunks_retrieved": 0,
+      "safety_check": {
+        "is_safe": true,
+        "matched_risks": []
+      },
+      "retrieval_query": "thank u"
+    }
+  ],
+  "retrieval_statistics": []
+}

@@ -13,15 +13,23 @@ Features:
 import os
 import json
 from datetime import datetime
+from dotenv import load_dotenv
 from rag.rag_pipeline import RAGPipeline
 from rag.memory import ConversationMemory
 from rag.metadata_enricher import enrich_chunks_with_metadata
+
+# Load .env file
+load_dotenv(os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), '.env'))
 
 # Get the project root directory (parent of src/)
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 VECTOR_DB_PATH = os.path.join(PROJECT_ROOT, "data", "embeddings")
 EVALUATION_DIR = os.path.join(PROJECT_ROOT, "data", "evaluations")
-API_KEY = "AIzaSyBEsINh-jay9q0M6HDVlXk-TU3SfY-N9x0"
+
+# Load API key from environment variable
+API_KEY = os.getenv("API_KEY")
+if not API_KEY:
+    raise ValueError("API_KEY not found in environment variables. Please set it in .env file.")
 
 BOOK_1 = "ayurvedic_treatment_file1.pdf"
 BOOK_2 = "Ayurvedic-Home-Remedies-English.pdf"
@@ -164,22 +172,19 @@ if __name__ == "__main__":
 
             # Check for medical safety risks before processing
             is_safe, safety_result = pipeline.check_safety(user_input)
+            is_first_user_turn = memory.user_turn_count == 0
             
             if not is_safe:
-                print("\n⚠️ MEDICAL SAFETY ALERT")
-                print("The symptoms you described may indicate a serious condition.")
-                print("Matched risks:", safety_result["matched_risks"])
-                print("\nPlease seek immediate medical attention.")
-                print("This AI is not a substitute for professional medical care.")
                 
-                # Log the safety alert
+                # Log the safety alert but do NOT terminate
                 evaluator.log_turn(
                     turn_number=memory.user_turn_count + 1,
                     user_input=user_input,
-                    assistant_response="[SAFETY ALERT - Session terminated]",
+                    assistant_response="[SAFETY WARNING - Continuing with clarification]",
                     safety_check=(is_safe, safety_result)
                 )
-                continue
+                # Ensure we are in a mode where the LLM asks questions
+                # If turn count is already high, we might need to adjust it or force gathering mode
 
             memory.add_turn("user", user_input)
 
@@ -187,7 +192,7 @@ if __name__ == "__main__":
             full_response = ""
             
             # Get retrieval query for logging
-            retrieval_query, _ = pipeline._classify_and_weight_query(user_input) if memory.user_turn_count == 0 else (user_input, None)
+            retrieval_query, _ = pipeline._classify_and_weight_query(user_input) if is_first_user_turn else (user_input, None)
             
             # Stream response for better user experience
             for chunk in pipeline.run(user_input, memory):

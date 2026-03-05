@@ -12,9 +12,21 @@ class ConversationMemory:
         self.waiting_more_info_consent = False  # Track if user was asked about more info
         self.waiting_treatment_risk_profile = False
         self.treatment_risk_profile_collected = False
+        self.escalation_active = False
+        self.verification_active = False
+        self.verification_attempts = 0
+        self.verification_question_index = 0
+        self.verification_questions = []
+        self.verification_reasons = []
+        self.verification_alternatives = []
         self.last_diagnosis = None
         self.patient_age = None
         self.patient_gender = None
+        self.patient_location_of_pain = None
+        
+        # Bayesian state
+        self.bayesian_observations = {} # {symptom: observed: bool}
+        self.bayesian_priors = None # Current distribution
 
     def mark_complete(self):
         self.diagnosis_complete = True
@@ -46,12 +58,24 @@ class ConversationMemory:
             except Exception:
                 pass
 
+        # Location of pain/issue capture.
+        location_keywords = [
+            "head", "neck", "shoulder", "arm", "chest", "abdomen", "stomach", 
+            "back", "hip", "leg", "knee", "ankle", "foot", "joint", "muscle", 
+            "throat", "skin", "heart", "liver", "kidney"
+        ]
+        for loc in location_keywords:
+            if loc in text:
+                self.patient_location_of_pain = loc
+                break
+
     def get_formatted_history(self):
         formatted = ""
-        if self.patient_age is not None or self.patient_gender is not None:
+        if self.patient_age is not None or self.patient_gender is not None or self.patient_location_of_pain is not None:
             age_text = str(self.patient_age) if self.patient_age is not None else "unknown"
             gender_text = self.patient_gender if self.patient_gender is not None else "unknown"
-            formatted += f"PATIENT_PROFILE: age={age_text}, gender={gender_text}\n"
+            location_text = self.patient_location_of_pain if self.patient_location_of_pain is not None else "unknown"
+            formatted += f"PATIENT_PROFILE: age={age_text}, gender={gender_text}, location={location_text}\n"
 
         for turn in self.history:
             formatted += f"{turn['role'].upper()}: {turn['content']}\n"
@@ -59,3 +83,21 @@ class ConversationMemory:
 
     def clear(self):
         self.history = []
+        self.user_turn_count = 0
+        self.diagnosis_complete = False
+        self.remedies_provided = False
+        self.waiting_remedies_consent = False
+        self.waiting_more_info_consent = False
+        self.waiting_treatment_risk_profile = False
+        self.treatment_risk_profile_collected = False
+        self.escalation_active = False
+        self.verification_active = False
+        self.verification_attempts = 0
+        self.verification_question_index = 0
+        self.verification_questions = []
+        self.verification_reasons = []
+        self.verification_alternatives = []
+        self.last_diagnosis = None
+        self.patient_age = None
+        self.patient_gender = None
+        self.patient_location_of_pain = None
