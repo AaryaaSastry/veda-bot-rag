@@ -8,23 +8,110 @@ Veda Bot RAG is a modular Python pipeline that transforms raw Ayurvedic PDF book
 
 ### Key Features
 
+#### Core Functionality
 - **PDF Processing Pipeline**: Extract, clean, and structure text from medical PDFs
 - **Hybrid Retrieval**: Dense FAISS retrieval + lexical BM25 fusion, then cross-encoder reranking
 - **Metadata Extraction**: Automatic detection of Ayurvedic concepts (doshas, srotas, treatment types)
 - **Multi-turn Conversation**: Context-aware diagnostic dialogue system
 - **Modular Architecture**: Each processing stage is independent and configurable
 
+#### Advanced Reasoning
+- **Bayesian Diagnostic Engine**: Probabilistic diagnosis based on symptom observations
+- **Information Gain Question Selection**: Asks most informative questions to reduce uncertainty
+- **Symptom Difficulty Weighting**: Prioritizes simple symptoms over technical terms
+- **Body System Classification**: Targets retrieval to relevant anatomical systems
+
+#### Safety & Verification
+- **Emergency Detector**: Identifies life-threatening conditions in every turn
+- **Dynamic Safety Engine**: Assesses medical risks using embeddings
+- **Ollama Verifier**: Audits diagnoses for consistency and safety
+- **Red Flag Detection**: Alerts for high-risk conditions (severe pain, sudden onset, etc.)
+
+#### Quality Assurance
+- **Canonical Symptom Vocabulary**: Ensures consistent symptom mapping
+- **Disease Candidate Filtering**: Focuses on relevant conditions
+- **Persistent State Tracking**: Maintains diagnostic context across turns
+- **Evaluation Reports**: Detailed session reports with safety alerts and retrieval stats
+
 ## Architecture
 
+### Detailed System Flow
+
+The system follows a sophisticated multi-stage pipeline that combines RAG retrieval with Bayesian reasoning and safety checks:
+
 ```
-┌──────────────┐    ┌──────────────┐    ┌──────────────┐    ┌──────────────┐
-│  EXTRACTION  │───▶│   CLEANING   │───▶│   STRUCTURE  │───▶│   CHUNKING   │
-└──────────────┘    └──────────────┘    └──────────────┘    └──────────────┘
-                                                                │
-┌──────────────┐    ┌──────────────┐    ┌──────────────┐       │
-│   RAG CHAT   │◀───│   RETRIEVAL  │◀───│  VECTOR DB   │◀──────┘
-└──────────────┘    └──────────────┘    └──────────────┘
+USER MESSAGE
+      │
+      ▼
+Emergency Safety Detector (Every turn)
+      │
+      ▼
+Symptom Extractor (LLM)
+      │
+      ▼
+Symptom Canonicalizer (LLM + Fuzzy Matching)
+      │
+      ▼
+Body System Classifier (LLM)
+      │
+      ▼
+Candidate Disease Filter (System-based filtering)
+      │
+      ▼
+Bayesian Diagnostic Engine
+      ├─ Probability Update
+      ├─ Entropy Calculation
+      └─ Information Gain Question Selection (Weighted by difficulty)
+      │
+      ▼
+Next Symptom Question (LLM natural language wrapper)
+      │
+      ▼
+User Response
+      │
+      ▼
+Conversation Memory Update
+      │
+      ▼
+Loop (until confidence threshold or max turns)
+      │
+      ▼
+Final Diagnosis
+      │
+      ▼
+RAG Retrieval (Hybrid: FAISS + BM25 + Cross-encoder reranking)
+      │
+      ▼
+Evidence + Explanation Generation (LLM)
+      │
+      ▼
+Ollama Verifier (Consistency & Safety Check)
+      │
+      ▼
+Final Response
 ```
+
+### Key Architectural Components
+
+1. **Data Pipeline**
+   - PDF Extraction → Cleaning → Chapter Parsing → Chunking → Embedding (FAISS)
+
+2. **Retrieval Layer**
+   - Hybrid: Dense FAISS search + BM25 lexical search
+   - Cross-encoder reranking (ms-marco-MiniLM-L-6-v2)
+   - Metadata filtering (body system, source)
+
+3. **Reasoning Engine**
+   - Bayesian Diagnostic Engine (probabilistic diagnosis)
+   - Symptom difficulty weighting
+   - Information gain-based question selection
+   - System-based disease filtering
+
+4. **Safety & Verification**
+   - Emergency detector (every turn)
+   - Dynamic medical safety engine
+   - Ollama-based verification (Llama 3)
+   - Red flag detection for high-risk conditions
 
 ## Installation
 
